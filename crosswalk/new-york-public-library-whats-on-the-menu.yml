@@ -1,0 +1,14 @@
+provider: new-york-public-library-whats-on-the-menu
+apis_io: https://apis.io/providers/new-york-public-library-whats-on-the-menu/
+context: food-ordering
+generated: '2026-11-10'
+concepts:
+  menu_item:
+    path_segment:
+    - dishes
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/new-york-public-library-whats-on-the-menu-openapi-original.yaml#GET /dishes
+    - openapi/_original/new-york-public-library-whats-on-the-menu-openapi-original.yaml#GET /dishes/{id}
+    - openapi/_original/new-york-public-library-whats-on-the-menu-openapi-original.yaml#GET /menus/{id}/dishes

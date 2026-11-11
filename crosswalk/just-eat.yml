@@ -1,0 +1,50 @@
+provider: just-eat
+apis_io: https://apis.io/providers/just-eat/
+context: food-ordering
+generated: '2026-11-10'
+concepts:
+  restaurant:
+    path_segment:
+    - restaurants
+    properties:
+      restaurant_id: restaurantId
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/just-eat-uk-openapi-original.json#DELETE /delivery/pools/{deliveryPoolId}/restaurants
+    - openapi/_original/just-eat-uk-openapi-original.json#GET /search/restaurants/{tenant}
+    - openapi/_original/just-eat-uk-openapi-original.json#PUT /delivery/pools/{deliveryPoolId}/restaurants
+  menu:
+    path_segment:
+    - menu
+    properties:
+      name: name
+      id: id
+      modifier_groups: modifierGroups
+      restaurant_id: restaurantId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/just-eat-uk-openapi-original.json#GET /restaurants/{tenant}/{restaurantId}/menu
+    - openapi/_original/just-eat-uk-openapi-original.json#PUT /restaurants/{tenant}/{restaurantId}/menu
+  menu_item:
+    path_segment:
+    - items
+    properties:
+      name: name
+      description: description
+      id: id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/just-eat-uk-openapi-original.json#GET /restaurants/{tenant}/{restaurantId}/catalogue/categories/{categoryId}/items
+    - openapi/_original/just-eat-uk-openapi-original.json#GET /restaurants/{tenant}/{restaurantId}/catalogue/items
+  food_order:
+    path_segment:
+    - orders
+    properties:
+      restaurant_id: Restaurant
+      items: Items
+      customer_id: Customer
+      order_id: OrderId
+      total: TotalPrice
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/just-eat-uk-openapi-original.json#POST /orders

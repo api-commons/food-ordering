@@ -1,0 +1,21 @@
+provider: zayo
+apis_io: https://apis.io/providers/zayo/
+context: food-ordering
+generated: '2026-11-10'
+concepts:
+  restaurant:
+    path_segment:
+    - locations
+    properties:
+      address: address
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/zayo-openapi-original.yml#GET /services/location-management/v2/building/{buildingId}/locations
+  food_order:
+    path_segment:
+    - order
+    properties:
+      description: notes
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/zayo-openapi-original.yml#POST /services/order-management/v2/orders/order

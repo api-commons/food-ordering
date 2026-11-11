@@ -1,0 +1,3811 @@
+{
+ "cohort_size": 77,
+ "unreadable": [],
+ "concepts": {
+  "restaurant": {
+   "2ndkitchen": {
+    "segments": [
+     "restaurants"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "restaurants": "array",
+     "longitude": "integer",
+     "latitude": "integer",
+     "distance": "integer",
+     "limit": "integer",
+     "order_by": "string",
+     "offset": "integer",
+     "ids": "array",
+     "address": "string",
+     "admin_user_id": "integer",
+     "city": "string",
+     "commission": "number",
+     "country": "string",
+     "courier_pickup_instructions": "string",
+     "currency_code": "string",
+     "delivery_code": "string",
+     "delivery_id": "integer",
+     "email": "string",
+     "external_establishment_id": "integer",
+     "external_establishment_name": "string",
+     "external_location_id": "string",
+     "has_printer": "integer",
+     "id": "integer",
+     "integrations": "string",
+     "is_deleted": "integer",
+     "launched_date": "string",
+     "logo": "string",
+     "name": "string",
+     "notes": "string",
+     "password": "string",
+     "phone_number": "string",
+     "printer_ip": "string",
+     "printer_port": "string",
+     "slug": "string",
+     "state": "string",
+     "status": "integer",
+     "stock_status": "integer",
+     "stock_status_override": "boolean",
+     "supports_popup": "boolean",
+     "sync_catalog": "integer",
+     "timezone": "string",
+     "timezone_offset": "string",
+     "user_name": "string",
+     "w9_uploaded": "integer",
+     "zip": "string",
+     "opening_hours": "array",
+     "opening_hours_exceptions": "array"
+    },
+    "evidence": [
+     "openapi/_original/2ndkitchen-indexingservice.yaml#POST /recommend/restaurants",
+     "openapi/_original/2ndkitchen-restaurantservice.yaml#GET /restaurants"
+    ]
+   },
+   "7shifts": {
+    "segments": [
+     "locations"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "integer",
+     "company_id": "integer",
+     "name": "string",
+     "address": "string",
+     "city": "string",
+     "state": "string",
+     "country": "string",
+     "zip": "string",
+     "timezone": "string",
+     "created": "string",
+     "modified": "string"
+    },
+    "evidence": [
+     "openapi/_original/7shifts-openapi.yml#GET /v2/company/{company_id}/locations",
+     "openapi/_original/7shifts-openapi.yml#GET /v2/company/{company_id}/locations/{location_id}",
+     "openapi/_original/7shifts-openapi.yml#POST /v2/company/{company_id}/locations"
+    ]
+   },
+   "ankorstore": {
+    "segments": [
+     "locations"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "type": "string",
+     "id": "string",
+     "attributes": "object"
+    },
+    "evidence": [
+     "openapi/_original/ankorstore-astral-openapi-original.yml#GET /api/astral/v1/stock/locations"
+    ]
+   },
+   "apicbase": {
+    "segments": [
+     "outlets"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "count": "integer",
+     "next": "string",
+     "previous": "string",
+     "id": "string",
+     "name": "string",
+     "custom_fields": "object"
+    },
+    "evidence": [
+     "openapi/_original/apicbase-openapi.yml#GET /api/v2/accounts/outlets/"
+    ]
+   },
+   "barogo": {
+    "segments": [
+     "stores"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "isSuccess": "boolean",
+     "stores": "array"
+    },
+    "evidence": [
+     "openapi/_original/barogo-gorela-openapi.yml#GET /api/stores"
+    ]
+   },
+   "blackbird": {
+    "segments": [
+     "restaurants",
+     "locations"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "restaurants": "array",
+     "pagination": "object",
+     "id": "string",
+     "object": "string",
+     "name": "string",
+     "cuisine": "array",
+     "cohort": "string",
+     "price": "integer",
+     "tags": "array",
+     "asset": "object",
+     "website_url": "string",
+     "instagram_url": "string",
+     "created_at": "string",
+     "updated_at": "string",
+     "locations": "array",
+     "restaurant": "object",
+     "neighborhood": "object",
+     "slug": "string",
+     "address": "object",
+     "coordinate": null,
+     "phone_number": "string",
+     "time_zone": "string",
+     "payments_enabled": "boolean",
+     "is_club": "boolean",
+     "reservations_enabled": "boolean",
+     "reservation_url": "string",
+     "google_place_id": "string"
+    },
+    "evidence": [
+     "openapi/_original/blackbird-flynet-openapi-original.yml#GET /locations",
+     "openapi/_original/blackbird-flynet-openapi-original.yml#GET /locations/{id}",
+     "openapi/_original/blackbird-flynet-openapi-original.yml#GET /restaurants",
+     "openapi/_original/blackbird-flynet-openapi-original.yml#GET /restaurants/{id}"
+    ]
+   },
+   "cloudkitchens": {
+    "segments": [
+     "stores"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "success": "boolean",
+     "storeId": "string",
+     "errorMessage": "object",
+     "id": "string",
+     "name": "string",
+     "address": "object"
+    },
+    "evidence": [
+     "openapi/_original/cloudkitchens-public-api-openapi.yml#GET /organization/v1/organization/brands/{brandId}/stores",
+     "openapi/_original/cloudkitchens-public-api-openapi.yml#GET /organization/v1/organization/brands/{brandId}/stores/{storeId}",
+     "openapi/_original/cloudkitchens-public-api-openapi.yml#POST /v1/stores"
+    ]
+   },
+   "delivery-hero": {
+    "segments": [
+     "outlets"
+    ],
+    "operations": [
+     "GET item",
+     "PATCH item",
+     "PUT item"
+    ],
+    "properties": {
+     "client_vendor_id": "string",
+     "name": "string",
+     "address": "string",
+     "street": "string",
+     "street_number": "string",
+     "building": "string",
+     "district": "string",
+     "postal_code": "string",
+     "rider_instructions": "string",
+     "latitude": "number",
+     "longitude": "number",
+     "city": "string",
+     "phone_number": "string",
+     "currency": "string",
+     "description": "string",
+     "locale": "string",
+     "halal": "boolean",
+     "vendor_id": "string",
+     "users": "array",
+     "add_user": "array",
+     "delete_user": "array"
+    },
+    "evidence": [
+     "openapi/_original/delivery-hero-on-demand-rider-openapi.json#GET /outlets/{client_vendor_id}",
+     "openapi/_original/delivery-hero-on-demand-rider-openapi.json#PATCH /outlets/{client_vendor_id}",
+     "openapi/_original/delivery-hero-on-demand-rider-openapi.json#PUT /outlets/{client_vendor_id}"
+    ]
+   },
+   "digi-key": {
+    "segments": [
+     "locations"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "CustomerId": "integer",
+     "BondedInventory": "boolean",
+     "Currency": "string",
+     "ShippingAddress": "object"
+    },
+    "evidence": [
+     "openapi/_original/digi-key-supply-chain-api-supplychain-v1-openapi.yml#GET /BondedQuantity/Locations",
+     "openapi/_original/digi-key-supply-chain-api-supplychain-v1-openapi.yml#GET /BondedQuantity/Locations/{accountId}",
+     "openapi/_original/digi-key-supply-chain-api-supplychain-v1.json#GET /BondedQuantity/Locations",
+     "openapi/_original/digi-key-supply-chain-api-supplychain-v1.json#GET /BondedQuantity/Locations/{accountId}"
+    ]
+   },
+   "doordash": {
+    "segments": [
+     "stores"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection",
+     "POST item"
+    ],
+    "properties": {
+     "name": "string",
+     "external_business_id": "string",
+     "external_store_id": "string",
+     "phone_number": "string",
+     "address": "string",
+     "status": "string",
+     "is_test": "boolean",
+     "created_at": "string",
+     "last_updated_at": "string",
+     "merchant_supplied_store_id": "string",
+     "open_hours": "array",
+     "special_hours": "array",
+     "promotion_id": "string",
+     "promotion_type": "string",
+     "funding_source": "string",
+     "purchase_criteria": "object",
+     "redemption_limit": "object",
+     "discount_options": "object",
+     "promotion_options": "object",
+     "start_time": "string",
+     "end_time": "string",
+     "provider_name": "string",
+     "merchant_supplied_id": "string",
+     "is_order_protocol_pos": "boolean",
+     "auto_release_enabled": "boolean",
+     "auto_release_distance": "integer",
+     "special_instructions_max_length": "integer",
+     "current_deactivations": "array",
+     "stores": "array",
+     "prev_token": "string",
+     "next_token": "string",
+     "id": "string",
+     "time_zone": "string",
+     "store_hours": "object",
+     "store_special_hours": "object",
+     "minimum_order_value": "number",
+     "delivery_fee": "number",
+     "average_delivery_time": "number",
+     "average_pickup_time": "number",
+     "should_show_delivery_fee": "boolean",
+     "store_properties": "object"
+    },
+    "evidence": [
+     "openapi/_original/doordash-drive-classic-openapi.yml#GET /developer/v1/businesses/{external_business_id}/stores",
+     "openapi/_original/doordash-drive-classic-openapi.yml#GET /developer/v1/businesses/{external_business_id}/stores/{external_store_id}",
+     "openapi/_original/doordash-drive-classic-openapi.yml#PATCH /developer/v1/businesses/{external_business_id}/stores/{external_store_id}",
+     "openapi/_original/doordash-drive-classic-openapi.yml#POST /developer/v1/businesses/{external_business_id}/stores",
+     "openapi/_original/doordash-drive-openapi.yml#GET /developer/v1/businesses/{external_business_id}/stores",
+     "openapi/_original/doordash-drive-openapi.yml#GET /developer/v1/businesses/{external_business_id}/stores/{external_store_id}",
+     "openapi/_original/doordash-drive-openapi.yml#PATCH /developer/v1/businesses/{external_business_id}/stores/{external_store_id}",
+     "openapi/_original/doordash-drive-openapi.yml#POST /developer/v1/businesses/{external_business_id}/stores",
+     "openapi/_original/doordash-item-management-openapi.yml#PATCH /api/v2/promotions/stores/{store_location_id}",
+     "openapi/_original/doordash-item-management-openapi.yml#PATCH /api/v2/stores/{store_location_id}",
+     "openapi/_original/doordash-item-management-openapi.yml#POST /api/v2/promotions/stores/{store_location_id}",
+     "openapi/_original/doordash-marketplace-legacy-openapi.yml#GET /api/v1/stores/{location_id}"
+    ]
+   },
+   "eat-app": {
+    "segments": [
+     "restaurants"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "string",
+     "type": "string",
+     "attributes": "object"
+    },
+    "evidence": [
+     "openapi/_original/eat-app-openapi.yml#GET /concierge/v2/restaurants"
+    ]
+   },
+   "flipdish": {
+    "segments": [
+     "stores",
+     "store",
+     "location",
+     "restaurants"
+    ],
+    "operations": [
+     "DELETE collection",
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "POST item",
+     "PUT item"
+    ],
+    "properties": {
+     "Stores": "array",
+     "Data": "object",
+     "Latitude": "number",
+     "Longitude": "number",
+     "StoreId": "integer",
+     "StoreName": "string",
+     "StoreGroupId": "integer",
+     "StoreGroupName": "string",
+     "HasLoyaltyCampaign": "boolean",
+     "HasRetentionCampaign": "boolean",
+     "IsPublished": "boolean",
+     "Name": "string",
+     "Active": "boolean",
+     "PayGreenId": "string",
+     "PayGreenConfigurationId": "integer",
+     "MenuEntityId": "integer",
+     "Key": "string",
+     "Value": "string",
+     "SummaryTotalPayout": "number",
+     "SummaryRevenue": "number",
+     "SummaryCashRevenue": "number",
+     "SummaryTotalFlipdishFees": "number",
+     "SummaryAdjustments": "number",
+     "Currency": "string",
+     "Page": "integer",
+     "Limit": "integer",
+     "TotalRecordCount": "integer",
+     "AppId": "string",
+     "StoreIds": "array",
+     "IsRegistered": "boolean",
+     "PinCode": "integer",
+     "Images": "array",
+     "UserType": "string",
+     "Address": "object",
+     "DeliveryZones": "array",
+     "ApmPhoneNumber": "string",
+     "PickupHours": "array",
+     "DeliveryHours": "array",
+     "MenuId": "integer",
+     "OrderConfirmationMessageOverrideDelivery": "string",
+     "OrderConfirmationMessageOverridePickup": "string",
+     "PrintoutLayoutType": "string",
+     "StoreNotes": "array",
+     "MicrosoftTimeZone": "string",
+     "IanaTimeZone": "string",
+     "PreOrderDeliveryEnabled": "boolean",
+     "PreOrderPickupEnabled": "boolean",
+     "LogoUrl": "string",
+     "FraudPreventionStrategy": "string",
+     "AppIds": "array",
+     "PropertyId": "string",
+     "PhoneNumber": "string",
+     "AlwaysAppearOpen": "boolean",
+     "PreOrderEnabled": "boolean",
+     "TakeOutEnabled": "boolean",
+     "TableServiceEnabled": "boolean",
+     "DineInEnabled": "boolean",
+     "AllowPreOrdersAndTableService": "boolean",
+     "PickupEnabled": "boolean",
+     "DeliveryEnabled": "boolean",
+     "CardOrderDeliveryEnabled": "boolean",
+     "CashOrdersDeliveryEnabled": "boolean",
+     "CardOrdersPickupEnabled": "boolean",
+     "CashOrdersPickupEnabled": "boolean",
+     "TipsEnabled": "boolean",
+     "AutomaticallyAcceptOrders": "boolean",
+     "OpenForDelivery": "boolean",
+     "OpenForPickup": "boolean",
+     "MinimumPickupOrderAmount": "number",
+     "RequireCustomerNameForPickup": "boolean",
+     "GdprCustomerPhoneNumbers": "boolean",
+     "RequireCustomerNameForDelivery": "boolean",
+     "AllowChefNotes": "boolean",
+     "EtaInPickupConfirmationSmsEnabled": "boolean",
+     "EtaInDeliveryConfirmationSmsEnabled": "boolean",
+     "IsArchived": "boolean",
+     "EmailAddress": "string",
+     "StaffLanguage": "string",
+     "SalesChannelTypes": "array",
+     "InheritanceConfigTypes": "array"
+    },
+    "evidence": [
+     "openapi/_original/flipdish-apps-openapi.json#DELETE /api/v1.0/{appId}/channels/{channelId}/stores",
+     "openapi/_original/flipdish-apps-openapi.json#DELETE /api/v1.0/{appId}/channels/{channelId}/stores/{storeId}",
+     "openapi/_original/flipdish-apps-openapi.json#GET /api/v1.0/{appId}/channels/{channelId}/stores",
+     "openapi/_original/flipdish-apps-openapi.json#POST /api/v1.0/{appId}/channels/{channelId}/stores/{storeId}",
+     "openapi/_original/flipdish-devices-openapi.json#POST /api/v1.0/{appId}/stripeterminal/location",
+     "openapi/_original/flipdish-marketing-openapi.json#GET /api/v1.0/{appId}/campaigns/stores",
+     "openapi/_original/flipdish-marketing-openapi.json#GET /api/v1.0/{appId}/restaurant-vouchers/paygreen/stores",
+     "openapi/_original/flipdish-marketing-openapi.json#GET /api/v1.0/{appId}/restaurant-vouchers/paygreen/stores/{storeId}",
+     "openapi/_original/flipdish-marketing-openapi.json#POST /api/v1.0/{appId}/restaurant-vouchers/paygreen/stores/{storeId}",
+     "openapi/_original/flipdish-menus-openapi.json#DELETE /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId}",
+     "openapi/_original/flipdish-menus-openapi.json#GET /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/store/{storeId}",
+     "openapi/_original/flipdish-menus-openapi.json#GET /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId}"
+    ]
+   },
+   "getir": {
+    "segments": [
+     "restaurants"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "string",
+     "averagePreparationTime": "number",
+     "status": "number",
+     "isCourierAvailable": "boolean",
+     "name": "string",
+     "isStatusChangedByUser": "boolean",
+     "closedSource": "number",
+     "rating": "number"
+    },
+    "evidence": [
+     "openapi/_original/getir-food-openapi.json#GET /restaurants",
+     "openapi/_original/getir-food-openapi.yml#GET /restaurants"
+    ]
+   },
+   "harri": {
+    "segments": [
+     "locations"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "POST item"
+    ],
+    "properties": {
+     "id": "number",
+     "name": "string",
+     "country_code": "string",
+     "state_code": "string",
+     "city": "string",
+     "type": "string",
+     "is_primary": "boolean",
+     "keep_source_location": "boolean",
+     "start_date": "string"
+    },
+    "evidence": [
+     "openapi/_original/harri-employee-openapi.yml#DELETE /api/v1/employees/{employeeId}/locations/{locationId}",
+     "openapi/_original/harri-employee-openapi.yml#DELETE /api/v1/franchisees/{franchiseeId}/employees/{employeeId}/locations/{locationId}",
+     "openapi/_original/harri-employee-openapi.yml#DELETE /api/v2/employees/{employeeId}/locations/{locationId}",
+     "openapi/_original/harri-employee-openapi.yml#DELETE /api/v2/franchisees/{franchiseeId}/employees/{employeeId}/locations/{locationId}",
+     "openapi/_original/harri-employee-openapi.yml#GET /api/v1/franchisees/{franchiseeId}/locations",
+     "openapi/_original/harri-employee-openapi.yml#GET /api/v1/locations",
+     "openapi/_original/harri-employee-openapi.yml#POST /api/v1/employees/{employeeId}/locations/{locationId}",
+     "openapi/_original/harri-employee-openapi.yml#POST /api/v1/franchisees/{franchiseeId}/employees/{employeeId}/locations/{locationId}",
+     "openapi/_original/harri-employee-openapi.yml#POST /api/v2/employees/{employeeId}/locations/{locationId}",
+     "openapi/_original/harri-employee-openapi.yml#POST /api/v2/franchisees/{franchiseeId}/employees/{employeeId}/locations/{locationId}"
+    ]
+   },
+   "incentivio": {
+    "segments": [
+     "locations",
+     "stores",
+     "location"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH collection",
+     "PATCH item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "clientId": "string",
+     "locations": "array",
+     "catalogOverrides": "array",
+     "catering": "boolean",
+     "charges": "array",
+     "countryCode": "string",
+     "currencyCode": "string",
+     "deliveryArea": "object",
+     "deliveryAsapSupported": "boolean",
+     "deliveryAvailabilityInterval": "integer",
+     "deliveryMaxDaysOut": "integer",
+     "deliveryOffDays": "array",
+     "deliveryOrderHours": "array",
+     "deliveryOrderNoticePeriod": "integer",
+     "deliveryOrderOptions": "array",
+     "deliveryOrderProcessingTime": "integer",
+     "deliveryOrdersAccepted": "boolean",
+     "deliveryOrderValueLimits": "object",
+     "deliveryRadius": "number",
+     "deliverySevenPlusDaysOrdering": "boolean",
+     "deliveryTemporaryHours": "array",
+     "disableTipping": "boolean",
+     "dynamicDeliveryCharge": "object",
+     "enableFulFillTextForToast": "boolean",
+     "extendedAttributes": "object",
+     "externalOrderingEnabled": "boolean",
+     "externalOrderingText": "string",
+     "extPosLocationId": "string",
+     "failureNotificationRecipientEmailList": "array",
+     "fulFillTextForToast": "string",
+     "groupOverrides": "array",
+     "kitchenThrottleConfig": "object",
+     "latitude": "number",
+     "locationName": "string",
+     "longitude": "number",
+     "menuImportConfig": "object",
+     "merchantId": "string",
+     "orderNotificationRecipientEmailList": "array",
+     "orderProcessingConfig": "object",
+     "orderThrottleConfig": "array",
+     "paymentConfigs": "array",
+     "paymentGatewayConfig": "object",
+     "pickupAsapSupported": "boolean",
+     "pickupAvailabilityInterval": "integer",
+     "pickupMaxDaysOut": "integer",
+     "pickupOffDays": "array",
+     "pickupOrderHours": "array",
+     "pickupOrderNoticePeriod": "integer",
+     "pickupOrderOptions": "array",
+     "pickupOrderProcessingTime": "integer",
+     "pickupOrdersAccepted": "boolean",
+     "pickupOrderValueLimits": "object",
+     "pickupSevenPlusDaysOrdering": "boolean",
+     "pickupTemporaryHours": "array",
+     "primaryLocation": "boolean",
+     "primaryLocationId": "string",
+     "qalocation": "boolean",
+     "showDeliveryTimeSlots": "boolean",
+     "showPickupTimeSlots": "boolean",
+     "taxes": "array",
+     "test": "boolean",
+     "timeZone": "string",
+     "patchData": "array",
+     "locationId": "string",
+     "active": "boolean",
+     "extTargetingId": "string",
+     "productType": "string",
+     "paging": "object",
+     "stores": "array"
+    },
+    "evidence": [
+     "openapi/_original/incentivio-admin-api-openapi.json#DELETE /incentivio-ordering-service/locations/{locationid}",
+     "openapi/_original/incentivio-admin-api-openapi.json#GET /incentivio-client-domain/admin/stores",
+     "openapi/_original/incentivio-admin-api-openapi.json#GET /incentivio-client-domain/clients/all/stores",
+     "openapi/_original/incentivio-admin-api-openapi.json#GET /incentivio-client-domain/clients/{clientid}/all/stores",
+     "openapi/_original/incentivio-admin-api-openapi.json#GET /incentivio-client-domain/clients/{clientid}/stores",
+     "openapi/_original/incentivio-admin-api-openapi.json#GET /incentivio-client-domain/clients/{clientid}/stores/{identifier}",
+     "openapi/_original/incentivio-admin-api-openapi.json#GET /incentivio-menu-service/search/locations",
+     "openapi/_original/incentivio-admin-api-openapi.json#GET /incentivio-ordering-service/locations/{locationid}",
+     "openapi/_original/incentivio-admin-api-openapi.json#GET /incentivio-reports/menuintelligence/locations",
+     "openapi/_original/incentivio-admin-api-openapi.json#PATCH /incentivio-giftcard-ach-service/fund-transfer-config/locations",
+     "openapi/_original/incentivio-admin-api-openapi.json#PATCH /incentivio-ordering-service/locations/{locationid}",
+     "openapi/_original/incentivio-admin-api-openapi.json#POST /incentivio-ordering-service/locations"
+    ]
+   },
+   "just-eat": {
+    "segments": [
+     "restaurants"
+    ],
+    "operations": [
+     "DELETE collection",
+     "GET item",
+     "PUT collection"
+    ],
+    "properties": {
+     "restaurants": "array",
+     "isSponsored": "boolean",
+     "products": "array",
+     "restaurantId": "string"
+    },
+    "evidence": [
+     "openapi/_original/just-eat-uk-openapi-original.json#DELETE /delivery/pools/{deliveryPoolId}/restaurants",
+     "openapi/_original/just-eat-uk-openapi-original.json#GET /search/restaurants/{tenant}",
+     "openapi/_original/just-eat-uk-openapi-original.json#PUT /delivery/pools/{deliveryPoolId}/restaurants"
+    ]
+   },
+   "lightspeed": {
+    "segments": [
+     "outlets"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "attributes": "array",
+     "currency": "string",
+     "currency_symbol": "string",
+     "default_tax_id": "string",
+     "deleted_at": "string",
+     "display_prices": "string",
+     "email": "string",
+     "id": "string",
+     "latitude": "string",
+     "longitude": "string",
+     "name": "string",
+     "phone": "string",
+     "physical_address_1": "string",
+     "physical_address_2": "string",
+     "physical_city": "string",
+     "physical_country_id": "string",
+     "physical_postcode": "string",
+     "physical_state": "string",
+     "physical_suburb": "string",
+     "time_zone": "string",
+     "version": "integer"
+    },
+    "evidence": [
+     "openapi/_original/lightspeed-x-series-openapi.json#GET /outlets",
+     "openapi/_original/lightspeed-x-series-openapi.json#GET /outlets/{outlet_id}"
+    ]
+   },
+   "lunchbox": {
+    "segments": [
+     "stores"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "store_id": "string",
+     "rest_id": "integer",
+     "rest_name": "string",
+     "address1": "string",
+     "city": "string",
+     "state_code": "string",
+     "zip_code": "string",
+     "timezone": "string",
+     "latitude": "number",
+     "longitude": "number",
+     "enable_loyalty": "boolean",
+     "status": "string",
+     "setup_type": "string",
+     "state_name": "string",
+     "state_id": "integer",
+     "driver_management": "boolean",
+     "global_disable_group_order": "boolean",
+     "restaurant_data": "object",
+     "pos_store_id": "string",
+     "name": "string",
+     "contact": "object",
+     "location": "object"
+    },
+    "evidence": [
+     "openapi/_original/lunchbox-core-openapi.yml#GET /stores",
+     "openapi/_original/lunchbox-management-openapi.yml#GET /management/stores",
+     "openapi/_original/lunchbox-management-openapi.yml#GET /management/stores/{store_id}",
+     "openapi/_original/lunchbox-pos-openapi.yml#GET /pos/stores",
+     "openapi/_original/lunchbox-pos-openapi.yml#GET /pos/stores/{store_id}"
+    ]
+   },
+   "oracle-hospitality": {
+    "segments": [
+     "restaurants"
+    ],
+    "operations": [
+     "DELETE item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "warnings": "array",
+     "links": "array",
+     "restaurantName": "string",
+     "restaurantType": "string",
+     "hours": "string",
+     "priceRange": "string",
+     "comments": "string",
+     "category": "string",
+     "timeSpan": "object",
+     "newRestaurantCode": "string",
+     "restaurantCode": "string",
+     "orderBy": "integer",
+     "hotelId": "string",
+     "onSite": "boolean",
+     "website": "string"
+    },
+    "evidence": [
+     "openapi/_original/oracle-hospitality-property-v1-entcfg.json#DELETE /hotels/{hotelId}/restaurants/{restaurantCode}",
+     "openapi/_original/oracle-hospitality-property-v1-entcfg.json#POST /hotels/{hotelId}/restaurants",
+     "openapi/_original/oracle-hospitality-property-v1-entcfg.json#PUT /hotels/{hotelId}/restaurants/{restaurantCode}"
+    ]
+   },
+   "ottimate": {
+    "segments": [
+     "locations"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "integer",
+     "name": "string",
+     "company": "string",
+     "location_group": "string",
+     "group": "string"
+    },
+    "evidence": [
+     "openapi/_original/plateiq-accounts-api-openapi.yml#GET /accounts/{id}/locations",
+     "openapi/_original/plateiq-openapi.json#GET /accounts/{id}/locations",
+     "openapi/_original/plateiq-openapi.yaml#GET /accounts/{id}/locations"
+    ]
+   },
+   "partstech": {
+    "segments": [
+     "stores"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "id": "integer",
+     "name": "integer",
+     "address": "object",
+     "pickUp": "boolean",
+     "hotshot": "integer",
+     "dropship": "boolean",
+     "distance": "integer",
+     "shippingMethods": "array",
+     "supplier": null
+    },
+    "evidence": [
+     "openapi/_original/partstech-api-openapi.yml#GET /stores",
+     "openapi/_original/partstech-api-openapi.yml#GET /stores/{storeId}",
+     "openapi/_original/partstech-openapi.yaml#GET /stores",
+     "openapi/_original/partstech-openapi.yaml#GET /stores/{storeId}"
+    ]
+   },
+   "punchh": {
+    "segments": [
+     "locations"
+    ],
+    "operations": [
+     "DELETE collection",
+     "GET collection",
+     "PATCH collection",
+     "POST collection"
+    ],
+    "properties": {
+     "address": "string",
+     "brand": "string",
+     "city": "string",
+     "country": "string",
+     "external_store_id": "string",
+     "latitude": "number",
+     "location_id": "integer",
+     "longitude": "number",
+     "name": "string",
+     "online_order_url": "string",
+     "phone_number": "string",
+     "loc_email": "string",
+     "post_code": "string",
+     "state": "string",
+     "store_number": "string",
+     "store_tags": "string",
+     "store_times": "array",
+     "time_zone": "string",
+     "updated_at": "string",
+     "status": "string",
+     "franchisee_id": "integer",
+     "enable_weekly_redemption_report": "boolean",
+     "checkin_evidenced_by": "string",
+     "guest_identity_code_type": "string",
+     "enable_pos_monitoring": "boolean",
+     "generate_barcodes": "boolean",
+     "location_groups": "array",
+     "alternate_store_number": "string",
+     "additional_url": "array",
+     "multiple_redemption_on_location": "boolean",
+     "location_extra_attributes": "object",
+     "validation_type": "string",
+     "ncr_store_id": "string",
+     "location": "object"
+    },
+    "evidence": [
+     "openapi/_original/punchh-platform-functions-api-openapi.yml#DELETE /api2/dashboard/locations",
+     "openapi/_original/punchh-platform-functions-api-openapi.yml#GET /api2/dashboard/locations",
+     "openapi/_original/punchh-platform-functions-api-openapi.yml#PATCH /api2/dashboard/locations",
+     "openapi/_original/punchh-platform-functions-api-openapi.yml#POST /api2/dashboard/locations"
+    ]
+   },
+   "restaurant-brands": {
+    "segments": [
+     "stores"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "availability": "object",
+     "franchiseGroupName": "string",
+     "location": "object",
+     "name": "string",
+     "posVendor": "string",
+     "serviceHour": "array",
+     "storeId": "string",
+     "timezone": "string"
+    },
+    "evidence": [
+     "openapi/_original/channel-openapi.yml#GET /stores",
+     "openapi/_original/channel-openapi.yml#GET /stores/{storeId}"
+    ]
+   },
+   "restaurant365": {
+    "segments": [
+     "location"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "locationId": "string",
+     "name": "string",
+     "locationNumber": "string",
+     "legalEntityId": "string",
+     "legalEntityNumber": "string",
+     "legalEntityName": "string",
+     "attribute1Id": "string",
+     "attribute1Number": "string",
+     "attribute1Name": "string",
+     "attribute2Id": "string",
+     "attribute2Number": "string",
+     "attribute2Name": "string",
+     "createdBy": "string",
+     "createdOn": "string",
+     "modifiedBy": "string",
+     "modifiedOn": "string"
+    },
+    "evidence": [
+     "openapi/_original/restaurant365-odata-connector-openapi.yml#GET /Location"
+    ]
+   },
+   "square": {
+    "segments": [
+     "locations"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "address": "object",
+     "timezone": "string",
+     "capabilities": "array",
+     "status": "string",
+     "created_at": "string",
+     "merchant_id": "string",
+     "country": "string",
+     "language_code": "string",
+     "currency": "string",
+     "phone_number": "string",
+     "business_name": "string",
+     "type": "string",
+     "website_url": "string",
+     "business_hours": "object",
+     "business_email": "string",
+     "description": "string",
+     "twitter_username": "string",
+     "instagram_username": "string",
+     "facebook_url": "string",
+     "coordinates": "object",
+     "logo_url": "string",
+     "pos_background_url": "string",
+     "mcc": "string",
+     "full_format_logo_url": "string",
+     "tax_ids": "object"
+    },
+    "evidence": [
+     "openapi/_original/square-openapi.yml#GET /v2/locations",
+     "openapi/_original/square-openapi.yml#GET /v2/locations/{location_id}",
+     "openapi/_original/square-openapi.yml#POST /v2/locations",
+     "openapi/_original/square-openapi.yml#PUT /v2/locations/{location_id}"
+    ]
+   },
+   "starbucks": {
+    "segments": [
+     "stores"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "stores": "array",
+     "total": "integer",
+     "id": "string",
+     "name": "string",
+     "address": "object",
+     "coordinates": "object",
+     "phone": "string",
+     "timezone": "string",
+     "hours": "array",
+     "amenities": "array",
+     "services": "array",
+     "mobileOrderingEnabled": "boolean",
+     "driveThru": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/starbucks-starbucks-api-openapi.yml#GET /v1/stores",
+     "openapi/_original/starbucks-starbucks-api-openapi.yml#GET /v1/stores/{storeId}"
+    ]
+   },
+   "thanx": {
+    "segments": [
+     "locations"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "locations": "array",
+     "pagination": "object",
+     "id": "string",
+     "merchant_id": "string",
+     "name": "string"
+    },
+    "evidence": [
+     "openapi/_original/thanx-consumer-api-openapi.yml#GET /locations",
+     "openapi/_original/thanx-partner-api-openapi.yml#GET /partner/metadata/locations"
+    ]
+   },
+   "toast": {
+    "segments": [
+     "restaurants"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "restaurantGuid": "string",
+     "managementGroupGuid": "string",
+     "deleted": "boolean",
+     "restaurantName": "string",
+     "locationName": "string",
+     "createdByEmailAddress": "string",
+     "externalGroupRef": "string",
+     "externalRestaurantRef": "string",
+     "modifiedDate": "integer",
+     "createdDate": "integer",
+     "isoModifiedDate": "string",
+     "isoCreatedDate": "string",
+     "guid": "string",
+     "general": "object",
+     "urls": "object",
+     "location": "object",
+     "schedules": "object",
+     "delivery": "object",
+     "onlineOrdering": "object",
+     "prepTimes": "object"
+    },
+    "evidence": [
+     "openapi/_original/toast-partners-openapi.yaml#GET /restaurants",
+     "openapi/_original/toast-restaurants-openapi.yaml#GET /groups/{managementGroupGUID}/restaurants",
+     "openapi/_original/toast-restaurants-openapi.yaml#GET /restaurants/{restaurantGUID}"
+    ]
+   },
+   "tripleseat": {
+    "segments": [
+     "locations"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "integer",
+     "name": "string",
+     "site_id": "integer",
+     "address": "string",
+     "city": "string",
+     "state": "string",
+     "zip_code": "string"
+    },
+    "evidence": [
+     "openapi/_original/tripleseat-openapi.yml#GET /v1/locations.json"
+    ]
+   },
+   "uber": {
+    "segments": [
+     "stores"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "PATCH item"
+    ],
+    "properties": {
+     "stores": "array",
+     "total": "integer",
+     "store_id": "string",
+     "name": "string",
+     "status": "string",
+     "address": "object",
+     "contact_emails": "array"
+    },
+    "evidence": [
+     "openapi/_original/uber-eats-openapi.yml#GET /eats/stores",
+     "openapi/_original/uber-eats-openapi.yml#GET /eats/stores/{store_id}",
+     "openapi/_original/uber-eats-openapi.yml#PATCH /eats/stores/{store_id}"
+    ]
+   },
+   "uber-eats": {
+    "segments": [
+     "stores"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "contact_emails": "array",
+     "partner_identifiers": "object",
+     "timezone": "string",
+     "location": "object",
+     "web_url": "string"
+    },
+    "evidence": [
+     "openapi/_original/uber-eats-openapi.yml#GET /eats/stores",
+     "openapi/_original/uber-eats-openapi.yml#GET /eats/stores/{store_id}"
+    ]
+   },
+   "urbanpiper": {
+    "segments": [
+     "stores",
+     "location",
+     "locations"
+    ],
+    "operations": [
+     "POST collection",
+     "POST item"
+    ],
+    "properties": {
+     "status": "string",
+     "message": "string",
+     "name": "string",
+     "city": "string",
+     "ref_id": "string",
+     "address": "string",
+     "active": "boolean",
+     "ordering_enabled": "boolean",
+     "included_platforms": "array",
+     "platform_data": "array",
+     "timings": "array",
+     "location_ref_id": "string",
+     "flush_categories": "boolean",
+     "flush_items": "boolean",
+     "flush_options": "boolean",
+     "flush_option_groups": "boolean",
+     "categories": "array",
+     "items": "array",
+     "option_groups": "array",
+     "options": "array",
+     "taxes": "array",
+     "charges": "array"
+    },
+    "evidence": [
+     "openapi/_original/urbanpiper-openapi.yml#POST /external/api/v1/inventory/locations/{location_ref_id}/",
+     "openapi/_original/urbanpiper-openapi.yml#POST /external/api/v1/stores/",
+     "openapi/_original/urbanpiper-openapi.yml#POST /hub/api/v1/location/"
+    ]
+   },
+   "workstream": {
+    "segments": [
+     "locations"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "uuid": "string",
+     "name": "string",
+     "custom_fields": "array"
+    },
+    "evidence": [
+     "openapi/_original/workstream-public-api-openapi-original.json#GET /locations",
+     "openapi/_original/workstream-public-api-openapi-original.json#GET /locations/{uuid}"
+    ]
+   },
+   "zayo": {
+    "segments": [
+     "locations"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "buildingId": "string",
+     "address": "string",
+     "zayoNetworkStatus": "string",
+     "locations": "array",
+     "messages": "array"
+    },
+    "evidence": [
+     "openapi/_original/zayo-openapi-original.yml#GET /services/location-management/v2/building/{buildingId}/locations"
+    ]
+   },
+   "zayo-group": {
+    "segments": [
+     "locations"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "buildingId": "string",
+     "address": "string",
+     "zayoNetworkStatus": "string",
+     "locations": "array",
+     "messages": "array"
+    },
+    "evidence": [
+     "openapi/_original/zayo-group-openapi.yml#GET /services/location-management/v2/building/{buildingId}/locations"
+    ]
+   }
+  },
+  "menu": {
+   "chowly": {
+    "segments": [
+     "menu"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/chowly-openapi.yml#GET /menu"
+    ]
+   },
+   "cloudkitchens": {
+    "segments": [
+     "menus"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "photos": "object",
+     "categories": "object",
+     "modifierGroups": "object",
+     "menus": "object",
+     "items": "object"
+    },
+    "evidence": [
+     "openapi/_original/cloudkitchens-public-api-openapi.yml#GET /v1/menus",
+     "openapi/_original/cloudkitchens-public-api-openapi.yml#POST /v1/menus"
+    ]
+   },
+   "cuboh": {
+    "segments": [
+     "menus"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "PATCH collection",
+     "POST collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/cuboh-openapi.yml#GET /api/v2/external-integration/merchant/{external_integration_merchant_uuid}/menus",
+     "openapi/_original/cuboh-openapi.yml#GET /api/v2/external-integration/merchant/{external_integration_merchant_uuid}/menus/{external_menu_id}",
+     "openapi/_original/cuboh-openapi.yml#PATCH /api/v2/external-integration/merchant/{external_integration_merchant_uuid}/menus",
+     "openapi/_original/cuboh-openapi.yml#POST /api/v2/external-integration/merchant/{external_integration_merchant_uuid}/menus"
+    ]
+   },
+   "doordash": {
+    "segments": [
+     "menus",
+     "menu"
+    ],
+    "operations": [
+     "GET collection",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "reference": "UUID",
+     "status": "string",
+     "store": "object",
+     "open_hours": "array",
+     "special_hours": "array",
+     "menu": "object",
+     "store_header": "object",
+     "primary_menu": "object",
+     "integration_id": "string",
+     "integration_type": "string",
+     "session_id": "string",
+     "menu_id": "string",
+     "fulfillment_type": "string",
+     "country_code": "string",
+     "name": "string",
+     "id": "string",
+     "categories": "array",
+     "menu_hours": "object"
+    },
+    "evidence": [
+     "openapi/_original/doordash-marketplace-legacy-openapi.yml#PATCH /api/v1/menus/{id}",
+     "openapi/_original/doordash-marketplace-legacy-openapi.yml#POST /api/v1/menus",
+     "openapi/_original/doordash-marketplace-openapi.yml#PATCH /api/v1/menus/{id}",
+     "openapi/_original/doordash-marketplace-openapi.yml#POST /api/v1/menus",
+     "openapi/_original/doordash-storefront-openapi.yml#GET /storefront/api/v1/stores/{store_id}/menus",
+     "openapi/_original/doordash-storefront-openapi.yml#POST /storefront/api/v1/stores/{store_id}/v2/menu"
+    ]
+   },
+   "flipdish": {
+    "segments": [
+     "menus",
+     "menu"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "POST item"
+    ],
+    "properties": {
+     "MenuId": "integer",
+     "ModifiedTime": "string",
+     "VersionNumber": "integer",
+     "MenuUrl": "string",
+     "Name": "string",
+     "Locked": "boolean",
+     "StoreNames": "array",
+     "IsIntegrated": "boolean",
+     "ImageUrl": "string",
+     "MenuSections": "array",
+     "TaxRates": "array",
+     "DisplaySectionLinks": "boolean",
+     "MenuSectionBehaviour": "string",
+     "TaxType": "string",
+     "ImageName": "string",
+     "AppId": "string",
+     "Data": "object",
+     "Page": "integer",
+     "Limit": "integer",
+     "TotalRecordCount": "integer"
+    },
+    "evidence": [
+     "openapi/_original/flipdish-menus-openapi.json#DELETE /api/v1.0/menus/{menuId}",
+     "openapi/_original/flipdish-menus-openapi.json#GET /api/v1.0/menus/{menuId}",
+     "openapi/_original/flipdish-menus-openapi.json#GET /api/v1.0/{appId}/menus",
+     "openapi/_original/flipdish-menus-openapi.json#POST /api/v1.0/menus/{menuId}",
+     "openapi/_original/flipdish-menus-openapi.json#POST /api/v1.0/{appId}/menus",
+     "openapi/_original/flipdish-platform-openapi.json#GET /api/v1.0/{appId}/events/menu/{menuId}",
+     "openapi/_original/flipdish-stores-openapi.json#POST /api/v1.0/stores/{storeId}/menu/{menuId}"
+    ]
+   },
+   "getir": {
+    "segments": [
+     "menu"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "object",
+     "restaurant": "string",
+     "products": "array",
+     "isApproved": "boolean",
+     "weight": "number",
+     "status": "number",
+     "chainProductCategory": "string"
+    },
+    "evidence": [
+     "openapi/_original/getir-food-openapi.json#GET /restaurants/menu",
+     "openapi/_original/getir-food-openapi.yml#GET /restaurants/menu"
+    ]
+   },
+   "just-eat": {
+    "segments": [
+     "menu"
+    ],
+    "operations": [
+     "GET collection",
+     "PUT collection"
+    ],
+    "properties": {
+     "currency": "string",
+     "description": "string",
+     "name": "string",
+     "restaurantId": "string",
+     "id": "string",
+     "labels": "array",
+     "requireOtherProducts": "boolean",
+     "type": "string",
+     "dealGroups": "array",
+     "imageUrl": "string",
+     "modifierGroups": "array",
+     "variations": "array"
+    },
+    "evidence": [
+     "openapi/_original/just-eat-uk-openapi-original.json#GET /restaurants/{tenant}/{restaurantId}/menu",
+     "openapi/_original/just-eat-uk-openapi-original.json#PUT /restaurants/{tenant}/{restaurantId}/menu"
+    ]
+   },
+   "lunchbox": {
+    "segments": [
+     "menus",
+     "menu"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "menu_id": "integer",
+     "name": "string",
+     "service_type_id": "integer"
+    },
+    "evidence": [
+     "openapi/_original/lunchbox-core-openapi.yml#GET /stores/{store_id}/menu",
+     "openapi/_original/lunchbox-core-openapi.yml#GET /stores/{store_id}/menus"
+    ]
+   },
+   "new-york-public-library-whats-on-the-menu": {
+    "segments": [
+     "menus"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/new-york-public-library-whats-on-the-menu-openapi-original.yaml#GET /dishes/{id}/menus",
+     "openapi/_original/new-york-public-library-whats-on-the-menu-openapi-original.yaml#GET /menus",
+     "openapi/_original/new-york-public-library-whats-on-the-menu-openapi-original.yaml#GET /menus/{id}"
+    ]
+   },
+   "oracle-hospitality": {
+    "segments": [
+     "menu"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "flexfields": "array",
+     "code": "string",
+     "name": "string",
+     "description": "string",
+     "shortDescription": "string",
+     "active": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/oracle-hospitality-property-v1-lov.json#GET /listOfValues/menuClassId/{menuClassId}/menu"
+    ]
+   },
+   "restaurant-brands": {
+    "segments": [
+     "menus"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "meta": "object",
+     "dayParts": "array",
+     "rootMenuEntryId": "string",
+     "entries": "array",
+     "systemWideOfferEntries": "array",
+     "rewardEntries": "array",
+     "configOfferEntries": "array",
+     "paperCouponEntries": "array"
+    },
+    "evidence": [
+     "openapi/_original/channel-openapi.yml#GET /stores/{storeId}/menus/{serviceMode}",
+     "openapi/_original/menu-v2-openapi.yml#GET /stores/menus",
+     "openapi/_original/menu-v2-openapi.yml#GET /stores/{storeId}/menus"
+    ]
+   },
+   "toast": {
+    "segments": [
+     "menus",
+     "menu"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "POST item"
+    ],
+    "properties": {
+     "startBusinessDate": "number",
+     "endBusinessDate": "number",
+     "restaurantIds": "array",
+     "excludedRestaurantIds": "array",
+     "groupBy": "array",
+     "businessDate": "string",
+     "restaurantGuid": "string",
+     "restaurantName": "string",
+     "restaurantLocationName": "string",
+     "restaurantLocationCode": "string",
+     "netSalesAmount": "number",
+     "grossSalesAmount": "number",
+     "discountAmount": "number",
+     "refundAmount": "number",
+     "voidAmount": "number",
+     "quantitySold": "number",
+     "averagePrice": "number",
+     "wasteCount": "number",
+     "wasteAmount": "number",
+     "menuGuid": "string",
+     "menuName": "string",
+     "menuGroupGuid": "string",
+     "menuGroupName": "string",
+     "menuItemGuid": "string",
+     "menuItemName": "string",
+     "modifierGuid": "string",
+     "modifierName": "string",
+     "guid": "string",
+     "entityType": "string",
+     "externalId": "string",
+     "name": "string",
+     "orderableOnline": "string",
+     "visibility": "string",
+     "groups": "array",
+     "images": "array",
+     "unitOfMeasure": "string",
+     "lastUpdated": "string",
+     "restaurantTimeZone": "string",
+     "menus": "array",
+     "modifierGroupReferences": "object",
+     "modifierOptionReferences": "object",
+     "preModifierGroupReferences": "object"
+    },
+    "evidence": [
+     "openapi/_original/toast-analytics-openapi.yaml#GET /menu/{reportRequestGuid}",
+     "openapi/_original/toast-analytics-openapi.yaml#POST /menu",
+     "openapi/_original/toast-analytics-openapi.yaml#POST /menu/{timeRange}",
+     "openapi/_original/toast-configuration-openapi.yaml#GET /menus",
+     "openapi/_original/toast-configuration-openapi.yaml#GET /menus/{guid}",
+     "openapi/_original/toast-menus-openapi.yaml#GET /menus",
+     "openapi/_original/toast-menus-v3-openapi.yaml#GET /menus"
+    ]
+   },
+   "uber": {
+    "segments": [
+     "menus"
+    ],
+    "operations": [
+     "GET collection",
+     "PUT collection"
+    ],
+    "properties": {
+     "category_id": "string",
+     "title": "object",
+     "entities": "array"
+    },
+    "evidence": [
+     "openapi/_original/uber-eats-openapi.yml#GET /eats/stores/{store_id}/menus",
+     "openapi/_original/uber-eats-openapi.yml#PUT /eats/stores/{store_id}/menus"
+    ]
+   },
+   "uber-eats": {
+    "segments": [
+     "menus"
+    ],
+    "operations": [
+     "GET collection",
+     "PUT collection"
+    ],
+    "properties": {
+     "menus": "array",
+     "categories": "array",
+     "items": "array",
+     "modifier_groups": "array"
+    },
+    "evidence": [
+     "openapi/_original/uber-eats-openapi.yml#GET /eats/stores/{store_id}/menus",
+     "openapi/_original/uber-eats-openapi.yml#PUT /eats/stores/{store_id}/menus"
+    ]
+   }
+  },
+  "menu_item": {
+   "2ndkitchen": {
+    "segments": [
+     "products"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "category_id": "integer",
+     "comments_enabled": "integer",
+     "contains_alcohol": "integer",
+     "description": "string",
+     "id": "integer",
+     "img": "string",
+     "item_img": "string",
+     "name": "string",
+     "price": "number",
+     "metas": "array",
+     "labels": "array",
+     "stock_status": "integer",
+     "menus_products": "object"
+    },
+    "evidence": [
+     "openapi/_original/2ndkitchen-restaurantservice.yaml#GET /menus/products",
+     "openapi/_original/2ndkitchen-restaurantservice.yaml#GET /menus/{menu_id}/products"
+    ]
+   },
+   "doordash": {
+    "segments": [
+     "items"
+    ],
+    "operations": [
+     "PATCH collection",
+     "POST collection"
+    ],
+    "properties": {
+     "merchant_supplied_item_id": "string",
+     "item_availability": "string",
+     "balance_on_hand": "integer",
+     "funding_source": "string",
+     "last_sold_datetime": "string",
+     "price_info": "object",
+     "location": "object",
+     "item_special_hours": "array",
+     "program_eligibility": "array",
+     "extras": "array"
+    },
+    "evidence": [
+     "openapi/_original/doordash-item-management-openapi.yml#PATCH /api/v2/stores/{store_location_id}/items",
+     "openapi/_original/doordash-item-management-openapi.yml#POST /api/v2/stores/{store_location_id}/items"
+    ]
+   },
+   "flipdish": {
+    "segments": [
+     "items",
+     "menuitems"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "POST item"
+    ],
+    "properties": {
+     "CatalogItemId": "string",
+     "IsArchived": "boolean",
+     "Groups": "array",
+     "Metafields": "array",
+     "ItemType": "string",
+     "Sku": "string",
+     "Name": "string",
+     "Description": "string",
+     "Price": "number",
+     "ImageFileName": "string",
+     "Alcohol": "boolean",
+     "Page": "integer",
+     "Limit": "integer",
+     "TotalRecordCount": "integer",
+     "Data": "array"
+    },
+    "evidence": [
+     "openapi/_original/flipdish-catalog-openapi.json#GET /api/v1.0/{appId}/catalog/items",
+     "openapi/_original/flipdish-catalog-openapi.json#GET /api/v1.0/{appId}/catalog/items/{catalogItemId}",
+     "openapi/_original/flipdish-catalog-openapi.json#POST /api/v1.0/{appId}/catalog/items",
+     "openapi/_original/flipdish-catalog-openapi.json#POST /api/v1.0/{appId}/catalog/items/{catalogItemId}",
+     "openapi/_original/flipdish-marketing-openapi.json#GET /api/v1.0/{appId}/crossSell/menuItems",
+     "openapi/_original/flipdish-platform-openapi.json#POST /api/v1.0/clients/{appId}/onboarding/stores/items/{onboardingItemId}",
+     "openapi/_original/flipdish-platform-openapi.json#POST /api/v1.0/clients/{appId}/onboarding/stores/{storeId}/items/{onboardingItemId}"
+    ]
+   },
+   "just-eat": {
+    "segments": [
+     "items"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "paging": "object",
+     "itemIds": "array",
+     "description": "string",
+     "id": "string",
+     "labels": "array",
+     "name": "string",
+     "requireOtherProducts": "boolean",
+     "type": "string"
+    },
+    "evidence": [
+     "openapi/_original/just-eat-uk-openapi-original.json#GET /restaurants/{tenant}/{restaurantId}/catalogue/categories/{categoryId}/items",
+     "openapi/_original/just-eat-uk-openapi-original.json#GET /restaurants/{tenant}/{restaurantId}/catalogue/items"
+    ]
+   },
+   "lunchbox": {
+    "segments": [
+     "items"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "item_id": "integer",
+     "category_id": "integer",
+     "menu_id": "integer",
+     "name": "string",
+     "description": "string",
+     "price_cents": "integer",
+     "is_available": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/lunchbox-core-openapi.yml#GET /stores/{store_id}/menus/{menu_id}/categories/{category_id}/items",
+     "openapi/_original/lunchbox-core-openapi.yml#GET /stores/{store_id}/menus/{menu_id}/categories/{category_id}/items/{item_id}"
+    ]
+   },
+   "new-york-public-library-whats-on-the-menu": {
+    "segments": [
+     "dishes"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/new-york-public-library-whats-on-the-menu-openapi-original.yaml#GET /dishes",
+     "openapi/_original/new-york-public-library-whats-on-the-menu-openapi-original.yaml#GET /dishes/{id}",
+     "openapi/_original/new-york-public-library-whats-on-the-menu-openapi-original.yaml#GET /menus/{id}/dishes"
+    ]
+   },
+   "opply": {
+    "segments": [
+     "items"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "uuid": "string",
+     "item_name": "string",
+     "sku": "string",
+     "item_description": "string",
+     "logo_url": "string",
+     "category_uuid": "string",
+     "kind": null,
+     "unit_of_measurement": null,
+     "allergen_requirements": null,
+     "require_allergen_declaration": "boolean",
+     "diet_requirements": null,
+     "require_dietary_certificate": "boolean",
+     "is_active": "boolean",
+     "document_count": "integer",
+     "created_at": "string",
+     "documents": "array",
+     "modified_at": "string"
+    },
+    "evidence": [
+     "openapi/_original/opply-openapi-original.yml#DELETE /api/v1/catalog/items/{uuid}/",
+     "openapi/_original/opply-openapi-original.yml#GET /api/v1/catalog/items/",
+     "openapi/_original/opply-openapi-original.yml#GET /api/v1/catalog/items/{uuid}/",
+     "openapi/_original/opply-openapi-original.yml#PATCH /api/v1/catalog/items/{uuid}/",
+     "openapi/_original/opply-openapi-original.yml#POST /api/v1/catalog/items/",
+     "openapi/_original/opply-openapi-original.yml#PUT /api/v1/catalog/items/{uuid}/"
+    ]
+   },
+   "oracle-hospitality": {
+    "segments": [
+     "menuitems"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "warnings": "array",
+     "links": "array",
+     "menuItemIds": "array",
+     "flexfields": "array",
+     "code": "string",
+     "name": "string",
+     "description": "string",
+     "shortDescription": "string",
+     "active": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/oracle-hospitality-property-v1-evm.json#POST /hotels/{hotelId}/events/{eventId}/menus/{menuId}/menuItems",
+     "openapi/_original/oracle-hospitality-property-v1-lov.json#GET /listOfValues/hotels/{hotelId}/menuItems"
+    ]
+   },
+   "rekki": {
+    "segments": [
+     "items"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "allergens": "array",
+     "availability": "string",
+     "currency": "string",
+     "description": "string",
+     "id": "integer",
+     "name": "string",
+     "order_cutoff_times": "object",
+     "product_code": "string",
+     "replacement_products": "array",
+     "seasonality": "array",
+     "units_prices": "array",
+     "success": "boolean",
+     "hide_from_rekki": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/rekki-supplier-api-openapi-original.json#DELETE /integration/v1/catalog/items/{id}",
+     "openapi/_original/rekki-supplier-api-openapi-original.json#GET /integration/v1/catalog/items",
+     "openapi/_original/rekki-supplier-api-openapi-original.json#GET /integration/v1/catalog/items/{id}",
+     "openapi/_original/rekki-supplier-api-openapi-original.json#GET /integration/v3/catalog/items",
+     "openapi/_original/rekki-supplier-api-openapi-original.json#GET /integration/v3/catalog/items/{id}",
+     "openapi/_original/rekki-supplier-api-openapi-original.json#POST /integration/v1/catalog/items",
+     "openapi/_original/rekki-supplier-api-openapi-original.json#POST /integration/v3/catalog/items"
+    ]
+   },
+   "spoonacular": {
+    "segments": [
+     "menuitems",
+     "dishes"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "id": "integer",
+     "title": "string",
+     "restaurantChain": "string",
+     "nutrition": "object",
+     "badges": "array",
+     "breadcrumbs": "array",
+     "generatedText": "string",
+     "imageType": "string",
+     "likes": "integer",
+     "servings": "object",
+     "price": "number",
+     "spoonacularScore": "number",
+     "pairings": "array",
+     "text": "string"
+    },
+    "evidence": [
+     "openapi/_original/spoonacular-openapi.yml#GET /food/menuItems/{id}",
+     "openapi/_original/spoonacular-openapi.yml#GET /food/wine/dishes"
+    ]
+   },
+   "starbucks": {
+    "segments": [
+     "items"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "description": "string",
+     "price": "number",
+     "imageUrl": "string",
+     "categoryId": "string",
+     "available": "boolean",
+     "sizes": "array",
+     "customizations": "array",
+     "calories": "integer",
+     "allergens": "array"
+    },
+    "evidence": [
+     "openapi/_original/starbucks-starbucks-api-openapi.yml#GET /v1/menu/categories/{categoryId}/items",
+     "openapi/_original/starbucks-starbucks-api-openapi.yml#GET /v1/menu/items/{itemId}"
+    ]
+   },
+   "toast": {
+    "segments": [
+     "menuitems"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "guid": "string",
+     "entityType": "string",
+     "externalId": "string",
+     "name": "string",
+     "calories": "integer",
+     "sku": "string",
+     "plu": "string",
+     "orderableOnline": "string",
+     "visibility": "string",
+     "type": "string",
+     "optionGroups": "array",
+     "inheritOptionGroups": "boolean",
+     "images": "array",
+     "unitOfMeasure": "string",
+     "inheritUnitOfMeasure": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/toast-configuration-openapi.yaml#GET /menuItems",
+     "openapi/_original/toast-configuration-openapi.yaml#GET /menuItems/{guid}"
+    ]
+   },
+   "uber-eats": {
+    "segments": [
+     "items"
+    ],
+    "operations": [
+     "POST item"
+    ],
+    "properties": {
+     "id": "string",
+     "title": "object",
+     "description": "object",
+     "price_info": "object",
+     "suspension_info": "object"
+    },
+    "evidence": [
+     "openapi/_original/uber-eats-openapi.yml#POST /eats/stores/{store_id}/menus/items/{item_id}"
+    ]
+   }
+  },
+  "food_order": {
+   "2ndkitchen": {
+    "segments": [
+     "order"
+    ],
+    "operations": [
+     "GET item"
+    ],
+    "properties": {
+     "admin_user_id": "integer",
+     "business_id": "integer",
+     "business_slug": "string",
+     "cancelled": "integer",
+     "coupon_used": "integer",
+     "currency_code": "string",
+     "created_time": "string",
+     "delivery_fee": "number",
+     "delivery_mode": "integer",
+     "email": "string",
+     "guest_checkout": "integer",
+     "issuer_id": "integer",
+     "menu_type": "integer",
+     "needs_supervisor": "integer",
+     "order_id": "string",
+     "order_method": "integer",
+     "paid_amount": "number",
+     "payment_method": "integer",
+     "price": "number",
+     "rel_order_id": "string",
+     "scheduled_date": "string",
+     "score": "integer",
+     "suppress_msgs": "integer",
+     "survey_sent": "integer",
+     "table": "number",
+     "tip": "number",
+     "user_addr": "string",
+     "user_addr_line_2": "string",
+     "user_city": "string",
+     "user_country": "string",
+     "user_id": "integer",
+     "user_name": "string",
+     "user_phone": "string",
+     "user_zip": "string",
+     "sub_orders": "array"
+    },
+    "evidence": [
+     "openapi/_original/2ndkitchen-orderservice.yaml#GET /order/{external_id}"
+    ]
+   },
+   "ankorstore": {
+    "segments": [
+     "orders",
+     "order"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "type": "string",
+     "id": "string",
+     "attributes": "object",
+     "relationships": "object",
+     "links": "object"
+    },
+    "evidence": [
+     "openapi/_original/ankorstore-main-openapi-original.yml#GET /api/v1/fulfillment/orders",
+     "openapi/_original/ankorstore-main-openapi-original.yml#GET /api/v1/fulfillment/orders/{id}",
+     "openapi/_original/ankorstore-main-openapi-original.yml#GET /api/v1/orders",
+     "openapi/_original/ankorstore-main-openapi-original.yml#GET /api/v1/orders/{order}",
+     "openapi/_original/ankorstore-main-openapi-original.yml#POST /api/v1/fulfillment/costs/order"
+    ]
+   },
+   "barogo": {
+    "segments": [
+     "orders"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "isSuccess": "boolean",
+     "order": "object",
+     "orderType": "string",
+     "requestDeliveryPrice": "integer",
+     "orderAgencyId": "string",
+     "orderAgencyOrderId": "string",
+     "orderAgencyDailyOrderId": "string",
+     "totalPayPrice": "integer",
+     "actualPayPrice": "integer",
+     "prepaidPrice": "integer",
+     "orderProducts": "array",
+     "receiverPhone": "string",
+     "receiverName": "string",
+     "ordererOrderMemo": "string",
+     "orderChannel": "string",
+     "pickupWishAt": "integer",
+     "hasAlcoholicBeverage": "boolean",
+     "isUntact": "boolean",
+     "pickupId": "string",
+     "pickupName": "string",
+     "pickupPhone": "string",
+     "pickupRoadAddress": "string",
+     "pickupJibunAddress": "string",
+     "pickupAddressDetail": "string",
+     "pickupLocation": "object",
+     "pickupGuide": "string",
+     "pickupEntrancePassword": "string",
+     "dropRoadAddress": "string",
+     "dropJibunAddress": "string",
+     "dropAddressDetail": "string",
+     "dropLocation": "object",
+     "dropEntrancePassword": "string",
+     "dropGuide": "string",
+     "referencedOrderAgencyOrderId": "string",
+     "orderId": "integer",
+     "orderAgencyStoreId": "string",
+     "storeId": "integer",
+     "status": "string",
+     "paymentCashPrice": "integer",
+     "paymentCardPrice": "integer",
+     "taxFreePayPrice": "integer",
+     "storeOrderMemo": "string",
+     "dropWishAt": "integer",
+     "isReservation": "boolean",
+     "createdAt": "integer",
+     "cancelType": "string",
+     "cancelReason": "string",
+     "statuses": "array",
+     "deliveries": "array",
+     "reservedOrderDisplayTime": "integer",
+     "bundleDeliveryCount": "integer",
+     "deliveryExecutionType": "string"
+    },
+    "evidence": [
+     "openapi/_original/barogo-gorela-openapi.yml#GET /api/orders",
+     "openapi/_original/barogo-gorela-openapi.yml#GET /api/orders/{orderAgencyOrderId}",
+     "openapi/_original/barogo-gorela-openapi.yml#POST /api/flexible/orders",
+     "openapi/_original/barogo-gorela-openapi.yml#POST /api/orders"
+    ]
+   },
+   "chowly": {
+    "segments": [
+     "orders"
+    ],
+    "operations": [
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/chowly-openapi.yml#GET /orders/{orderId}",
+     "openapi/_original/chowly-openapi.yml#POST /orders"
+    ]
+   },
+   "cloudkitchens": {
+    "segments": [
+     "orders"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "externalIdentifiers": "object",
+     "storeId": "string",
+     "currencyCode": "string",
+     "status": "string",
+     "items": "array",
+     "orderedAt": "string",
+     "customer": null,
+     "customerNote": "string",
+     "deliveryInfo": "object",
+     "orderTotal": null,
+     "orderTotalV2": null,
+     "customerPayments": "array",
+     "fulfillmentInfo": "object",
+     "promotionsDetails": "array",
+     "preparationTime": "object",
+     "orders": "array",
+     "offsetToken": "string"
+    },
+    "evidence": [
+     "openapi/_original/cloudkitchens-public-api-openapi.yml#GET /manager/order/v1/orders",
+     "openapi/_original/cloudkitchens-public-api-openapi.yml#POST /v1/orders",
+     "openapi/_original/cloudkitchens-public-api-openapi.yml#PUT /v1/orders/{orderId}"
+    ]
+   },
+   "cuboh": {
+    "segments": [
+     "order",
+     "orders"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/cuboh-openapi.yml#GET /api/v2/external-integration/merchant/{external_integration_merchant_uuid}/orders",
+     "openapi/_original/cuboh-openapi.yml#GET /api/v2/external-integration/order",
+     "openapi/_original/cuboh-openapi.yml#GET /api/v2/external-integration/order/{order_id}",
+     "openapi/_original/cuboh-openapi.yml#POST /api/v2/external-integration/order"
+    ]
+   },
+   "delivery-hero": {
+    "segments": [
+     "orders"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "order_id": "string",
+     "client_order_id": "string",
+     "sender": "object",
+     "recipient": "object",
+     "distance": "number",
+     "payment_method": "string",
+     "coldbag_needed": "boolean",
+     "amount": "number",
+     "description": "string",
+     "status": "string",
+     "delivery_fee": "number",
+     "timeline": "object",
+     "driver": "object",
+     "created_at": "integer",
+     "updated_at": "integer",
+     "delivery_tasks": "object",
+     "pickup_tasks": "object",
+     "packaging": "object",
+     "collect_from_customer": "number",
+     "preordered_for": "number",
+     "currency_code": "string",
+     "products": "array",
+     "external_details": "object",
+     "integrator": "string",
+     "is_dynamic_pickup": "boolean",
+     "tracking_link": "string",
+     "vat_number": "string",
+     "proof_of_delivery_url": "string",
+     "proof_of_pickup_url": "string",
+     "proof_of_return_url": "string",
+     "cancellation": "object",
+     "status_history": "array",
+     "location": "object",
+     "reason": "string"
+    },
+    "evidence": [
+     "openapi/_original/delivery-hero-on-demand-rider-openapi.json#DELETE /orders/{order_id}",
+     "openapi/_original/delivery-hero-on-demand-rider-openapi.json#GET /orders/{order_id}",
+     "openapi/_original/delivery-hero-on-demand-rider-openapi.json#POST /orders",
+     "openapi/_original/delivery-hero-on-demand-rider-openapi.json#PUT /orders/{order_id}"
+    ]
+   },
+   "digi-key": {
+    "segments": [
+     "orders"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "Message": "string",
+     "SalesOrderId": "integer",
+     "PurchaseOrderNumber": "string",
+     "SalesOrderIds_DKPlus": "array",
+     "Currency": "string",
+     "ShipControl": "string",
+     "MfgCOfCRequired": "boolean",
+     "BuyerContact": "object",
+     "ShippingContact": "object",
+     "BillingAccount": "integer",
+     "ShipMethod": "string",
+     "ShipperAccountNumber": "string",
+     "LineItems": "array",
+     "OrderNotes": "array",
+     "PackagingPreference": "string",
+     "Taxable": "boolean",
+     "ExportQuestions": "object",
+     "TotalOrders": "integer",
+     "Orders": "array"
+    },
+    "evidence": [
+     "openapi/_original/digi-key-ordering-api-v3-ordering-v3-openapi.yml#POST /Orders",
+     "openapi/_original/digi-key-ordering-api-v3-ordering-v3.json#POST /Orders",
+     "openapi/_original/digi-key-orderstatus-orderstatus-v4-openapi.yml#GET /orders",
+     "openapi/_original/digi-key-orderstatus-orderstatus-v4.json#GET /orders"
+    ]
+   },
+   "doordash": {
+    "segments": [
+     "orders"
+    ],
+    "operations": [
+     "PATCH item"
+    ],
+    "properties": {
+     "merchant_supplied_id": "string",
+     "order_status": "string",
+     "failure_reason": "string",
+     "prep_time": "string",
+     "pickup_instructions": "string",
+     "errors": "array"
+    },
+    "evidence": [
+     "openapi/_original/doordash-marketplace-legacy-openapi.yml#PATCH /api/v1/orders/{id}",
+     "openapi/_original/doordash-marketplace-openapi.yml#PATCH /api/v1/orders/{id}"
+    ]
+   },
+   "flipdish": {
+    "segments": [
+     "orders",
+     "order"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST item"
+    ],
+    "properties": {
+     "Store": "object",
+     "Customer": "object",
+     "Voucher": "object",
+     "Fees": "object",
+     "OrderItems": "array",
+     "DeliveryLocation": "object",
+     "CustomerLocation": "object",
+     "MaskedPhoneNumber": "object",
+     "DropOffLocationId": "integer",
+     "DropOffLocation": "string",
+     "AcceptedFor": "string",
+     "InFraudZone": "boolean",
+     "UnusualHighValueOrder": "boolean",
+     "RejectedByUserId": "integer",
+     "ChannelOrderId": "string",
+     "ChannelOrderDisplayId": "string",
+     "Channel": "object",
+     "OrderDropOffLocation": "object",
+     "FulfillmentStatus": "object",
+     "OrderBatchInfo": "object",
+     "TaxItems": "array",
+     "CreatedCampaignVoucherId": "integer",
+     "OrderId": "integer",
+     "LocalOrderId": "string",
+     "DeliveryType": "string",
+     "PickupLocationType": "string",
+     "TableServiceCatagory": "string",
+     "TipAmount": "number",
+     "DeliveryAmount": "number",
+     "OrderItemsAmount": "number",
+     "ServiceChargeAmount": "number",
+     "ServiceChargePercentage": "number",
+     "Amount": "number",
+     "ProcessingFee": "number",
+     "PaymentAccountType": "string",
+     "PaymentAccountDescription": "string",
+     "OrderState": "string",
+     "IsPreOrder": "boolean",
+     "PlacedTime": "string",
+     "RequestedForTime": "string",
+     "ChefNote": "string",
+     "AppType": "string",
+     "UserRating": "integer",
+     "PaymentStatus": "string",
+     "RejectionReason": "string",
+     "RefundedAmount": "number",
+     "DeliveryTrackingStatus": "string",
+     "DriverId": "integer",
+     "TotalTax": "number",
+     "OrderTrackingCode": "string",
+     "DeliveryFeeAreaId": "integer",
+     "ReceiptCode": "string",
+     "TotalDepositReturnFeeAmount": "number",
+     "TsOrderPlacedUtc": "string",
+     "TsUpdateUtc": "string",
+     "RestaurantName": "string",
+     "FoodAmount": "number",
+     "TotalRestaurantAmount": "number",
+     "IsoCurrency": "string",
+     "Page": "integer",
+     "Limit": "integer",
+     "TotalRecordCount": "integer",
+     "Data": "array",
+     "PeriodStart": "string",
+     "PeriodLengthInDays": "integer",
+     "CurrencyData": "array"
+    },
+    "evidence": [
+     "openapi/_original/flipdish-customers-openapi.json#GET /api/v1.0/users/{userId}/orders",
+     "openapi/_original/flipdish-customers-openapi.json#GET /api/v1.0/users/{userId}/orders/{orderId}",
+     "openapi/_original/flipdish-orders-openapi.json#GET /api/v1.0/orders",
+     "openapi/_original/flipdish-orders-openapi.json#GET /api/v1.0/orders/{id}",
+     "openapi/_original/flipdish-payments-openapi.json#GET /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/orders",
+     "openapi/_original/flipdish-payments-openapi.json#GET /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/export/orders",
+     "openapi/_original/flipdish-platform-openapi.json#GET /api/v1.0/{appId}/apm/statistics/orders/{aggregateDataBy}",
+     "openapi/_original/flipdish-platform-openapi.json#GET /api/v1.0/{appId}/events/order",
+     "openapi/_original/flipdish-platform-openapi.json#GET /api/v1.0/{appId}/events/order/{orderId}",
+     "openapi/_original/flipdish-platform-openapi.json#POST /api/v1.0/auditlogs/orders/{orderId}"
+    ]
+   },
+   "grubhub": {
+    "segments": [
+     "orders"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "uuid": "string",
+     "order_merchant_uuid": "string",
+     "merchant_uuid": "string",
+     "order_number": "string",
+     "parent_order_number": "string",
+     "is_test": "boolean",
+     "status": "string",
+     "statusHistory": "array",
+     "updated_at": "object",
+     "merchant_id": "string",
+     "fulfillment_info": "object",
+     "brand": "string",
+     "time_placed": "object",
+     "confirmation_code": "string",
+     "when_for": "string",
+     "restaurant_timezone_id": "object",
+     "payments": "object",
+     "charges": "object",
+     "tax_withheld": "boolean",
+     "catering": "object",
+     "order_filtering_applied": "boolean",
+     "diner_uuid": "array",
+     "jit_enabled": "boolean",
+     "just_in_time_fired": "boolean",
+     "diners": "array",
+     "order_type": "string",
+     "order_taking_system": "string",
+     "handoff_options": "array",
+     "merchant_data": "object",
+     "restaurant_version_id": "object",
+     "affiliate": "object",
+     "fulfillment_scheduling": "string",
+     "cart_version_id": "string",
+     "transmission_id": "string",
+     "metadata": "object",
+     "external_ordering_configs": "object",
+     "gh_plus": "boolean",
+     "gh_plus_diner": "boolean",
+     "external_order_id": "string",
+     "chain_id": "string",
+     "order_merchant_id": "string"
+    },
+    "evidence": [
+     "openapi/_original/grubhub-orders-openapi.yml#GET /pos/v1/group/{group_key}/orders",
+     "openapi/_original/grubhub-orders-openapi.yml#GET /pos/v1/merchant/{merchant_long_id}/orders",
+     "openapi/_original/grubhub-orders-openapi.yml#GET /pos/v1/merchant/{merchant_long_id}/orders/{order_uuid}"
+    ]
+   },
+   "hang": {
+    "segments": [
+     "orders"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/hang-openapi.json#POST /v2/external/orders"
+    ]
+   },
+   "incentivio": {
+    "segments": [
+     "orders"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "PUT collection"
+    ],
+    "properties": {
+     "op": "string",
+     "path": "string",
+     "value": "string",
+     "clientId": "string",
+     "userId": "string",
+     "orderId": "string",
+     "locationId": "string",
+     "orderName": "string",
+     "orderType": "string",
+     "customer": "object",
+     "guestCount": "integer",
+     "tableNumber": "string",
+     "delivery": "object",
+     "requestedFulfillTime": "string",
+     "revenueCenter": "string",
+     "orderNote": "string",
+     "orderSource": "string",
+     "additionalAttributes": "object",
+     "restrictedOrder": "boolean",
+     "presetOrderId": "string",
+     "languageCode": "string"
+    },
+    "evidence": [
+     "openapi/_original/incentivio-admin-api-openapi.json#GET /incentivio-reports/loyaltyreport/brand/orders",
+     "openapi/_original/incentivio-admin-api-openapi.json#PATCH /incentivio-ordering-service/orders/{orderId}",
+     "openapi/_original/incentivio-admin-api-openapi.yml#GET /incentivio-reports/loyaltyreport/brand/orders",
+     "openapi/_original/incentivio-admin-api-openapi.yml#PATCH /incentivio-ordering-service/orders/{orderId}",
+     "openapi/_original/incentivio-mobile-api-openapi.json#GET /orders",
+     "openapi/_original/incentivio-mobile-api-openapi.json#GET /orders/{orderid}",
+     "openapi/_original/incentivio-mobile-api-openapi.json#PUT /orders",
+     "openapi/_original/incentivio-mobile-api-openapi.yml#GET /orders",
+     "openapi/_original/incentivio-mobile-api-openapi.yml#GET /orders/{orderid}",
+     "openapi/_original/incentivio-mobile-api-openapi.yml#PUT /orders"
+    ]
+   },
+   "just-eat": {
+    "segments": [
+     "orders"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "OrderId": "string",
+     "Customer": "object",
+     "CustomerNotes": "object",
+     "FriendlyOrderReference": "string",
+     "Fulfilment": "object",
+     "IsTest": "boolean",
+     "Items": "array",
+     "OrderReference": "string",
+     "Payment": "object",
+     "Restaurant": null,
+     "TotalPrice": "number"
+    },
+    "evidence": [
+     "openapi/_original/just-eat-uk-openapi-original.json#POST /orders"
+    ]
+   },
+   "lafourchette": {
+    "segments": [
+     "orders"
+    ],
+    "operations": [
+     "PUT item"
+    ],
+    "properties": {
+     "locale": "string",
+     "currency": "string",
+     "totalAmount": "number",
+     "lines": "array"
+    },
+    "evidence": [
+     "openapi/_original/lafourchette-pos-api-openapi.yml#PUT /v1/orders/{orderUuid}"
+    ]
+   },
+   "lunchbox": {
+    "segments": [
+     "orders"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "POST item",
+     "PUT item"
+    ],
+    "properties": {
+     "ordersid": "integer",
+     "restaurant_id": "integer",
+     "is_cancelable": "boolean",
+     "is_editable": "boolean",
+     "ordering_status": "string",
+     "comments_to_restaurant": "string",
+     "internal_notes": "string",
+     "tip_percentages": "array",
+     "customer": "object",
+     "charges": "object",
+     "total_cents": "integer",
+     "statusid": "integer",
+     "service_name": "string",
+     "grouporderid": "integer",
+     "isdelivery": "boolean",
+     "tz_name": "string",
+     "dpstamp": "string",
+     "pos_store_id": "string",
+     "pos_order_id": "string",
+     "status": "object",
+     "order_id": "string",
+     "ready_ts": "string",
+     "service_type_id": "integer",
+     "service_type": "string",
+     "location": "object"
+    },
+    "evidence": [
+     "openapi/_original/lunchbox-core-openapi.yml#DELETE /orders/{order_id}",
+     "openapi/_original/lunchbox-core-openapi.yml#GET /customers/{customer_id}/orders",
+     "openapi/_original/lunchbox-core-openapi.yml#GET /orders/{order_id}",
+     "openapi/_original/lunchbox-core-openapi.yml#POST /stores/{store_id}/orders",
+     "openapi/_original/lunchbox-core-openapi.yml#PUT /orders/{order_id}",
+     "openapi/_original/lunchbox-management-openapi.yml#GET /management/orders",
+     "openapi/_original/lunchbox-pos-openapi.yml#POST /pos/orders/{pos_store_id}"
+    ]
+   },
+   "marginedge": {
+    "segments": [
+     "orders"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "nextPage": "string",
+     "orders": "array",
+     "deliveryCharges": "number",
+     "attachments": "array",
+     "orderId": "string",
+     "otherCharges": "number",
+     "vendorId": "string",
+     "tax": "number",
+     "vendorName": "string",
+     "customerNumber": "string",
+     "invoiceDate": "string",
+     "orderTotal": "number",
+     "lineItems": "array",
+     "isCredit": "boolean",
+     "createdDate": "string",
+     "inputTaxCredits": "number",
+     "invoiceNumber": "string",
+     "creditAmount": "number",
+     "paymentAccount": "string",
+     "otherDescription": "string",
+     "status": "string"
+    },
+    "evidence": [
+     "openapi/_original/marginedge-openapi.yml#GET /orders",
+     "openapi/_original/marginedge-openapi.yml#GET /orders/{orderId}"
+    ]
+   },
+   "mealme": {
+    "segments": [
+     "orders"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "order_id": "string",
+     "cart_id": "string",
+     "status": "string",
+     "total": "integer"
+    },
+    "evidence": [
+     "openapi/_original/mealme-openapi.yml#GET /account/orders"
+    ]
+   },
+   "opply": {
+    "segments": [
+     "orders"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "PUT item"
+    ],
+    "properties": {
+     "uuid": "string",
+     "order_number": "string",
+     "created_at": "string",
+     "lifecycle_state": "string",
+     "delivery_state": "string",
+     "created": "string",
+     "buyer_name": "string",
+     "supplier_name": "string",
+     "shipment_status": "string",
+     "category": "string",
+     "state": "string",
+     "payment_status": null,
+     "kriya_status": null,
+     "kriya_payment_due_date": "string",
+     "payment_due_date": "string",
+     "payment_method": null,
+     "confirmation_date": "string",
+     "quotes": "array",
+     "created_by": "string",
+     "payment_currency": "string",
+     "tracking_code": "string",
+     "prices": null,
+     "paid_date": "string",
+     "is_order_paid_out": "boolean",
+     "payout_date": "string",
+     "send_email": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/opply-openapi-original.yml#GET /api/v1/agreements/merchant-of-record/{uuid}/orders/",
+     "openapi/_original/opply-openapi-original.yml#GET /api/v1/users/admin_panel/orders/",
+     "openapi/_original/opply-openapi-original.yml#GET /api/v1/users/admin_panel/orders/{uuid}/",
+     "openapi/_original/opply-openapi-original.yml#PATCH /api/v1/users/admin_panel/orders/{uuid}/",
+     "openapi/_original/opply-openapi-original.yml#PUT /api/v1/users/admin_panel/orders/{uuid}/"
+    ]
+   },
+   "partstech": {
+    "segments": [
+     "orders",
+     "order"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "integer",
+     "supplier": "object",
+     "store": null,
+     "shippingAddress": "object",
+     "delivery": "object",
+     "tax": "number",
+     "totalPrice": "number",
+     "totalDiscount": "number",
+     "coreCharge": "number",
+     "fet": "number",
+     "shippingPrice": "number",
+     "paymentType": "string",
+     "poNumber": "string",
+     "invoiceNumbers": "array",
+     "notes": "string",
+     "orderUrl": "string",
+     "paymentDate": "string",
+     "status": "string",
+     "rewards": "array",
+     "parts": "array",
+     "sessionId": "string",
+     "user": "object",
+     "shop": "object",
+     "buyerShop": "object",
+     "orders": "array",
+     "urls": "object"
+    },
+    "evidence": [
+     "openapi/_original/partstech-api-openapi.yml#GET /orders",
+     "openapi/_original/partstech-api-openapi.yml#GET /orders/{orderId}",
+     "openapi/_original/partstech-api-openapi.yml#GET /partner/orders",
+     "openapi/_original/partstech-api-openapi.yml#GET /partner/orders/{orderId}",
+     "openapi/_original/partstech-api-openapi.yml#POST /punchout/cart/custom/order",
+     "openapi/_original/partstech-api-openapi.yml#POST /punchout/orders",
+     "openapi/_original/partstech-openapi.yaml#GET /orders",
+     "openapi/_original/partstech-openapi.yaml#GET /orders/{orderId}",
+     "openapi/_original/partstech-openapi.yaml#GET /partner/orders",
+     "openapi/_original/partstech-openapi.yaml#GET /partner/orders/{orderId}",
+     "openapi/_original/partstech-openapi.yaml#POST /punchout/cart/custom/order",
+     "openapi/_original/partstech-openapi.yaml#POST /punchout/orders"
+    ]
+   },
+   "speccheck": {
+    "segments": [
+     "orders"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "tray_number": "string",
+     "invoice_number": "string",
+     "lab_status": "string",
+     "created": "integer",
+     "updated": "integer",
+     "mode": "string",
+     "submission_type": "string",
+     "order_type": "string",
+     "lab": "string",
+     "account_number": "string",
+     "patient": "object",
+     "mounting_option": "string",
+     "lens": "object",
+     "frame": "object",
+     "rx": "object",
+     "services": "array",
+     "special_instructions": "string",
+     "redo_data": "object",
+     "multi_pair_data": "object"
+    },
+    "evidence": [
+     "openapi/_original/speccheck-openapi.yml#GET /v1/orders",
+     "openapi/_original/speccheck-openapi.yml#POST /v1/orders"
+    ]
+   },
+   "square": {
+    "segments": [
+     "orders"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "errors": "array",
+     "id": "string",
+     "buyer_email": "string",
+     "recipient_name": "string",
+     "recipient_phone_number": "string",
+     "state": "string",
+     "shipping_address": "object",
+     "subtotal_money": "object",
+     "total_shipping_money": "object",
+     "total_tax_money": "object",
+     "total_price_money": "object",
+     "total_discount_money": "object",
+     "created_at": "string",
+     "updated_at": "string",
+     "expires_at": "string",
+     "payment_id": "string",
+     "buyer_note": "string",
+     "completed_note": "string",
+     "refunded_note": "string",
+     "canceled_note": "string",
+     "tender": "object",
+     "order_history": "array",
+     "promo_code": "string",
+     "btc_receive_address": "string",
+     "btc_price_satoshi": "number",
+     "action": "string",
+     "shipped_tracking_number": "string",
+     "location_id": "string",
+     "reference_id": "string",
+     "source": "object",
+     "customer_id": "string",
+     "line_items": "array",
+     "taxes": "array",
+     "discounts": "array",
+     "service_charges": "array",
+     "fulfillments": "array",
+     "returns": "array",
+     "return_amounts": "object",
+     "net_amounts": "object",
+     "rounding_adjustment": "object",
+     "tenders": "array",
+     "refunds": "array",
+     "metadata": "object",
+     "closed_at": "string",
+     "version": "integer",
+     "total_money": "object",
+     "total_tip_money": "object",
+     "total_service_charge_money": "object",
+     "ticket_name": "string",
+     "pricing_options": "object",
+     "rewards": "array",
+     "net_amount_due_money": "object",
+     "order": "object",
+     "idempotency_key": "string",
+     "fields_to_clear": "array"
+    },
+    "evidence": [
+     "openapi/_original/square-openapi.yml#GET /v1/{location_id}/orders",
+     "openapi/_original/square-openapi.yml#GET /v1/{location_id}/orders/{order_id}",
+     "openapi/_original/square-openapi.yml#GET /v2/orders/{order_id}",
+     "openapi/_original/square-openapi.yml#POST /v2/orders",
+     "openapi/_original/square-openapi.yml#PUT /v1/{location_id}/orders/{order_id}",
+     "openapi/_original/square-openapi.yml#PUT /v2/orders/{order_id}"
+    ]
+   },
+   "starbucks": {
+    "segments": [
+     "orders"
+    ],
+    "operations": [
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "status": "string",
+     "storeId": "string",
+     "items": "array",
+     "subtotal": "number",
+     "tax": "number",
+     "total": "number",
+     "starsEarned": "integer",
+     "createdAt": "string",
+     "estimatedReadyAt": "string",
+     "menuItemId": "string",
+     "quantity": "integer",
+     "sizeId": "string",
+     "customizations": "array"
+    },
+    "evidence": [
+     "openapi/_original/starbucks-starbucks-api-openapi.yml#GET /v1/orders/{orderId}",
+     "openapi/_original/starbucks-starbucks-api-openapi.yml#POST /v1/orders"
+    ]
+   },
+   "synthego": {
+    "segments": [
+     "order"
+    ],
+    "operations": [
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "label": "string",
+     "sequence": "string",
+     "product_type": "string",
+     "product_price": "string",
+     "api_key": "string",
+     "current_order_contents": "array",
+     "initial_order": "object",
+     "integrator_id": "string",
+     "order_request_id": "string",
+     "status": "string",
+     "subtotal": "number"
+    },
+    "evidence": [
+     "openapi/_original/synthego-order-openapi.json#GET /order/{order_request_id}",
+     "openapi/_original/synthego-order-openapi.json#POST /order/"
+    ]
+   },
+   "takealot": {
+    "segments": [
+     "orders"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "page_summary": "object",
+     "sales": "array"
+    },
+    "evidence": [
+     "openapi/_original/takealot-seller-openapi.yml#GET /{version}/sales/orders"
+    ]
+   },
+   "terminal-shop": {
+    "segments": [
+     "order"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "amount": "object",
+     "created": "string",
+     "items": "array",
+     "shipping": "object",
+     "tracking": "object",
+     "index": "integer",
+     "data": "string",
+     "addressID": "string",
+     "cardID": "string",
+     "variants": "object"
+    },
+    "evidence": [
+     "openapi/_original/terminal-shop-openapi.yml#GET /order",
+     "openapi/_original/terminal-shop-openapi.yml#GET /order/{id}",
+     "openapi/_original/terminal-shop-openapi.yml#POST /order"
+    ]
+   },
+   "texas-instruments": {
+    "segments": [
+     "orders"
+    ],
+    "operations": [
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "orderNumber": "string",
+     "orderStatus": "string",
+     "customerPurchaseOrderNumber": "string",
+     "orderPlacedTime": "string",
+     "subTotal": "number",
+     "totalPrice": "number",
+     "totalTax": "number",
+     "totalDeliveryCost": "number",
+     "totalDiscount": "number",
+     "currencyISO": "string",
+     "paymentType": "string",
+     "checkoutProfileIdentifier": "string",
+     "shippingAddress": "object",
+     "billingAddress": "object",
+     "lineItems": "array",
+     "orderMessages": "array",
+     "checkoutProfileId": "string",
+     "purchaseOrderDate": "string",
+     "endCustomerCompanyName": "string",
+     "expediteShipping": "boolean",
+     "customerOrderComments": "array"
+    },
+    "evidence": [
+     "openapi/_original/texas-instruments-store-openapi.yml#GET /orders/{orderNumber}",
+     "openapi/_original/texas-instruments-store-openapi.yml#POST /orders"
+    ]
+   },
+   "thefork": {
+    "segments": [
+     "orders"
+    ],
+    "operations": [
+     "PUT item"
+    ],
+    "properties": {
+     "locale": "string",
+     "currency": "string",
+     "totalAmount": "number",
+     "lines": "array"
+    },
+    "evidence": [
+     "openapi/_original/lafourchette-v1-api-openapi.yml#PUT /v1/orders/{orderUuid}"
+    ]
+   },
+   "toast": {
+    "segments": [
+     "orders"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "guid": "string",
+     "entityType": "string",
+     "externalId": "string",
+     "openedDate": "string",
+     "modifiedDate": "string",
+     "promisedDate": "string",
+     "channelGuid": "string",
+     "diningOption": "object",
+     "checks": "array",
+     "table": "object",
+     "serviceArea": "object",
+     "restaurantService": "object",
+     "revenueCenter": "object",
+     "source": "string",
+     "duration": "integer",
+     "deliveryInfo": "object",
+     "requiredPrepTime": "string",
+     "estimatedFulfillmentDate": "string",
+     "numberOfGuests": "integer",
+     "voided": "boolean",
+     "voidDate": "string",
+     "voidBusinessDate": "integer",
+     "paidDate": "string",
+     "closedDate": "string",
+     "deletedDate": "string",
+     "deleted": "boolean",
+     "businessDate": "integer",
+     "server": "object",
+     "pricingFeatures": "array",
+     "approvalStatus": "string",
+     "createdDevice": "object",
+     "createdDate": "string",
+     "lastModifiedDevice": "object",
+     "curbsidePickupInfo": "object",
+     "marketplaceFacilitatorTaxInfo": "object",
+     "createdInTestMode": "boolean",
+     "appliedPackagingInfo": "object",
+     "excessFood": "boolean",
+     "displayNumber": "string"
+    },
+    "evidence": [
+     "openapi/_original/toast-orders-openapi.yaml#GET /orders",
+     "openapi/_original/toast-orders-openapi.yaml#GET /orders/{guid}",
+     "openapi/_original/toast-orders-openapi.yaml#POST /orders"
+    ]
+   },
+   "uber": {
+    "segments": [
+     "orders"
+    ],
+    "operations": [
+     "GET item"
+    ],
+    "properties": {
+     "id": "string",
+     "external_reference_id": "string",
+     "current_state": "string",
+     "store": "object",
+     "cart": "object",
+     "payment": "object",
+     "placed_at": "string"
+    },
+    "evidence": [
+     "openapi/_original/uber-eats-openapi.yml#GET /eats/orders/{order_id}"
+    ]
+   },
+   "uber-eats": {
+    "segments": [
+     "order"
+    ],
+    "operations": [
+     "GET item"
+    ],
+    "properties": {
+     "id": "string",
+     "display_id": "string",
+     "external_reference_id": "string",
+     "current_state": "string",
+     "store": "object",
+     "eater": "object",
+     "cart": "object",
+     "payment": "object",
+     "placed_at": "string"
+    },
+    "evidence": [
+     "openapi/_original/uber-eats-openapi.yml#GET /eats/order/{order_id}"
+    ]
+   },
+   "zayo": {
+    "segments": [
+     "order"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "jobId": "string",
+     "quoteId": "string",
+     "term": null,
+     "billingAccountId": "string",
+     "primaryContactId": "string",
+     "contractSignerId": "string",
+     "notes": "string",
+     "poNumber": "string",
+     "msaRead": null,
+     "serviceScheduleRead": null,
+     "digitalSignature": null,
+     "provisioningDetails": "array"
+    },
+    "evidence": [
+     "openapi/_original/zayo-openapi-original.yml#POST /services/order-management/v2/orders/order"
+    ]
+   },
+   "zayo-group": {
+    "segments": [
+     "order"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "jobId": "string",
+     "quoteId": "string",
+     "term": null,
+     "billingAccountId": "string",
+     "primaryContactId": "string",
+     "contractSignerId": "string",
+     "notes": "string",
+     "poNumber": "string",
+     "msaRead": null,
+     "serviceScheduleRead": null,
+     "digitalSignature": null,
+     "provisioningDetails": "array"
+    },
+    "evidence": [
+     "openapi/_original/zayo-group-openapi.yml#POST /services/order-management/v2/orders/order"
+    ]
+   }
+  }
+ },
+ "naming": {
+  "path_segment": {
+   "lower": [
+    "2ndkitchen",
+    "7shifts",
+    "ankorstore",
+    "apicbase",
+    "barogo",
+    "bevz",
+    "blackbird",
+    "bolt-eu",
+    "chowly",
+    "cloudkitchens",
+    "crunchtime-information-systems",
+    "cuboh",
+    "delivery-hero",
+    "digi-key",
+    "doordash",
+    "eat-app",
+    "edamam",
+    "edamam-recipes",
+    "flipdish",
+    "foursquare",
+    "fudo",
+    "getir",
+    "google-places",
+    "goto-gojek",
+    "grab",
+    "grubhub",
+    "hang",
+    "harri",
+    "incentivio",
+    "just-eat",
+    "lafourchette",
+    "lightspeed",
+    "lightspeed-pos",
+    "lish",
+    "lunchbox",
+    "marginedge",
+    "marketman",
+    "mealme",
+    "new-york-public-library-whats-on-the-menu",
+    "nory",
+    "olo",
+    "opentripmap",
+    "opply",
+    "oracle-hospitality",
+    "ottimate",
+    "partstech",
+    "punchh",
+    "quandoo",
+    "quartzy",
+    "rekki",
+    "restaurant-brands",
+    "speccheck",
+    "spoonacular",
+    "square",
+    "starbucks",
+    "synthego",
+    "tablecheck",
+    "takealot",
+    "terminal-shop",
+    "texas-instruments",
+    "thanx",
+    "thefork",
+    "toast",
+    "tripadvisor",
+    "tripleseat",
+    "uber",
+    "uber-eats",
+    "urbanpiper",
+    "workstream",
+    "zayo",
+    "zayo-group"
+   ],
+   "kebab-case": [
+    "ankorstore",
+    "barogo",
+    "bevz",
+    "cloudkitchens",
+    "crunchtime-information-systems",
+    "cuboh",
+    "delivery-hero",
+    "doordash",
+    "edamam",
+    "edamam-recipes",
+    "flipdish",
+    "fudo",
+    "getir",
+    "grab",
+    "grubhub",
+    "hang",
+    "incentivio",
+    "just-eat",
+    "lightspeed",
+    "lunchbox",
+    "nory",
+    "opply",
+    "ottimate",
+    "partstech",
+    "quandoo",
+    "quartzy",
+    "rekki",
+    "restaurant-brands",
+    "spoonacular",
+    "square",
+    "texas-instruments",
+    "toast",
+    "uber",
+    "uber-eats",
+    "urbanpiper",
+    "zayo",
+    "zayo-group"
+   ],
+   "snake_case": [
+    "2ndkitchen",
+    "7shifts",
+    "apicbase",
+    "blackbird",
+    "delivery-hero",
+    "doordash",
+    "eat-app",
+    "flipdish",
+    "hang",
+    "harri",
+    "lightspeed",
+    "lightspeed-pos",
+    "lunchbox",
+    "mealme",
+    "opply",
+    "petpooja",
+    "punchh",
+    "quandoo",
+    "rekki",
+    "speccheck",
+    "tablecheck",
+    "takealot",
+    "thanx",
+    "tripadvisor",
+    "uber",
+    "uber-eats",
+    "workstream"
+   ],
+   "camelCase": [
+    "bolt-eu",
+    "crunchtime-information-systems",
+    "delivery-hero",
+    "digi-key",
+    "doordash",
+    "flipdish",
+    "grubhub",
+    "incentivio",
+    "just-eat",
+    "lafourchette",
+    "lightspeed",
+    "marginedge",
+    "nory",
+    "oracle-hospitality",
+    "spoonacular",
+    "thefork",
+    "toast"
+   ],
+   "other": [
+    "ankorstore",
+    "bevz",
+    "crunchtime-information-systems",
+    "doordash",
+    "flipdish",
+    "google-places",
+    "grab",
+    "incentivio",
+    "lightspeed",
+    "openmenu",
+    "opply",
+    "spoonacular"
+   ],
+   "PascalCase": [
+    "digi-key",
+    "flipdish",
+    "lightspeed",
+    "marketman",
+    "oracle-hospitality",
+    "restaurant365"
+   ]
+  },
+  "path_param": {
+   "lower": [
+    "2ndkitchen",
+    "7shifts",
+    "ankorstore",
+    "apicbase",
+    "blackbird",
+    "cloudkitchens",
+    "digi-key",
+    "doordash",
+    "edamam",
+    "edamam-recipes",
+    "flipdish",
+    "fudo",
+    "hang",
+    "harri",
+    "incentivio",
+    "just-eat",
+    "lafourchette",
+    "lightspeed",
+    "lightspeed-pos",
+    "lish",
+    "new-york-public-library-whats-on-the-menu",
+    "nory",
+    "opentripmap",
+    "opply",
+    "oracle-hospitality",
+    "ottimate",
+    "partstech",
+    "punchh",
+    "quandoo",
+    "quartzy",
+    "rekki",
+    "speccheck",
+    "spoonacular",
+    "square",
+    "tablecheck",
+    "takealot",
+    "terminal-shop",
+    "thanx",
+    "thefork",
+    "toast",
+    "urbanpiper",
+    "workstream",
+    "zayo",
+    "zayo-group"
+   ],
+   "camelCase": [
+    "ankorstore",
+    "barogo",
+    "chowly",
+    "cloudkitchens",
+    "crunchtime-information-systems",
+    "digi-key",
+    "doordash",
+    "flipdish",
+    "getir",
+    "google-places",
+    "goto-gojek",
+    "grab",
+    "grubhub",
+    "harri",
+    "incentivio",
+    "just-eat",
+    "lafourchette",
+    "lightspeed",
+    "marginedge",
+    "nory",
+    "olo",
+    "oracle-hospitality",
+    "partstech",
+    "quandoo",
+    "quartzy",
+    "restaurant-brands",
+    "starbucks",
+    "texas-instruments",
+    "thefork",
+    "toast",
+    "tripadvisor",
+    "zayo",
+    "zayo-group"
+   ],
+   "snake_case": [
+    "2ndkitchen",
+    "7shifts",
+    "ankorstore",
+    "bevz",
+    "cuboh",
+    "delivery-hero",
+    "doordash",
+    "eat-app",
+    "edamam-recipes",
+    "foursquare",
+    "grubhub",
+    "hang",
+    "harri",
+    "lightspeed",
+    "lunchbox",
+    "opply",
+    "punchh",
+    "spoonacular",
+    "square",
+    "synthego",
+    "tablecheck",
+    "takealot",
+    "tripleseat",
+    "uber",
+    "uber-eats",
+    "urbanpiper",
+    "workstream"
+   ],
+   "PascalCase": [
+    "digi-key",
+    "oracle-hospitality",
+    "punchh"
+   ],
+   "kebab-case": [
+    "lightspeed"
+   ],
+   "other": [
+    "opply"
+   ]
+  },
+  "query_param": {
+   "lower": [
+    "2ndkitchen",
+    "7shifts",
+    "ankorstore",
+    "apicbase",
+    "barogo",
+    "blackbird",
+    "cloudkitchens",
+    "crunchtime-information-systems",
+    "digi-key",
+    "doordash",
+    "eat-app",
+    "edamam",
+    "edamam-recipes",
+    "flipdish",
+    "foursquare",
+    "fudo",
+    "getir",
+    "grab",
+    "grubhub",
+    "hang",
+    "harri",
+    "incentivio",
+    "just-eat",
+    "lafourchette",
+    "lightspeed",
+    "lightspeed-pos",
+    "lish",
+    "lunchbox",
+    "mealme",
+    "new-york-public-library-whats-on-the-menu",
+    "nory",
+    "openmenu",
+    "opentripmap",
+    "opply",
+    "oracle-hospitality",
+    "ottimate",
+    "partstech",
+    "punchh",
+    "quandoo",
+    "quartzy",
+    "rekki",
+    "restaurant-brands",
+    "speccheck",
+    "spoonacular",
+    "square",
+    "starbucks",
+    "tablecheck",
+    "takealot",
+    "texas-instruments",
+    "thanx",
+    "thefork",
+    "toast",
+    "tripadvisor",
+    "tripleseat",
+    "uber",
+    "uber-eats",
+    "workstream",
+    "zayo",
+    "zayo-group"
+   ],
+   "snake_case": [
+    "2ndkitchen",
+    "7shifts",
+    "apicbase",
+    "blackbird",
+    "cloudkitchens",
+    "doordash",
+    "eat-app",
+    "edamam-recipes",
+    "foursquare",
+    "goto-gojek",
+    "grab",
+    "grubhub",
+    "hang",
+    "harri",
+    "lightspeed",
+    "lightspeed-pos",
+    "lish",
+    "lunchbox",
+    "mealme",
+    "new-york-public-library-whats-on-the-menu",
+    "nory",
+    "openmenu",
+    "opentripmap",
+    "opply",
+    "ottimate",
+    "punchh",
+    "quartzy",
+    "rekki",
+    "speccheck",
+    "square",
+    "tablecheck",
+    "takealot",
+    "thanx",
+    "tripadvisor",
+    "tripleseat",
+    "uber",
+    "workstream"
+   ],
+   "camelCase": [
+    "ankorstore",
+    "barogo",
+    "cloudkitchens",
+    "crunchtime-information-systems",
+    "digi-key",
+    "doordash",
+    "edamam",
+    "edamam-recipes",
+    "flipdish",
+    "getir",
+    "google-places",
+    "grubhub",
+    "incentivio",
+    "just-eat",
+    "lafourchette",
+    "lightspeed",
+    "marginedge",
+    "olo",
+    "opply",
+    "oracle-hospitality",
+    "partstech",
+    "quandoo",
+    "spoonacular",
+    "texas-instruments",
+    "thefork",
+    "toast",
+    "tripadvisor",
+    "zayo",
+    "zayo-group"
+   ],
+   "other": [
+    "7shifts",
+    "ankorstore",
+    "barogo",
+    "crunchtime-information-systems",
+    "edamam",
+    "edamam-recipes",
+    "flipdish",
+    "lightspeed",
+    "opply",
+    "restaurant365",
+    "speccheck",
+    "thanx",
+    "workstream"
+   ],
+   "kebab-case": [
+    "edamam",
+    "edamam-recipes",
+    "incentivio",
+    "spoonacular"
+   ],
+   "PascalCase": [
+    "digi-key",
+    "oracle-hospitality",
+    "rekki"
+   ]
+  },
+  "property": {
+   "lower": [
+    "2ndkitchen",
+    "7shifts",
+    "ankorstore",
+    "apicbase",
+    "barogo",
+    "blackbird",
+    "cloudkitchens",
+    "delivery-hero",
+    "doordash",
+    "eat-app",
+    "getir",
+    "grubhub",
+    "harri",
+    "incentivio",
+    "just-eat",
+    "lafourchette",
+    "lightspeed",
+    "lunchbox",
+    "marginedge",
+    "mealme",
+    "opply",
+    "oracle-hospitality",
+    "ottimate",
+    "partstech",
+    "punchh",
+    "rekki",
+    "restaurant-brands",
+    "restaurant365",
+    "speccheck",
+    "spoonacular",
+    "square",
+    "starbucks",
+    "synthego",
+    "takealot",
+    "terminal-shop",
+    "thanx",
+    "thefork",
+    "toast",
+    "tripleseat",
+    "uber",
+    "uber-eats",
+    "urbanpiper",
+    "workstream",
+    "zayo",
+    "zayo-group"
+   ],
+   "snake_case": [
+    "2ndkitchen",
+    "7shifts",
+    "apicbase",
+    "blackbird",
+    "delivery-hero",
+    "doordash",
+    "grubhub",
+    "harri",
+    "lightspeed",
+    "lunchbox",
+    "mealme",
+    "opply",
+    "ottimate",
+    "punchh",
+    "rekki",
+    "speccheck",
+    "square",
+    "synthego",
+    "takealot",
+    "thanx",
+    "tripleseat",
+    "uber",
+    "uber-eats",
+    "urbanpiper",
+    "workstream"
+   ],
+   "camelCase": [
+    "barogo",
+    "cloudkitchens",
+    "getir",
+    "grubhub",
+    "incentivio",
+    "just-eat",
+    "lafourchette",
+    "marginedge",
+    "oracle-hospitality",
+    "partstech",
+    "restaurant-brands",
+    "restaurant365",
+    "spoonacular",
+    "starbucks",
+    "terminal-shop",
+    "texas-instruments",
+    "thefork",
+    "toast",
+    "zayo",
+    "zayo-group"
+   ],
+   "PascalCase": [
+    "digi-key",
+    "flipdish",
+    "just-eat"
+   ],
+   "other": [
+    "digi-key"
+   ]
+  },
+  "pagination_param": {
+   "limit": [
+    "7shifts",
+    "barogo",
+    "cloudkitchens",
+    "digi-key",
+    "doordash",
+    "edamam-recipes",
+    "flipdish",
+    "foursquare",
+    "hang",
+    "harri",
+    "just-eat",
+    "lafourchette",
+    "lightspeed",
+    "lunchbox",
+    "nory",
+    "opentripmap",
+    "opply",
+    "oracle-hospitality",
+    "ottimate",
+    "quandoo",
+    "restaurant-brands",
+    "speccheck",
+    "square",
+    "starbucks",
+    "thefork",
+    "uber",
+    "uber-eats"
+   ],
+   "page": [
+    "apicbase",
+    "blackbird",
+    "flipdish",
+    "fudo",
+    "getir",
+    "grubhub",
+    "hang",
+    "harri",
+    "incentivio",
+    "lafourchette",
+    "lightspeed",
+    "lish",
+    "lunchbox",
+    "mealme",
+    "opply",
+    "ottimate",
+    "partstech",
+    "punchh",
+    "quartzy",
+    "spoonacular",
+    "tablecheck",
+    "texas-instruments",
+    "thanx",
+    "thefork",
+    "toast",
+    "tripleseat",
+    "workstream"
+   ],
+   "offset": [
+    "barogo",
+    "digi-key",
+    "hang",
+    "harri",
+    "just-eat",
+    "lightspeed",
+    "lish",
+    "openmenu",
+    "opply",
+    "oracle-hospitality",
+    "quandoo",
+    "spoonacular",
+    "starbucks",
+    "uber",
+    "uber-eats"
+   ],
+   "page_size": [
+    "ankorstore",
+    "blackbird",
+    "crunchtime-information-systems",
+    "digi-key",
+    "flipdish",
+    "getir",
+    "lightspeed",
+    "lightspeed-pos",
+    "opply",
+    "takealot",
+    "toast"
+   ],
+   "per_page": [
+    "hang",
+    "lish",
+    "partstech",
+    "tablecheck",
+    "thanx",
+    "workstream"
+   ],
+   "cursor": [
+    "7shifts",
+    "lightspeed",
+    "opply",
+    "restaurant-brands",
+    "square"
+   ],
+   "after": [
+    "flipdish",
+    "just-eat",
+    "lightspeed",
+    "lightspeed-pos",
+    "lish"
+   ],
+   "count": [
+    "doordash",
+    "incentivio",
+    "just-eat",
+    "square"
+   ],
+   "start": [
+    "flipdish",
+    "grubhub",
+    "oracle-hospitality"
+   ],
+   "size": [
+    "grubhub",
+    "lightspeed",
+    "ottimate"
+   ],
+   "skip": [
+    "flipdish",
+    "restaurant365"
+   ],
+   "before": [
+    "lightspeed",
+    "lish"
+   ],
+   "top": [
+    "restaurant365"
+   ],
+   "starting_after": [
+    "speccheck"
+   ],
+   "page_token": [
+    "toast"
+   ]
+  }
+ }
+}

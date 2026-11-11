@@ -1,0 +1,41 @@
+provider: incentivio
+apis_io: https://apis.io/providers/incentivio/
+context: food-ordering
+generated: '2026-11-10'
+concepts:
+  restaurant:
+    path_segment:
+    - locations
+    - stores
+    - location
+    properties:
+      status: active
+      time_zone: timeZone
+      restaurant_id:
+      - merchantId
+      - locationId
+      currency: currencyCode
+      latitude: latitude
+      longitude: longitude
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/incentivio-admin-api-openapi.json#DELETE /incentivio-ordering-service/locations/{locationid}
+    - openapi/_original/incentivio-admin-api-openapi.json#GET /incentivio-client-domain/admin/stores
+    - openapi/_original/incentivio-admin-api-openapi.json#GET /incentivio-client-domain/clients/all/stores
+    - openapi/_original/incentivio-admin-api-openapi.json#GET /incentivio-client-domain/clients/{clientid}/all/stores
+    - openapi/_original/incentivio-admin-api-openapi.json#GET /incentivio-client-domain/clients/{clientid}/stores
+  food_order:
+    path_segment:
+    - orders
+    properties:
+      restaurant_id: locationId
+      customer_id: customer
+      order_id: orderId
+      fulfillment_type: orderType
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/incentivio-admin-api-openapi.json#GET /incentivio-reports/loyaltyreport/brand/orders
+    - openapi/_original/incentivio-admin-api-openapi.json#PATCH /incentivio-ordering-service/orders/{orderId}
+    - openapi/_original/incentivio-admin-api-openapi.yml#GET /incentivio-reports/loyaltyreport/brand/orders
+    - openapi/_original/incentivio-admin-api-openapi.yml#PATCH /incentivio-ordering-service/orders/{orderId}
+    - openapi/_original/incentivio-mobile-api-openapi.json#GET /orders

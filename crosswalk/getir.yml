@@ -1,0 +1,28 @@
+provider: getir
+apis_io: https://apis.io/providers/getir/
+context: food-ordering
+generated: '2026-11-10'
+concepts:
+  restaurant:
+    path_segment:
+    - restaurants
+    properties:
+      name: name
+      id: id
+      status: status
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/getir-food-openapi.json#GET /restaurants
+    - openapi/_original/getir-food-openapi.yml#GET /restaurants
+  menu:
+    path_segment:
+    - menu
+    properties:
+      name: name
+      id: id
+      restaurant_id: restaurant
+      status: status
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/getir-food-openapi.json#GET /restaurants/menu
+    - openapi/_original/getir-food-openapi.yml#GET /restaurants/menu

@@ -1,0 +1,38 @@
+provider: delivery-hero
+apis_io: https://apis.io/providers/delivery-hero/
+context: food-ordering
+generated: '2026-11-10'
+concepts:
+  restaurant:
+    path_segment:
+    - outlets
+    properties:
+      name: name
+      address: address
+      phone: phone_number
+      city: city
+      currency: currency
+      latitude: latitude
+      longitude: longitude
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/delivery-hero-on-demand-rider-openapi.json#GET /outlets/{client_vendor_id}
+    - openapi/_original/delivery-hero-on-demand-rider-openapi.json#PATCH /outlets/{client_vendor_id}
+    - openapi/_original/delivery-hero-on-demand-rider-openapi.json#PUT /outlets/{client_vendor_id}
+  food_order:
+    path_segment:
+    - orders
+    properties:
+      restaurant_id: location
+      items: products
+      created_at: created_at
+      status: status
+      order_id: order_id
+      currency: currency_code
+      description: description
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/delivery-hero-on-demand-rider-openapi.json#DELETE /orders/{order_id}
+    - openapi/_original/delivery-hero-on-demand-rider-openapi.json#GET /orders/{order_id}
+    - openapi/_original/delivery-hero-on-demand-rider-openapi.json#POST /orders
+    - openapi/_original/delivery-hero-on-demand-rider-openapi.json#PUT /orders/{order_id}

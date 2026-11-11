@@ -1,0 +1,79 @@
+context: food-ordering
+name: Food Ordering
+intro: >-
+  The common food-ordering vocabulary -- the restaurants and locations that cook, the menus
+  they publish, the items and modifier groups on them and the orders placed against them --
+  distilled from the APIs that already exist. Delivery belongs to the shipping context.
+tags: [Restaurant, Food Delivery, Online Ordering, Mobile Ordering, Ordering, Restaurant Technology, QSR]
+
+envelope: [_links, _pagination, _results, data, success, errors, warnings, count, total, page, meta, links,
+           value, results, next, previous, has_more, message, status_code, ids, next_page, previous_page,
+           page_info, cursor, total_count, per_page, total_pages, current_page, object, url]
+
+common_fields:
+  id: [uuid, guid, object_id, record_id, external_id, store_id]
+  created_at: [created, created_date, date_created, create_time, creation_date, created_on, placed_at, ordered_at]
+  updated_at: [updated, updated_date, modified_at, last_modified, date_modified, update_time, modified_date, modified]
+  metadata: [meta_data, custom_fields, custom, attributes, properties]
+  status: [state, order_status, availability, is_available, available, active, enabled]
+  name: [title, display_name, label]
+  description: [notes, note, details]
+  restaurant_id: [restaurant, location_id, location, store, store_id, merchant_id, merchant, venue_id, brand_id]
+  price: [amount, base_price, unit_price, price_money, price_cents, cost]
+  currency: [currency_code]
+
+concepts:
+  restaurant:
+    segments: [restaurants, restaurant, stores, store, locations, location, venues, merchants@food|delivery|ordering, outlets]
+    aliases:
+      address: [location, street_address, address_line1, addresses]
+      phone: [phone_number, telephone]
+      hours: [opening_hours, business_hours, service_hours, schedule, regular_hours]
+      time_zone: [timezone, tz]
+      cuisine: [cuisines, categories, cuisine_type]
+  menu:
+    requires: [restaurant]
+    segments: [menus, menu]
+    aliases:
+      categories: [sections, menu_categories, groups, menu_groups]
+      hours: [availability, service_availability, schedules, menu_hours]
+  menu_item:
+    requires: [menu]
+    segments: [menu_items, menu-items, menuitems, items@menus|menu|stores|restaurants|locations|catalog, products@menus|menu|stores, dishes]
+    aliases:
+      category_id: [category, menu_category_id, section_id, group_id]
+      image_url: [image, photo, photo_url, images]
+      modifier_group_ids: [modifier_groups, option_groups, modifiers, modifier_group_list]
+      calories: [nutrition, nutritional_info, kcal]
+  # modifier_group was measured and dropped: 2 providers expose modifier groups as a resource.
+  food_order:
+    requires: [restaurant]
+    path: /food-orders
+    segments: [orders, order, checks@pos|restaurants, tickets@kitchen]
+    aliases:
+      items: [line_items, order_items, cart, products, selections]
+      total: [total_amount, total_price, grand_total, order_total, amount_total, total_money]
+      subtotal: [sub_total, subtotal_amount, items_total]
+      tax: [tax_amount, total_tax, taxes]
+      tip: [tip_amount, gratuity]
+      fulfillment_type: [order_type, type, dining_option, service_type, delivery_type, fulfillment_method, mode]
+      customer_id: [customer, guest, eater, consumer]
+      pickup_at: [pickup_time, ready_at, estimated_pickup_time, promised_time, scheduled_time]
+
+exclude:
+  restaurant:
+    ankorstore: /stock/locations are warehouse stock locations
+
+findings:
+  - "A food order agrees only on the restaurant it belongs to. Aggregators (DoorDash, Just
+    Eat), ordering platforms and kitchen systems each model the order, its items and
+    its fulfilment type differently -- the same divergence as orders in commerce."
+  - "A restaurant agrees only on name and id; hours and address are carried by too few to
+    share, because many APIs take the restaurant as given from their own onboarding."
+  - "Modifier groups -- the min/max choice rules that make a menu orderable -- are almost never
+    a resource of their own (2 providers); they live inside the menu item."
+decisions:
+  - "Orders are `/food-orders`: `/orders` is commerce's (and trading's)."
+  - "A restaurant covers stores, locations, venues and outlets in this cohort."
+  - "A menu item covers items and products beneath a menu, store or restaurant."
+  - "Delivery is the shipping context's: a delivery job is a shipment."

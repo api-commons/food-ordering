@@ -1,0 +1,28 @@
+provider: digi-key
+apis_io: https://apis.io/providers/digi-key/
+context: food-ordering
+generated: '2026-11-10'
+concepts:
+  restaurant:
+    path_segment:
+    - locations
+    properties:
+      currency: Currency
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/digi-key-supply-chain-api-supplychain-v1-openapi.yml#GET /BondedQuantity/Locations
+    - openapi/_original/digi-key-supply-chain-api-supplychain-v1-openapi.yml#GET /BondedQuantity/Locations/{accountId}
+    - openapi/_original/digi-key-supply-chain-api-supplychain-v1.json#GET /BondedQuantity/Locations
+    - openapi/_original/digi-key-supply-chain-api-supplychain-v1.json#GET /BondedQuantity/Locations/{accountId}
+  food_order:
+    path_segment:
+    - orders
+    properties:
+      items: LineItems
+      currency: Currency
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/digi-key-ordering-api-v3-ordering-v3-openapi.yml#POST /Orders
+    - openapi/_original/digi-key-ordering-api-v3-ordering-v3.json#POST /Orders
+    - openapi/_original/digi-key-orderstatus-orderstatus-v4-openapi.yml#GET /orders
+    - openapi/_original/digi-key-orderstatus-orderstatus-v4.json#GET /orders

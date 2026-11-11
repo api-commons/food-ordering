@@ -1,0 +1,639 @@
+context: food-ordering
+name: Food Ordering
+generated: '2026-11-10'
+version: 0.1.0-draft.20261110
+status: draft
+cohort:
+  tags:
+  - Restaurant
+  - Food Delivery
+  - Online Ordering
+  - Mobile Ordering
+  - Ordering
+  - Restaurant Technology
+  - QSR
+  providers_with_harvested_openapi: 77
+thresholds:
+  core: 0.5
+  extended: 0.2
+  min_providers: 3
+excluded:
+  restaurant:
+    ankorstore: /stock/locations are warehouse stock locations
+duplicates: {}
+shared_specs: {}
+concepts:
+  restaurant:
+    segments_seen:
+      locations: 14
+      stores: 12
+      restaurants: 8
+      location: 4
+      outlets: 3
+      store: 1
+    providers_exposing: 34
+    providers_with_readable_schema: 34
+    operations:
+    - operation: GET collection
+      providers: 30
+      share: 0.882
+      tier: core
+    - operation: GET item
+      providers: 19
+      share: 0.559
+      tier: core
+    - operation: POST collection
+      providers: 10
+      share: 0.294
+      tier: extended
+    - operation: UPDATE item
+      providers: 7
+      share: 0.206
+      tier: extended
+    - operation: DELETE item
+      providers: 4
+      share: 0.118
+      tier: long-tail
+    - operation: POST item
+      providers: 4
+      share: 0.118
+      tier: long-tail
+    - operation: DELETE collection
+      providers: 3
+      share: 0.088
+      tier: long-tail
+    - operation: UPDATE collection
+      providers: 3
+      share: 0.088
+      tier: long-tail
+    properties:
+    - name: name
+      tier: core
+      providers: 25
+      share: 0.735
+      type: string
+      spellings:
+      - name
+      - Name
+    - name: id
+      tier: core
+      providers: 19
+      share: 0.559
+      type: string
+      spellings:
+      - id
+      - guid
+      - uuid
+    - name: address
+      tier: extended
+      providers: 16
+      share: 0.471
+      type: string
+      spellings:
+      - address
+      - Address
+    - name: status
+      tier: extended
+      providers: 13
+      share: 0.382
+      type: string
+      spellings:
+      - status
+      - state
+      - active
+      - Active
+      - availability
+    - name: time_zone
+      tier: extended
+      providers: 12
+      share: 0.353
+      type: string
+      spellings:
+      - timezone
+      - time_zone
+      - timeZone
+    - name: restaurant_id
+      tier: extended
+      providers: 11
+      share: 0.324
+      type: string
+      spellings:
+      - storeId
+      - locationId
+      - store_id
+      - merchant_id
+      - StoreId
+      - merchantId
+      - restaurantId
+      - location_id
+    - name: phone
+      tier: extended
+      providers: 9
+      share: 0.265
+      type: string
+      spellings:
+      - phone_number
+      - phone
+      - PhoneNumber
+    - name: city
+      tier: extended
+      providers: 8
+      share: 0.235
+      type: string
+      spellings:
+      - city
+    - name: currency
+      tier: extended
+      providers: 7
+      share: 0.206
+      type: string
+      spellings:
+      - currency
+      - Currency
+      - currency_code
+      - currencyCode
+    - name: latitude
+      tier: extended
+      providers: 7
+      share: 0.206
+      type: number
+      spellings:
+      - latitude
+      - Latitude
+    - name: longitude
+      tier: extended
+      providers: 7
+      share: 0.206
+      type: number
+      spellings:
+      - longitude
+      - Longitude
+    long_tail_count: 373
+    long_tail_sample:
+    - created_at
+    - country
+    - hours
+    - metadata
+    - updated_at
+    - description
+    - type
+    - building_id
+    - charges
+    - contact_emails
+    - coordinates
+    - country_code
+    - cuisine
+    - distance
+    - email
+    - external_store_id
+    - limit
+    - location_name
+    - logo_url
+    - messages
+    - order_by
+    - pagination
+    - restaurant_name
+    - slug
+    - state_code
+    - taxes
+    - website_url
+    - zayo_network_status
+    - zip
+    - zip_code
+    - add_user
+    - additional_url
+    - address1
+    - admin_user_id
+    - allow_chef_notes
+    - allow_pre_orders_and_table_service
+    - alternate_store_number
+    - always_appear_open
+    - amenities
+    - apm_phone_number
+  menu:
+    segments_seen:
+      menus: 8
+      menu: 7
+    providers_exposing: 11
+    providers_with_readable_schema: 11
+    operations:
+    - operation: GET collection
+      providers: 11
+      share: 1.0
+      tier: core
+    - operation: POST collection
+      providers: 4
+      share: 0.364
+      tier: extended
+    - operation: GET item
+      providers: 3
+      share: 0.273
+      tier: extended
+    - operation: UPDATE collection
+      providers: 3
+      share: 0.273
+      tier: extended
+    - operation: POST item
+      providers: 2
+      share: 0.182
+      tier: long-tail
+    - operation: DELETE item
+      providers: 1
+      share: 0.091
+      tier: long-tail
+    - operation: UPDATE item
+      providers: 1
+      share: 0.091
+      tier: long-tail
+    properties:
+    - name: name
+      tier: core
+      providers: 8
+      share: 0.727
+      type: string
+      spellings:
+      - name
+      - Name
+      - title
+    - name: id
+      tier: core
+      providers: 6
+      share: 0.545
+      type: string
+      spellings:
+      - id
+      - menu_id
+      - MenuId
+      - guid
+      - externalId
+    - name: categories
+      tier: extended
+      providers: 4
+      share: 0.364
+      type: array
+      spellings:
+      - categories
+      - groups
+    - name: modifier_groups
+      tier: extended
+      providers: 3
+      share: 0.273
+      type: array
+      spellings:
+      - modifierGroups
+      - modifier_groups
+    - name: restaurant_id
+      tier: extended
+      providers: 3
+      share: 0.273
+      type: string
+      spellings:
+      - store
+      - restaurant
+      - restaurantId
+    - name: status
+      tier: extended
+      providers: 3
+      share: 0.273
+      type: string
+      spellings:
+      - status
+      - active
+    long_tail_count: 90
+    long_tail_sample:
+    - description
+    - image_url
+    - items
+    - app_id
+    - average_price
+    - business_date
+    - category_id
+    - chain_product_category
+    - code
+    - config_offer_entries
+    - country_code
+    - currency
+    - day_parts
+    - deal_groups
+    - discount_amount
+    - display_section_links
+    - end_business_date
+    - entities
+    - entity_type
+    - entries
+    - excluded_restaurant_ids
+    - flexfields
+    - fulfillment_type
+    - gross_sales_amount
+    - group_by
+    - hours
+    - image_name
+    - images
+    - integration_id
+    - integration_type
+    - is_approved
+    - is_integrated
+    - labels
+    - last_updated
+    - limit
+    - locked
+    - menu_group_guid
+    - menu_group_name
+    - menu_guid
+    - menu_item_guid
+  menu_item:
+    segments_seen:
+      items: 5
+      menuitems: 3
+      dishes: 1
+    providers_exposing: 8
+    providers_with_readable_schema: 7
+    operations:
+    - operation: GET collection
+      providers: 6
+      share: 0.75
+      tier: core
+    - operation: GET item
+      providers: 4
+      share: 0.5
+      tier: core
+    - operation: POST collection
+      providers: 3
+      share: 0.375
+      tier: extended
+    - operation: POST item
+      providers: 2
+      share: 0.25
+      tier: long-tail
+    - operation: UPDATE collection
+      providers: 1
+      share: 0.125
+      tier: long-tail
+    properties:
+    - name: name
+      tier: core
+      providers: 6
+      share: 0.857
+      type: string
+      spellings:
+      - name
+      - Name
+      - title
+    - name: description
+      tier: core
+      providers: 5
+      share: 0.714
+      type: string
+      spellings:
+      - description
+      - Description
+    - name: id
+      tier: extended
+      providers: 3
+      share: 0.429
+      type: string
+      spellings:
+      - id
+      - guid
+      - externalId
+    long_tail_count: 45
+    long_tail_sample:
+    - price
+    - price_info
+    - sku
+    - status
+    - type
+    - alcohol
+    - balance_on_hand
+    - calories
+    - catalog_item_id
+    - category_id
+    - code
+    - entity_type
+    - extras
+    - flexfields
+    - funding_source
+    - groups
+    - image_file_name
+    - image_url
+    - inherit_option_groups
+    - inherit_unit_of_measure
+    - is_archived
+    - item_availability
+    - item_id
+    - item_ids
+    - item_special_hours
+    - item_type
+    - labels
+    - last_sold_datetime
+    - limit
+    - menu_id
+    - menu_item_ids
+    - merchant_supplied_item_id
+    - metafields
+    - modifier_group_ids
+    - orderable_online
+    - paging
+    - plu
+    - program_eligibility
+    - require_other_products
+    - restaurant_id
+  food_order:
+    segments_seen:
+      orders: 14
+      order: 6
+    providers_exposing: 18
+    providers_with_readable_schema: 18
+    operations:
+    - operation: GET item
+      providers: 12
+      share: 0.667
+      tier: core
+    - operation: POST collection
+      providers: 12
+      share: 0.667
+      tier: core
+    - operation: GET collection
+      providers: 9
+      share: 0.5
+      tier: core
+    - operation: UPDATE item
+      providers: 6
+      share: 0.333
+      tier: extended
+    - operation: DELETE item
+      providers: 2
+      share: 0.111
+      tier: long-tail
+    - operation: POST item
+      providers: 2
+      share: 0.111
+      tier: long-tail
+    - operation: UPDATE collection
+      providers: 1
+      share: 0.056
+      tier: long-tail
+    properties:
+    - name: restaurant_id
+      tier: core
+      providers: 12
+      share: 0.667
+      type: object
+      spellings:
+      - storeId
+      - store
+      - location
+      - Store
+      - locationId
+      - Restaurant
+      - restaurant_id
+      - location_id
+    - name: items
+      tier: core
+      providers: 9
+      share: 0.5
+      type: array
+      spellings:
+      - items
+      - cart
+      - products
+      - LineItems
+      - OrderItems
+      - Items
+      - line_items
+    - name: created_at
+      tier: extended
+      providers: 8
+      share: 0.444
+      type: string
+      spellings:
+      - createdAt
+      - created_at
+      - placed_at
+      - orderedAt
+      - createdDate
+    - name: status
+      tier: extended
+      providers: 8
+      share: 0.444
+      type: string
+      spellings:
+      - status
+      - order_status
+      - state
+    - name: customer_id
+      tier: extended
+      providers: 7
+      share: 0.389
+      type: object
+      spellings:
+      - customer
+      - Customer
+      - customer_id
+      - eater
+    - name: order_id
+      tier: extended
+      providers: 7
+      share: 0.389
+      type: string
+      spellings:
+      - order_id
+      - orderId
+      - OrderId
+    - name: id
+      tier: extended
+      providers: 6
+      share: 0.333
+      type: string
+      spellings:
+      - id
+      - guid
+      - externalId
+    - name: fulfillment_type
+      tier: extended
+      providers: 5
+      share: 0.278
+      type: string
+      spellings:
+      - orderType
+      - DeliveryType
+      - service_type
+      - diningOption
+    - name: currency
+      tier: extended
+      providers: 4
+      share: 0.222
+      type: string
+      spellings:
+      - currency_code
+      - currencyCode
+      - Currency
+    - name: description
+      tier: extended
+      providers: 4
+      share: 0.222
+      type: string
+      spellings:
+      - notes
+      - description
+    - name: tax
+      tier: extended
+      providers: 4
+      share: 0.222
+      type: number
+      spellings:
+      - tax
+      - TotalTax
+      - taxes
+    - name: total
+      tier: extended
+      providers: 4
+      share: 0.222
+      type: number
+      spellings:
+      - orderTotal
+      - TotalPrice
+      - totalPrice
+      - total_money
+    long_tail_count: 337
+    long_tail_sample:
+    - payment
+    - po_number
+    - price
+    - updated_at
+    - billing_account_id
+    - contract_signer_id
+    - current_state
+    - delivery
+    - delivery_fee
+    - delivery_info
+    - digital_signature
+    - external_reference_id
+    - job_id
+    - msa_read
+    - payment_method
+    - primary_contact_id
+    - provisioning_details
+    - quote_id
+    - revenue_center
+    - rewards
+    - service_schedule_read
+    - shipping_address
+    - source
+    - table
+    - term
+    - tip
+    - user_id
+    - accepted_for
+    - action
+    - actual_pay_price
+    - additional_attributes
+    - admin_user_id
+    - app_type
+    - applied_packaging_info
+    - approval_status
+    - billing_account
+    - btc_price_satoshi
+    - btc_receive_address
+    - bundle_delivery_count
+    - business_date

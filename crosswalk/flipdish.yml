@@ -1,0 +1,73 @@
+provider: flipdish
+apis_io: https://apis.io/providers/flipdish/
+context: food-ordering
+generated: '2026-11-10'
+concepts:
+  restaurant:
+    path_segment:
+    - stores
+    - store
+    - location
+    - restaurants
+    properties:
+      name: Name
+      address: Address
+      status: Active
+      restaurant_id: StoreId
+      phone: PhoneNumber
+      currency: Currency
+      latitude: Latitude
+      longitude: Longitude
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/flipdish-apps-openapi.json#DELETE /api/v1.0/{appId}/channels/{channelId}/stores
+    - openapi/_original/flipdish-apps-openapi.json#DELETE /api/v1.0/{appId}/channels/{channelId}/stores/{storeId}
+    - openapi/_original/flipdish-apps-openapi.json#GET /api/v1.0/{appId}/channels/{channelId}/stores
+    - openapi/_original/flipdish-apps-openapi.json#POST /api/v1.0/{appId}/channels/{channelId}/stores/{storeId}
+    - openapi/_original/flipdish-devices-openapi.json#POST /api/v1.0/{appId}/stripeterminal/location
+  menu:
+    path_segment:
+    - menus
+    - menu
+    properties:
+      name: Name
+      id: MenuId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/flipdish-menus-openapi.json#DELETE /api/v1.0/menus/{menuId}
+    - openapi/_original/flipdish-menus-openapi.json#GET /api/v1.0/menus/{menuId}
+    - openapi/_original/flipdish-menus-openapi.json#GET /api/v1.0/{appId}/menus
+    - openapi/_original/flipdish-menus-openapi.json#POST /api/v1.0/menus/{menuId}
+    - openapi/_original/flipdish-menus-openapi.json#POST /api/v1.0/{appId}/menus
+  menu_item:
+    path_segment:
+    - items
+    - menuitems
+    properties:
+      name: Name
+      description: Description
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/flipdish-catalog-openapi.json#GET /api/v1.0/{appId}/catalog/items
+    - openapi/_original/flipdish-catalog-openapi.json#GET /api/v1.0/{appId}/catalog/items/{catalogItemId}
+    - openapi/_original/flipdish-catalog-openapi.json#POST /api/v1.0/{appId}/catalog/items
+    - openapi/_original/flipdish-catalog-openapi.json#POST /api/v1.0/{appId}/catalog/items/{catalogItemId}
+    - openapi/_original/flipdish-marketing-openapi.json#GET /api/v1.0/{appId}/crossSell/menuItems
+  food_order:
+    path_segment:
+    - orders
+    - order
+    properties:
+      restaurant_id: Store
+      items: OrderItems
+      customer_id: Customer
+      order_id: OrderId
+      fulfillment_type: DeliveryType
+      tax: TotalTax
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/flipdish-customers-openapi.json#GET /api/v1.0/users/{userId}/orders
+    - openapi/_original/flipdish-customers-openapi.json#GET /api/v1.0/users/{userId}/orders/{orderId}
+    - openapi/_original/flipdish-orders-openapi.json#GET /api/v1.0/orders
+    - openapi/_original/flipdish-orders-openapi.json#GET /api/v1.0/orders/{id}
+    - openapi/_original/flipdish-payments-openapi.json#GET /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/orders

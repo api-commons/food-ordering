@@ -1,0 +1,54 @@
+aid: common-food-ordering
+name: Food Ordering
+type: Common
+description: 'The common Food Ordering vocabulary, distilled from the harvested OpenAPI of 77 providers in APIs.io:
+  shared operations, JSON Schema per concept with measured adoption, and a crosswalk from the common names to each
+  provider''s own.'
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+- Application Programming Interface
+- API
+- Restaurant
+- Food Delivery
+- Online Ordering
+- Mobile Ordering
+- Common Schema
+created: '2026-11-10'
+modified: '2026-11-10'
+url: https://raw.githubusercontent.com/api-commons/food-ordering/main/apis.yml
+specificationVersion: '0.20'
+apis:
+- aid: common-food-ordering:food-ordering
+  name: Common Food Ordering Interface
+  description: The Food Ordering interface the market already shares, measured.
+  humanURL: https://github.com/api-commons/food-ordering
+  tags:
+  - Restaurant
+  - Food Delivery
+  properties:
+  - type: OpenAPI
+    url: https://raw.githubusercontent.com/api-commons/food-ordering/main/openapi.yml
+  - type: Profile
+    url: https://raw.githubusercontent.com/api-commons/food-ordering/main/profile.yml
+  - type: Adopters
+    url: https://raw.githubusercontent.com/api-commons/food-ordering/main/adopters.yml
+  - type: Rules
+    url: https://raw.githubusercontent.com/api-commons/schema-commons/main/ruleset/schema-commons-naming.yaml
+  - type: JSONSchema
+    name: restaurant
+    url: https://raw.githubusercontent.com/api-commons/food-ordering/main/schema/restaurant.json
+  - type: JSONSchema
+    name: menu
+    url: https://raw.githubusercontent.com/api-commons/food-ordering/main/schema/menu.json
+  - type: JSONSchema
+    name: menu_item
+    url: https://raw.githubusercontent.com/api-commons/food-ordering/main/schema/menu_item.json
+  - type: JSONSchema
+    name: food_order
+    url: https://raw.githubusercontent.com/api-commons/food-ordering/main/schema/food_order.json
+common:
+- type: License
+  url: https://raw.githubusercontent.com/api-commons/food-ordering/main/LICENSE
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

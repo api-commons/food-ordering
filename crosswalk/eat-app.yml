@@ -1,0 +1,13 @@
+provider: eat-app
+apis_io: https://apis.io/providers/eat-app/
+context: food-ordering
+generated: '2026-11-10'
+concepts:
+  restaurant:
+    path_segment:
+    - restaurants
+    properties:
+      id: id
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/eat-app-openapi.yml#GET /concierge/v2/restaurants

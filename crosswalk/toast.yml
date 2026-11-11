@@ -1,0 +1,58 @@
+provider: toast
+apis_io: https://apis.io/providers/toast/
+context: food-ordering
+generated: '2026-11-10'
+concepts:
+  restaurant:
+    path_segment:
+    - restaurants
+    properties:
+      id: guid
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/toast-partners-openapi.yaml#GET /restaurants
+    - openapi/_original/toast-restaurants-openapi.yaml#GET /groups/{managementGroupGUID}/restaurants
+    - openapi/_original/toast-restaurants-openapi.yaml#GET /restaurants/{restaurantGUID}
+  menu:
+    path_segment:
+    - menus
+    - menu
+    properties:
+      name: name
+      id:
+      - guid
+      - externalId
+      categories: groups
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/toast-analytics-openapi.yaml#GET /menu/{reportRequestGuid}
+    - openapi/_original/toast-analytics-openapi.yaml#POST /menu
+    - openapi/_original/toast-analytics-openapi.yaml#POST /menu/{timeRange}
+    - openapi/_original/toast-configuration-openapi.yaml#GET /menus
+    - openapi/_original/toast-configuration-openapi.yaml#GET /menus/{guid}
+  menu_item:
+    path_segment:
+    - menuitems
+    properties:
+      name: name
+      id:
+      - guid
+      - externalId
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/toast-configuration-openapi.yaml#GET /menuItems
+    - openapi/_original/toast-configuration-openapi.yaml#GET /menuItems/{guid}
+  food_order:
+    path_segment:
+    - orders
+    properties:
+      created_at: createdDate
+      id:
+      - guid
+      - externalId
+      fulfillment_type: diningOption
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/toast-orders-openapi.yaml#GET /orders
+    - openapi/_original/toast-orders-openapi.yaml#GET /orders/{guid}
+    - openapi/_original/toast-orders-openapi.yaml#POST /orders

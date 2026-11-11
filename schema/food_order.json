@@ -1,0 +1,166 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/food-ordering/main/schema/food_order.json",
+  "title": "Food Order",
+  "description": "The common food_order in Food Ordering, distilled from 18 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "restaurant_id": {
+      "type": "object",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.667,
+      "x-commons-providers": 12,
+      "x-commons-spellings": [
+        "storeId",
+        "store",
+        "location",
+        "Store",
+        "locationId",
+        "Restaurant",
+        "restaurant_id",
+        "location_id"
+      ]
+    },
+    "items": {
+      "type": "array",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.5,
+      "x-commons-providers": 9,
+      "x-commons-spellings": [
+        "items",
+        "cart",
+        "products",
+        "LineItems",
+        "OrderItems",
+        "Items",
+        "line_items"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.444,
+      "x-commons-providers": 8,
+      "x-commons-spellings": [
+        "createdAt",
+        "created_at",
+        "placed_at",
+        "orderedAt",
+        "createdDate"
+      ],
+      "format": "date-time"
+    },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.444,
+      "x-commons-providers": 8,
+      "x-commons-spellings": [
+        "status",
+        "order_status",
+        "state"
+      ]
+    },
+    "customer_id": {
+      "type": "object",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.389,
+      "x-commons-providers": 7,
+      "x-commons-spellings": [
+        "customer",
+        "Customer",
+        "customer_id",
+        "eater"
+      ]
+    },
+    "order_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.389,
+      "x-commons-providers": 7,
+      "x-commons-spellings": [
+        "order_id",
+        "orderId",
+        "OrderId"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.333,
+      "x-commons-providers": 6,
+      "x-commons-spellings": [
+        "id",
+        "guid",
+        "externalId"
+      ]
+    },
+    "fulfillment_type": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.278,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "orderType",
+        "DeliveryType",
+        "service_type",
+        "diningOption"
+      ]
+    },
+    "currency": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.222,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "currency_code",
+        "currencyCode",
+        "Currency"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.222,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "notes",
+        "description"
+      ]
+    },
+    "tax": {
+      "type": "number",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.222,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "tax",
+        "TotalTax",
+        "taxes"
+      ]
+    },
+    "total": {
+      "type": "number",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.222,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "orderTotal",
+        "TotalPrice",
+        "totalPrice",
+        "total_money"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "food-ordering",
+    "concept": "food_order",
+    "providers": 18,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

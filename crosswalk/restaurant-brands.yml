@@ -1,0 +1,26 @@
+provider: restaurant-brands
+apis_io: https://apis.io/providers/restaurant-brands/
+context: food-ordering
+generated: '2026-11-10'
+concepts:
+  restaurant:
+    path_segment:
+    - stores
+    properties:
+      name: name
+      status: availability
+      time_zone: timezone
+      restaurant_id: storeId
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/channel-openapi.yml#GET /stores
+    - openapi/_original/channel-openapi.yml#GET /stores/{storeId}
+  menu:
+    path_segment:
+    - menus
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/channel-openapi.yml#GET /stores/{storeId}/menus/{serviceMode}
+    - openapi/_original/menu-v2-openapi.yml#GET /stores/menus
+    - openapi/_original/menu-v2-openapi.yml#GET /stores/{storeId}/menus

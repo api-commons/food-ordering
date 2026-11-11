@@ -1,0 +1,33 @@
+provider: oracle-hospitality
+apis_io: https://apis.io/providers/oracle-hospitality/
+context: food-ordering
+generated: '2026-11-10'
+concepts:
+  restaurant:
+    path_segment:
+    - restaurants
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/oracle-hospitality-property-v1-entcfg.json#DELETE /hotels/{hotelId}/restaurants/{restaurantCode}
+    - openapi/_original/oracle-hospitality-property-v1-entcfg.json#POST /hotels/{hotelId}/restaurants
+    - openapi/_original/oracle-hospitality-property-v1-entcfg.json#PUT /hotels/{hotelId}/restaurants/{restaurantCode}
+  menu:
+    path_segment:
+    - menu
+    properties:
+      name: name
+      status: active
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/oracle-hospitality-property-v1-lov.json#GET /listOfValues/menuClassId/{menuClassId}/menu
+  menu_item:
+    path_segment:
+    - menuitems
+    properties:
+      name: name
+      description: description
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/oracle-hospitality-property-v1-evm.json#POST /hotels/{hotelId}/events/{eventId}/menus/{menuId}/menuItems
+    - openapi/_original/oracle-hospitality-property-v1-lov.json#GET /listOfValues/hotels/{hotelId}/menuItems

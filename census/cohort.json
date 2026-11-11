@@ -1,0 +1,671 @@
+[
+ {
+  "slug": "2ndkitchen",
+  "specs": [
+   "openapi/_original/2ndkitchen-authservice.yaml",
+   "openapi/_original/2ndkitchen-businessservice.yaml",
+   "openapi/_original/2ndkitchen-deliveryservice.yaml",
+   "openapi/_original/2ndkitchen-indexingservice.yaml",
+   "openapi/_original/2ndkitchen-orderservice.yaml",
+   "openapi/_original/2ndkitchen-paymentservice.yaml",
+   "openapi/_original/2ndkitchen-pricingservice.yaml",
+   "openapi/_original/2ndkitchen-restaurantservice.yaml",
+   "openapi/_original/2ndkitchen-userservice.yaml"
+  ]
+ },
+ {
+  "slug": "7shifts",
+  "specs": [
+   "openapi/_original/7shifts-openapi.yml"
+  ]
+ },
+ {
+  "slug": "ankorstore",
+  "specs": [
+   "openapi/_original/ankorstore-astral-openapi-original.yml",
+   "openapi/_original/ankorstore-fulfillment-openapi-original.yml",
+   "openapi/_original/ankorstore-main-openapi-original.yml"
+  ]
+ },
+ {
+  "slug": "apicbase",
+  "specs": [
+   "openapi/_original/apicbase-openapi.yml"
+  ]
+ },
+ {
+  "slug": "barogo",
+  "specs": [
+   "openapi/_original/barogo-gorela-openapi.yml"
+  ]
+ },
+ {
+  "slug": "bevz",
+  "specs": [
+   "openapi/_original/bevz-openapi.yaml"
+  ]
+ },
+ {
+  "slug": "blackbird",
+  "specs": [
+   "openapi/_original/blackbird-flynet-openapi-original.yml"
+  ]
+ },
+ {
+  "slug": "bolt-eu",
+  "specs": [
+   "openapi/_original/bolt-eu-delivery-openapi.yml",
+   "openapi/_original/bolt-eu-food-openapi.yml",
+   "openapi/_original/bolt-eu-stores-openapi.yml"
+  ]
+ },
+ {
+  "slug": "chowly",
+  "specs": [
+   "openapi/_original/chowly-openapi.yml"
+  ]
+ },
+ {
+  "slug": "cloudkitchens",
+  "specs": [
+   "openapi/_original/cloudkitchens-public-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "crunchtime-information-systems",
+  "specs": [
+   "openapi/_original/crunchtime-information-systems-cruise-platform-openapi.yml",
+   "openapi/_original/crunchtime-information-systems-cruise-platform-readme-slices.json",
+   "openapi/_original/crunchtime-information-systems-inventory-labor-openapi.yml",
+   "openapi/_original/crunchtime-information-systems-inventory-labor-readme-slices.json"
+  ]
+ },
+ {
+  "slug": "cuboh",
+  "specs": [
+   "openapi/_original/cuboh-openapi.yml"
+  ]
+ },
+ {
+  "slug": "delivery-hero",
+  "specs": [
+   "openapi/_original/delivery-hero-on-demand-rider-openapi.json"
+  ]
+ },
+ {
+  "slug": "digi-key",
+  "specs": [
+   "openapi/_original/digi-key-b2bapi-order-management-api-ordermanagement-v1-openapi.yml",
+   "openapi/_original/digi-key-b2bapi-order-management-api-ordermanagement-v1.json",
+   "openapi/_original/digi-key-barcoding-barcoding-v3-openapi.yml",
+   "openapi/_original/digi-key-barcoding-barcoding-v3.json",
+   "openapi/_original/digi-key-customerresource-customerresource-v1-openapi.yml",
+   "openapi/_original/digi-key-customerresource-customerresource-v1.json",
+   "openapi/_original/digi-key-mylists-api-mylists-v1-openapi.yml",
+   "openapi/_original/digi-key-mylists-api-mylists-v1.json",
+   "openapi/_original/digi-key-ordering-api-v3-ordering-v3-openapi.yml",
+   "openapi/_original/digi-key-ordering-api-v3-ordering-v3.json",
+   "openapi/_original/digi-key-orderstatus-orderstatus-v4-openapi.yml",
+   "openapi/_original/digi-key-orderstatus-orderstatus-v4.json",
+   "openapi/_original/digi-key-packinglist-api-packinglist-openapi.yml",
+   "openapi/_original/digi-key-packinglist-api-packinglist.json",
+   "openapi/_original/digi-key-product-change-notifications-api-changenotifications-v3-openapi.yml",
+   "openapi/_original/digi-key-product-change-notifications-api-changenotifications-v3.json",
+   "openapi/_original/digi-key-productsearch-api-products-v4-openapi.yml",
+   "openapi/_original/digi-key-productsearch-api-products-v4.json",
+   "openapi/_original/digi-key-quote-api-quoting-v4-openapi.yml",
+   "openapi/_original/digi-key-quote-api-quoting-v4.json",
+   "openapi/_original/digi-key-supply-chain-api-supplychain-v1-openapi.yml",
+   "openapi/_original/digi-key-supply-chain-api-supplychain-v1.json"
+  ]
+ },
+ {
+  "slug": "doordash",
+  "specs": [
+   "openapi/_original/doordash-ads-openapi.yml",
+   "openapi/_original/doordash-drive-classic-openapi.yml",
+   "openapi/_original/doordash-drive-dasher-feedback-openapi.yml",
+   "openapi/_original/doordash-drive-openapi.yml",
+   "openapi/_original/doordash-drive-redelivery-openapi.yml",
+   "openapi/_original/doordash-drive-refunds-openapi.yml",
+   "openapi/_original/doordash-external-checkout-openapi.yml",
+   "openapi/_original/doordash-item-management-openapi.yml",
+   "openapi/_original/doordash-marketplace-legacy-openapi.yml",
+   "openapi/_original/doordash-marketplace-openapi.yml",
+   "openapi/_original/doordash-parcel-openapi.yml",
+   "openapi/_original/doordash-reporting-openapi.yml",
+   "openapi/_original/doordash-storefront-openapi.yml"
+  ]
+ },
+ {
+  "slug": "eat-app",
+  "specs": [
+   "openapi/_original/eat-app-openapi.yml"
+  ]
+ },
+ {
+  "slug": "edamam",
+  "specs": [
+   "openapi/_original/edamam-openapi.yml"
+  ]
+ },
+ {
+  "slug": "edamam-recipes",
+  "specs": [
+   "openapi/_original/edamam-food-database-v2-openapi.yml",
+   "openapi/_original/edamam-meal-planner-v1-openapi.yml",
+   "openapi/_original/edamam-nutrition-analysis-v1-openapi.yml",
+   "openapi/_original/edamam-recipe-search-v2-openapi.yml"
+  ]
+ },
+ {
+  "slug": "flipdish",
+  "specs": [
+   "openapi/_original/flipdish-apps-openapi.json",
+   "openapi/_original/flipdish-catalog-openapi.json",
+   "openapi/_original/flipdish-customers-openapi.json",
+   "openapi/_original/flipdish-devices-openapi.json",
+   "openapi/_original/flipdish-marketing-openapi.json",
+   "openapi/_original/flipdish-menus-openapi.json",
+   "openapi/_original/flipdish-orders-openapi.json",
+   "openapi/_original/flipdish-payments-openapi.json",
+   "openapi/_original/flipdish-platform-openapi.json",
+   "openapi/_original/flipdish-stores-openapi.json"
+  ]
+ },
+ {
+  "slug": "foursquare",
+  "specs": [
+   "openapi/_original/foursquare-places-openapi.yml"
+  ]
+ },
+ {
+  "slug": "fudo",
+  "specs": [
+   "openapi/_original/fudo-openapi-original.yml"
+  ]
+ },
+ {
+  "slug": "getir",
+  "specs": [
+   "openapi/_original/getir-food-openapi.json",
+   "openapi/_original/getir-food-openapi.yml"
+  ]
+ },
+ {
+  "slug": "google-places",
+  "specs": [
+   "openapi/_original/openapi.yml"
+  ]
+ },
+ {
+  "slug": "goto-gojek",
+  "specs": [
+   "openapi/_original/goto-gojek-openapi.yml"
+  ]
+ },
+ {
+  "slug": "grab",
+  "specs": [
+   "openapi/_original/grab-openapi.yml"
+  ]
+ },
+ {
+  "slug": "grubhub",
+  "specs": [
+   "openapi/_original/grubhub-busy-intervals-openapi.yml",
+   "openapi/_original/grubhub-connect-endpoints-openapi.yml",
+   "openapi/_original/grubhub-connect-webhooks-openapi.yml",
+   "openapi/_original/grubhub-deliveries-openapi.yml",
+   "openapi/_original/grubhub-menu-openapi.yml",
+   "openapi/_original/grubhub-merchant-data-openapi.yml",
+   "openapi/_original/grubhub-merchant-schedules-openapi.yml",
+   "openapi/_original/grubhub-onboarding-openapi.yml",
+   "openapi/_original/grubhub-orders-openapi.yml",
+   "openapi/_original/grubhub-reporting-endpoints-openapi.yml",
+   "openapi/_original/grubhub-reporting-webhooks-openapi.yml",
+   "openapi/_original/grubhub-testing-openapi.yml"
+  ]
+ },
+ {
+  "slug": "hang",
+  "specs": [
+   "openapi/_original/hang-openapi.json"
+  ]
+ },
+ {
+  "slug": "harri",
+  "specs": [
+   "openapi/_original/harri-employee-openapi.yml",
+   "openapi/_original/harri-employer-openapi.json"
+  ]
+ },
+ {
+  "slug": "incentivio",
+  "specs": [
+   "openapi/_original/incentivio-admin-api-openapi.json",
+   "openapi/_original/incentivio-admin-api-openapi.yml",
+   "openapi/_original/incentivio-mobile-api-openapi.json",
+   "openapi/_original/incentivio-mobile-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "just-eat",
+  "specs": [
+   "openapi/_original/just-eat-uk-openapi-original.json"
+  ]
+ },
+ {
+  "slug": "lafourchette",
+  "specs": [
+   "openapi/_original/lafourchette-b2b-api-openapi.yml",
+   "openapi/_original/lafourchette-pos-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "lightspeed",
+  "specs": [
+   "openapi/_original/lightspeed-k-series-openapi.json",
+   "openapi/_original/lightspeed-k-series-openapi.yml",
+   "openapi/_original/lightspeed-x-series-openapi.json"
+  ]
+ },
+ {
+  "slug": "lightspeed-pos",
+  "specs": [
+   "openapi/_original/lightspeed-pos-retail-x-series-openapi.yml"
+  ]
+ },
+ {
+  "slug": "lish",
+  "specs": [
+   "openapi/_original/lish-wordpress-openapi.json"
+  ]
+ },
+ {
+  "slug": "lunchbox",
+  "specs": [
+   "openapi/_original/lunchbox-core-openapi.yml",
+   "openapi/_original/lunchbox-loyalty-openapi.yml",
+   "openapi/_original/lunchbox-management-openapi.yml",
+   "openapi/_original/lunchbox-pos-openapi.yml"
+  ]
+ },
+ {
+  "slug": "marginedge",
+  "specs": [
+   "openapi/_original/marginedge-openapi.yml"
+  ]
+ },
+ {
+  "slug": "marketman",
+  "specs": [
+   "openapi/_original/marketman-openapi.yml"
+  ]
+ },
+ {
+  "slug": "mealme",
+  "specs": [
+   "openapi/_original/mealme-openapi.yml"
+  ]
+ },
+ {
+  "slug": "new-york-public-library-whats-on-the-menu",
+  "specs": [
+   "openapi/_original/new-york-public-library-whats-on-the-menu-openapi-original.yaml"
+  ]
+ },
+ {
+  "slug": "nory",
+  "specs": [
+   "openapi/_original/nory-middleware-openapi.json"
+  ]
+ },
+ {
+  "slug": "olo",
+  "specs": [
+   "openapi/_original/olo-ordering-openapi.yml",
+   "openapi/_original/olo-promotions-openapi.yml"
+  ]
+ },
+ {
+  "slug": "openmenu",
+  "specs": [
+   "openapi/_original/openmenu-openapi.yml"
+  ]
+ },
+ {
+  "slug": "opentripmap",
+  "specs": [
+   "openapi/_original/opentripmap-openapi.json"
+  ]
+ },
+ {
+  "slug": "opply",
+  "specs": [
+   "openapi/_original/opply-openapi-original.yml"
+  ]
+ },
+ {
+  "slug": "oracle-hospitality",
+  "specs": [
+   "openapi/_original/oracle-hospitality-distribution-outbound-aripublication.json",
+   "openapi/_original/oracle-hospitality-distribution-outbound-lookup.json",
+   "openapi/_original/oracle-hospitality-distribution-outbound-notification.json",
+   "openapi/_original/oracle-hospitality-distribution-v1-book.json",
+   "openapi/_original/oracle-hospitality-distribution-v1-content.json",
+   "openapi/_original/oracle-hospitality-distribution-v1-controls.json",
+   "openapi/_original/oracle-hospitality-distribution-v1-distribution.json",
+   "openapi/_original/oracle-hospitality-distribution-v1-hdpbaoauth2.json",
+   "openapi/_original/oracle-hospitality-distribution-v1-onboard.json",
+   "openapi/_original/oracle-hospitality-distribution-v1-resnotif.json",
+   "openapi/_original/oracle-hospitality-distribution-v1-shop.json",
+   "openapi/_original/oracle-hospitality-nor1-v1-upselloffers.json",
+   "openapi/_original/oracle-hospitality-property-outbound-crmoutbound.json",
+   "openapi/_original/oracle-hospitality-property-outbound-cshoutbound.json",
+   "openapi/_original/oracle-hospitality-property-outbound-fofoutbound.json",
+   "openapi/_original/oracle-hospitality-property-v1-act.json",
+   "openapi/_original/oracle-hospitality-property-v1-actcfg.json",
+   "openapi/_original/oracle-hospitality-property-v1-ars.json",
+   "openapi/_original/oracle-hospitality-property-v1-blk.json",
+   "openapi/_original/oracle-hospitality-property-v1-blkasync.json",
+   "openapi/_original/oracle-hospitality-property-v1-blkcfg.json",
+   "openapi/_original/oracle-hospitality-property-v1-bof.json",
+   "openapi/_original/oracle-hospitality-property-v1-chl.json",
+   "openapi/_original/oracle-hospitality-property-v1-cms.json",
+   "openapi/_original/oracle-hospitality-property-v1-crm.json",
+   "openapi/_original/oracle-hospitality-property-v1-crmasync.json",
+   "openapi/_original/oracle-hospitality-property-v1-crmcfg.json",
+   "openapi/_original/oracle-hospitality-property-v1-csh.json",
+   "openapi/_original/oracle-hospitality-property-v1-cshasync.json",
+   "openapi/_original/oracle-hospitality-property-v1-dvm.json",
+   "openapi/_original/oracle-hospitality-property-v1-ecommtokenization.json",
+   "openapi/_original/oracle-hospitality-property-v1-entcfg.json",
+   "openapi/_original/oracle-hospitality-property-v1-evm.json",
+   "openapi/_original/oracle-hospitality-property-v1-evmcfg.json",
+   "openapi/_original/oracle-hospitality-property-v1-expcfg.json",
+   "openapi/_original/oracle-hospitality-property-v1-fof.json",
+   "openapi/_original/oracle-hospitality-property-v1-fofcfg.json",
+   "openapi/_original/oracle-hospitality-property-v1-hsk.json",
+   "openapi/_original/oracle-hospitality-property-v1-int.json",
+   "openapi/_original/oracle-hospitality-property-v1-intcfg.json",
+   "openapi/_original/oracle-hospitality-property-v1-inv.json",
+   "openapi/_original/oracle-hospitality-property-v1-invasync.json",
+   "openapi/_original/oracle-hospitality-property-v1-lms.json",
+   "openapi/_original/oracle-hospitality-property-v1-lov.json",
+   "openapi/_original/oracle-hospitality-property-v1-medcfg.json",
+   "openapi/_original/oracle-hospitality-property-v1-oauth.json",
+   "openapi/_original/oracle-hospitality-property-v1-ops.json",
+   "openapi/_original/oracle-hospitality-property-v1-par.json",
+   "openapi/_original/oracle-hospitality-property-v1-parasync.json",
+   "openapi/_original/oracle-hospitality-property-v1-repcfg.json",
+   "openapi/_original/oracle-hospitality-property-v1-rmcfg.json",
+   "openapi/_original/oracle-hospitality-property-v1-rmr.json",
+   "openapi/_original/oracle-hospitality-property-v1-rmrcfg.json",
+   "openapi/_original/oracle-hospitality-property-v1-rsv.json",
+   "openapi/_original/oracle-hospitality-property-v1-rsvasync.json",
+   "openapi/_original/oracle-hospitality-property-v1-rsvcfg.json",
+   "openapi/_original/oracle-hospitality-property-v1-rtp.json",
+   "openapi/_original/oracle-hospitality-property-v1-rtpasync.json",
+   "openapi/_original/oracle-hospitality-property-v1-tokenexchange.json"
+  ]
+ },
+ {
+  "slug": "ottimate",
+  "specs": [
+   "openapi/_original/plateiq-accounts-api-openapi.yml",
+   "openapi/_original/plateiq-batch-api-openapi.yml",
+   "openapi/_original/plateiq-catalog-api-openapi.yml",
+   "openapi/_original/plateiq-dimensions-api-openapi.yml",
+   "openapi/_original/plateiq-invoices-api-openapi.yml",
+   "openapi/_original/plateiq-oauth-api-openapi.yml",
+   "openapi/_original/plateiq-openapi.json",
+   "openapi/_original/plateiq-openapi.yaml",
+   "openapi/_original/plateiq-purchase-orders-api-openapi.yml",
+   "openapi/_original/plateiq-receipts-api-openapi.yml",
+   "openapi/_original/plateiq-vendors-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "partstech",
+  "specs": [
+   "openapi/_original/partstech-api-openapi.yml",
+   "openapi/_original/partstech-openapi.yaml"
+  ]
+ },
+ {
+  "slug": "petpooja",
+  "specs": [
+   "openapi/_original/petpooja-openapi.yml"
+  ]
+ },
+ {
+  "slug": "punchh",
+  "specs": [
+   "openapi/_original/punchh-mobile-api-openapi.yml",
+   "openapi/_original/punchh-mobile-redemptions-legacy-openapi.yml",
+   "openapi/_original/punchh-mobile-redemptions-v2-openapi.yml",
+   "openapi/_original/punchh-mobile-subscription-openapi.yml",
+   "openapi/_original/punchh-online-ordering-redemptions-legacy-openapi.yml",
+   "openapi/_original/punchh-online-ordering-redemptions-v2-openapi.yml",
+   "openapi/_original/punchh-online-ordering-sso-api-openapi.yml",
+   "openapi/_original/punchh-online-ordering-subscription-openapi.yml",
+   "openapi/_original/punchh-platform-functions-api-openapi.yml",
+   "openapi/_original/punchh-platform-functions-headless-offers-openapi.yml",
+   "openapi/_original/punchh-platform-functions-offers-ingestion-openapi.yml",
+   "openapi/_original/punchh-platform-functions-subscription-openapi.yml",
+   "openapi/_original/punchh-pos-api-openapi.yml",
+   "openapi/_original/punchh-pos-redemptions-legacy-openapi.yml",
+   "openapi/_original/punchh-pos-redemptions-v2-openapi.yml"
+  ]
+ },
+ {
+  "slug": "quandoo",
+  "specs": [
+   "openapi/_original/quandoo-public-partner-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "quartzy",
+  "specs": [
+   "openapi/_original/quartzy-openapi.yml"
+  ]
+ },
+ {
+  "slug": "rekki",
+  "specs": [
+   "openapi/_original/rekki-supplier-api-openapi-original.json"
+  ]
+ },
+ {
+  "slug": "restaurant-brands",
+  "specs": [
+   "openapi/_original/channel-openapi.yml",
+   "openapi/_original/menu-v2-openapi.yml"
+  ]
+ },
+ {
+  "slug": "restaurant365",
+  "specs": [
+   "openapi/_original/restaurant365-odata-connector-openapi.yml",
+   "openapi/_original/restaurant365-r365-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "speccheck",
+  "specs": [
+   "openapi/_original/speccheck-openapi.yml"
+  ]
+ },
+ {
+  "slug": "spoonacular",
+  "specs": [
+   "openapi/_original/spoonacular-openapi.yml"
+  ]
+ },
+ {
+  "slug": "square",
+  "specs": [
+   "openapi/_original/square-openapi.yml"
+  ]
+ },
+ {
+  "slug": "starbucks",
+  "specs": [
+   "openapi/_original/starbucks-starbucks-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "synthego",
+  "specs": [
+   "openapi/_original/synthego-order-openapi.json"
+  ]
+ },
+ {
+  "slug": "tabit",
+  "specs": [
+   "openapi/_original/tabit-openapi.yml"
+  ]
+ },
+ {
+  "slug": "tablecheck",
+  "specs": [
+   "openapi/_original/tablecheck-availability.yml",
+   "openapi/_original/tablecheck-booking.yml",
+   "openapi/_original/tablecheck-crm.yml",
+   "openapi/_original/tablecheck-pos.yml",
+   "openapi/_original/tablecheck-site-controller.yml",
+   "openapi/_original/tablecheck-web-booking.yml"
+  ]
+ },
+ {
+  "slug": "takealot",
+  "specs": [
+   "openapi/_original/takealot-seller-openapi.yml"
+  ]
+ },
+ {
+  "slug": "terminal-shop",
+  "specs": [
+   "openapi/_original/terminal-shop-openapi.yml"
+  ]
+ },
+ {
+  "slug": "texas-instruments",
+  "specs": [
+   "openapi/_original/texas-instruments-product-information-openapi.yml",
+   "openapi/_original/texas-instruments-store-openapi.yml"
+  ]
+ },
+ {
+  "slug": "thanx",
+  "specs": [
+   "openapi/_original/thanx-consumer-api-openapi.yml",
+   "openapi/_original/thanx-loyalty-api-openapi.yml",
+   "openapi/_original/thanx-partner-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "thefork",
+  "specs": [
+   "openapi/_original/lafourchette-booking-flow-api-openapi.yml",
+   "openapi/_original/lafourchette-data-api-openapi.yml",
+   "openapi/_original/lafourchette-phone-api-openapi.yml",
+   "openapi/_original/lafourchette-review-flow-api-openapi.yml",
+   "openapi/_original/lafourchette-v1-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "toast",
+  "specs": [
+   "openapi/_original/toast-analytics-openapi.yaml",
+   "openapi/_original/toast-authentication-openapi.yaml",
+   "openapi/_original/toast-cash-management-openapi.yaml",
+   "openapi/_original/toast-configuration-openapi.yaml",
+   "openapi/_original/toast-credit-cards-openapi.yaml",
+   "openapi/_original/toast-device-details-openapi.yaml",
+   "openapi/_original/toast-gift-cards-openapi.yaml",
+   "openapi/_original/toast-kitchen-openapi.yaml",
+   "openapi/_original/toast-labor-openapi.yaml",
+   "openapi/_original/toast-loyalty-openapi.yaml",
+   "openapi/_original/toast-menus-openapi.yaml",
+   "openapi/_original/toast-menus-v3-openapi.yaml",
+   "openapi/_original/toast-ordermgmt-configuration-openapi.yaml",
+   "openapi/_original/toast-orders-openapi.yaml",
+   "openapi/_original/toast-packaging-openapi.yaml",
+   "openapi/_original/toast-partners-openapi.yaml",
+   "openapi/_original/toast-restaurant-availability-openapi.yaml",
+   "openapi/_original/toast-restaurants-openapi.yaml",
+   "openapi/_original/toast-stock-openapi.yaml",
+   "openapi/_original/toast-tender-openapi.yaml"
+  ]
+ },
+ {
+  "slug": "tock",
+  "specs": [
+   "openapi/_original/tock-guest-profile-openapi.yml",
+   "openapi/_original/tock-reservation-openapi.yml"
+  ]
+ },
+ {
+  "slug": "tripadvisor",
+  "specs": [
+   "openapi/_original/tripadvisor-content-api-openapi.yml",
+   "openapi/_original/tripadvisor-hotel-availability-check-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "tripleseat",
+  "specs": [
+   "openapi/_original/tripleseat-openapi.yml"
+  ]
+ },
+ {
+  "slug": "uber",
+  "specs": [
+   "openapi/_original/uber-businesses-openapi.yml",
+   "openapi/_original/uber-direct-openapi.yml",
+   "openapi/_original/uber-drivers-openapi.yml",
+   "openapi/_original/uber-eats-openapi.yml",
+   "openapi/_original/uber-riders-openapi.yml",
+   "openapi/_original/uber-vouchers-openapi.yml"
+  ]
+ },
+ {
+  "slug": "uber-eats",
+  "specs": [
+   "openapi/_original/uber-direct-openapi.yml",
+   "openapi/_original/uber-eats-openapi.yml"
+  ]
+ },
+ {
+  "slug": "urbanpiper",
+  "specs": [
+   "openapi/_original/urbanpiper-openapi.yml"
+  ]
+ },
+ {
+  "slug": "wisk-ai",
+  "specs": [
+   "openapi/_original/wisk-ai-openapi.yml"
+  ]
+ },
+ {
+  "slug": "workstream",
+  "specs": [
+   "openapi/_original/workstream-public-api-openapi-original.json"
+  ]
+ },
+ {
+  "slug": "zayo",
+  "specs": [
+   "openapi/_original/zayo-openapi-original.yml"
+  ]
+ },
+ {
+  "slug": "zayo-group",
+  "specs": [
+   "openapi/_original/zayo-group-openapi.yml"
+  ]
+ }
+]

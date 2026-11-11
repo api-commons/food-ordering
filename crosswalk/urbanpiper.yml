@@ -1,0 +1,22 @@
+provider: urbanpiper
+apis_io: https://apis.io/providers/urbanpiper/
+context: food-ordering
+generated: '2026-11-10'
+concepts:
+  restaurant:
+    path_segment:
+    - stores
+    - location
+    - locations
+    properties:
+      name: name
+      address: address
+      status:
+      - status
+      - active
+      city: city
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/urbanpiper-openapi.yml#POST /external/api/v1/inventory/locations/{location_ref_id}/
+    - openapi/_original/urbanpiper-openapi.yml#POST /external/api/v1/stores/
+    - openapi/_original/urbanpiper-openapi.yml#POST /hub/api/v1/location/

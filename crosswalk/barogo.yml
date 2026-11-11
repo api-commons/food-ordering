@@ -1,0 +1,27 @@
+provider: barogo
+apis_io: https://apis.io/providers/barogo/
+context: food-ordering
+generated: '2026-11-10'
+concepts:
+  restaurant:
+    path_segment:
+    - stores
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/barogo-gorela-openapi.yml#GET /api/stores
+  food_order:
+    path_segment:
+    - orders
+    properties:
+      restaurant_id: storeId
+      created_at: createdAt
+      status: status
+      order_id: orderId
+      fulfillment_type: orderType
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/barogo-gorela-openapi.yml#GET /api/orders
+    - openapi/_original/barogo-gorela-openapi.yml#GET /api/orders/{orderAgencyOrderId}
+    - openapi/_original/barogo-gorela-openapi.yml#POST /api/flexible/orders
+    - openapi/_original/barogo-gorela-openapi.yml#POST /api/orders

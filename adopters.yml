@@ -1,0 +1,214 @@
+context: food-ordering
+generated: '2026-11-10'
+adopters:
+- provider: 2ndkitchen
+  apis_io: https://apis.io/providers/2ndkitchen/
+  crosswalk: crosswalk/2ndkitchen.yml
+  concepts:
+  - food_order
+  - restaurant
+- provider: 7shifts
+  apis_io: https://apis.io/providers/7shifts/
+  crosswalk: crosswalk/7shifts.yml
+  concepts:
+  - restaurant
+- provider: apicbase
+  apis_io: https://apis.io/providers/apicbase/
+  crosswalk: crosswalk/apicbase.yml
+  concepts:
+  - restaurant
+- provider: barogo
+  apis_io: https://apis.io/providers/barogo/
+  crosswalk: crosswalk/barogo.yml
+  concepts:
+  - food_order
+  - restaurant
+- provider: blackbird
+  apis_io: https://apis.io/providers/blackbird/
+  crosswalk: crosswalk/blackbird.yml
+  concepts:
+  - restaurant
+- provider: cloudkitchens
+  apis_io: https://apis.io/providers/cloudkitchens/
+  crosswalk: crosswalk/cloudkitchens.yml
+  concepts:
+  - food_order
+  - menu
+  - restaurant
+- provider: delivery-hero
+  apis_io: https://apis.io/providers/delivery-hero/
+  crosswalk: crosswalk/delivery-hero.yml
+  concepts:
+  - food_order
+  - restaurant
+- provider: digi-key
+  apis_io: https://apis.io/providers/digi-key/
+  crosswalk: crosswalk/digi-key.yml
+  concepts:
+  - food_order
+  - restaurant
+- provider: doordash
+  apis_io: https://apis.io/providers/doordash/
+  crosswalk: crosswalk/doordash.yml
+  concepts:
+  - food_order
+  - menu
+  - menu_item
+  - restaurant
+- provider: eat-app
+  apis_io: https://apis.io/providers/eat-app/
+  crosswalk: crosswalk/eat-app.yml
+  concepts:
+  - restaurant
+- provider: flipdish
+  apis_io: https://apis.io/providers/flipdish/
+  crosswalk: crosswalk/flipdish.yml
+  concepts:
+  - food_order
+  - menu
+  - menu_item
+  - restaurant
+- provider: getir
+  apis_io: https://apis.io/providers/getir/
+  crosswalk: crosswalk/getir.yml
+  concepts:
+  - menu
+  - restaurant
+- provider: harri
+  apis_io: https://apis.io/providers/harri/
+  crosswalk: crosswalk/harri.yml
+  concepts:
+  - restaurant
+- provider: incentivio
+  apis_io: https://apis.io/providers/incentivio/
+  crosswalk: crosswalk/incentivio.yml
+  concepts:
+  - food_order
+  - restaurant
+- provider: just-eat
+  apis_io: https://apis.io/providers/just-eat/
+  crosswalk: crosswalk/just-eat.yml
+  concepts:
+  - food_order
+  - menu
+  - menu_item
+  - restaurant
+- provider: lightspeed
+  apis_io: https://apis.io/providers/lightspeed/
+  crosswalk: crosswalk/lightspeed.yml
+  concepts:
+  - restaurant
+- provider: lunchbox
+  apis_io: https://apis.io/providers/lunchbox/
+  crosswalk: crosswalk/lunchbox.yml
+  concepts:
+  - food_order
+  - menu
+  - menu_item
+  - restaurant
+- provider: new-york-public-library-whats-on-the-menu
+  apis_io: https://apis.io/providers/new-york-public-library-whats-on-the-menu/
+  crosswalk: crosswalk/new-york-public-library-whats-on-the-menu.yml
+  concepts:
+  - menu_item
+- provider: oracle-hospitality
+  apis_io: https://apis.io/providers/oracle-hospitality/
+  crosswalk: crosswalk/oracle-hospitality.yml
+  concepts:
+  - menu
+  - menu_item
+  - restaurant
+- provider: ottimate
+  apis_io: https://apis.io/providers/ottimate/
+  crosswalk: crosswalk/ottimate.yml
+  concepts:
+  - restaurant
+- provider: partstech
+  apis_io: https://apis.io/providers/partstech/
+  crosswalk: crosswalk/partstech.yml
+  concepts:
+  - food_order
+  - restaurant
+- provider: punchh
+  apis_io: https://apis.io/providers/punchh/
+  crosswalk: crosswalk/punchh.yml
+  concepts:
+  - restaurant
+- provider: restaurant-brands
+  apis_io: https://apis.io/providers/restaurant-brands/
+  crosswalk: crosswalk/restaurant-brands.yml
+  concepts:
+  - menu
+  - restaurant
+- provider: restaurant365
+  apis_io: https://apis.io/providers/restaurant365/
+  crosswalk: crosswalk/restaurant365.yml
+  concepts:
+  - restaurant
+- provider: square
+  apis_io: https://apis.io/providers/square/
+  crosswalk: crosswalk/square.yml
+  concepts:
+  - food_order
+  - restaurant
+- provider: starbucks
+  apis_io: https://apis.io/providers/starbucks/
+  crosswalk: crosswalk/starbucks.yml
+  concepts:
+  - food_order
+  - restaurant
+- provider: thanx
+  apis_io: https://apis.io/providers/thanx/
+  crosswalk: crosswalk/thanx.yml
+  concepts:
+  - restaurant
+- provider: toast
+  apis_io: https://apis.io/providers/toast/
+  crosswalk: crosswalk/toast.yml
+  concepts:
+  - food_order
+  - menu
+  - menu_item
+  - restaurant
+- provider: tripleseat
+  apis_io: https://apis.io/providers/tripleseat/
+  crosswalk: crosswalk/tripleseat.yml
+  concepts:
+  - restaurant
+- provider: uber
+  apis_io: https://apis.io/providers/uber/
+  crosswalk: crosswalk/uber.yml
+  concepts:
+  - food_order
+  - menu
+  - restaurant
+- provider: uber-eats
+  apis_io: https://apis.io/providers/uber-eats/
+  crosswalk: crosswalk/uber-eats.yml
+  concepts:
+  - food_order
+  - menu
+  - menu_item
+  - restaurant
+- provider: urbanpiper
+  apis_io: https://apis.io/providers/urbanpiper/
+  crosswalk: crosswalk/urbanpiper.yml
+  concepts:
+  - restaurant
+- provider: workstream
+  apis_io: https://apis.io/providers/workstream/
+  crosswalk: crosswalk/workstream.yml
+  concepts:
+  - restaurant
+- provider: zayo
+  apis_io: https://apis.io/providers/zayo/
+  crosswalk: crosswalk/zayo.yml
+  concepts:
+  - food_order
+  - restaurant
+- provider: zayo-group
+  apis_io: https://apis.io/providers/zayo-group/
+  crosswalk: crosswalk/zayo-group.yml
+  concepts:
+  - food_order
+  - restaurant

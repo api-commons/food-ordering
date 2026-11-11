@@ -1,0 +1,14 @@
+provider: apicbase
+apis_io: https://apis.io/providers/apicbase/
+context: food-ordering
+generated: '2026-11-10'
+concepts:
+  restaurant:
+    path_segment:
+    - outlets
+    properties:
+      name: name
+      id: id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/apicbase-openapi.yml#GET /api/v2/accounts/outlets/

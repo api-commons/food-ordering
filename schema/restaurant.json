@@ -1,0 +1,143 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/food-ordering/main/schema/restaurant.json",
+  "title": "Restaurant",
+  "description": "The common restaurant in Food Ordering, distilled from 34 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.735,
+      "x-commons-providers": 25,
+      "x-commons-spellings": [
+        "name",
+        "Name"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.559,
+      "x-commons-providers": 19,
+      "x-commons-spellings": [
+        "id",
+        "guid",
+        "uuid"
+      ]
+    },
+    "address": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.471,
+      "x-commons-providers": 16,
+      "x-commons-spellings": [
+        "address",
+        "Address"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.382,
+      "x-commons-providers": 13,
+      "x-commons-spellings": [
+        "status",
+        "state",
+        "active",
+        "Active",
+        "availability"
+      ]
+    },
+    "time_zone": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.353,
+      "x-commons-providers": 12,
+      "x-commons-spellings": [
+        "timezone",
+        "time_zone",
+        "timeZone"
+      ]
+    },
+    "restaurant_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.324,
+      "x-commons-providers": 11,
+      "x-commons-spellings": [
+        "storeId",
+        "locationId",
+        "store_id",
+        "merchant_id",
+        "StoreId",
+        "merchantId",
+        "restaurantId",
+        "location_id"
+      ]
+    },
+    "phone": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.265,
+      "x-commons-providers": 9,
+      "x-commons-spellings": [
+        "phone_number",
+        "phone",
+        "PhoneNumber"
+      ]
+    },
+    "city": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.235,
+      "x-commons-providers": 8,
+      "x-commons-spellings": [
+        "city"
+      ]
+    },
+    "currency": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.206,
+      "x-commons-providers": 7,
+      "x-commons-spellings": [
+        "currency",
+        "Currency",
+        "currency_code",
+        "currencyCode"
+      ]
+    },
+    "latitude": {
+      "type": "number",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.206,
+      "x-commons-providers": 7,
+      "x-commons-spellings": [
+        "latitude",
+        "Latitude"
+      ]
+    },
+    "longitude": {
+      "type": "number",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.206,
+      "x-commons-providers": 7,
+      "x-commons-spellings": [
+        "longitude",
+        "Longitude"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "food-ordering",
+    "concept": "restaurant",
+    "providers": 34,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

@@ -1,0 +1,322 @@
+openapi: 3.1.0
+info:
+  title: Food Ordering (API Commons)
+  version: 0.1.0-draft.20261110
+  description: 'The common Food Ordering interface, distilled from the harvested OpenAPI of 77 providers in the
+    APIs.io catalog. Not a product: no one serves this API. It is the shape the market already shares, measured,
+    so that providers, agents and integrators can map to one vocabulary. See profile.yml.'
+  license:
+    name: CC BY-NC-SA 4.0
+    url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+paths:
+  /restaurants:
+    get:
+      operationId: listRestaurants
+      summary: List restaurants
+      tags:
+      - Restaurants
+      x-commons-tier: core
+      x-commons-share: 0.882
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id001
+                  $ref: '#/components/schemas/Restaurant'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createRestaurant
+      summary: Create a restaurant
+      tags:
+      - Restaurants
+      x-commons-tier: extended
+      x-commons-share: 0.294
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id001
+  /restaurants/{restaurant_id}:
+    parameters:
+    - $ref: '#/components/parameters/restaurant_id'
+    get:
+      operationId: getRestaurant
+      summary: Get a restaurant
+      tags:
+      - Restaurants
+      x-commons-tier: core
+      x-commons-share: 0.559
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+    patch:
+      operationId: updateRestaurant
+      summary: Update a restaurant
+      tags:
+      - Restaurants
+      x-commons-tier: extended
+      x-commons-share: 0.206
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id001
+  /menus:
+    get:
+      operationId: listMenus
+      summary: List menus
+      tags:
+      - Menus
+      x-commons-tier: core
+      x-commons-share: 1.0
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id002
+                  $ref: '#/components/schemas/Menu'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createMenu
+      summary: Create a menu
+      tags:
+      - Menus
+      x-commons-tier: extended
+      x-commons-share: 0.364
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id002
+  /menus/{menu_id}:
+    parameters:
+    - $ref: '#/components/parameters/menu_id'
+    get:
+      operationId: getMenu
+      summary: Get a menu
+      tags:
+      - Menus
+      x-commons-tier: extended
+      x-commons-share: 0.273
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+  /menu-items:
+    get:
+      operationId: listMenuItems
+      summary: List menu items
+      tags:
+      - Menu Items
+      x-commons-tier: core
+      x-commons-share: 0.75
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id003
+                  $ref: '#/components/schemas/MenuItem'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createMenuItem
+      summary: Create a menu item
+      tags:
+      - Menu Items
+      x-commons-tier: extended
+      x-commons-share: 0.375
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id003
+  /menu-items/{menu_item_id}:
+    parameters:
+    - $ref: '#/components/parameters/menu_item_id'
+    get:
+      operationId: getMenuItem
+      summary: Get a menu item
+      tags:
+      - Menu Items
+      x-commons-tier: core
+      x-commons-share: 0.5
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+  /food-orders/{food_order_id}:
+    parameters:
+    - $ref: '#/components/parameters/food_order_id'
+    get:
+      operationId: getFoodOrder
+      summary: Get a food order
+      tags:
+      - Food Orders
+      x-commons-tier: core
+      x-commons-share: 0.667
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: &id004
+                $ref: '#/components/schemas/FoodOrder'
+    patch:
+      operationId: updateFoodOrder
+      summary: Update a food order
+      tags:
+      - Food Orders
+      x-commons-tier: extended
+      x-commons-share: 0.333
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id004
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id004
+  /food-orders:
+    post:
+      operationId: createFoodOrder
+      summary: Create a food order
+      tags:
+      - Food Orders
+      x-commons-tier: core
+      x-commons-share: 0.667
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id004
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id004
+    get:
+      operationId: listFoodOrders
+      summary: List food orders
+      tags:
+      - Food Orders
+      x-commons-tier: core
+      x-commons-share: 0.5
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: *id004
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+components:
+  schemas:
+    Restaurant:
+      $ref: ./schema/restaurant.json
+    Menu:
+      $ref: ./schema/menu.json
+    MenuItem:
+      $ref: ./schema/menu_item.json
+    FoodOrder:
+      $ref: ./schema/food_order.json
+  parameters:
+    restaurant_id:
+      name: restaurant_id
+      in: path
+      required: true
+      schema:
+        type: string
+    menu_id:
+      name: menu_id
+      in: path
+      required: true
+      schema:
+        type: string
+    menu_item_id:
+      name: menu_item_id
+      in: path
+      required: true
+      schema:
+        type: string
+    food_order_id:
+      name: food_order_id
+      in: path
+      required: true
+      schema:
+        type: string

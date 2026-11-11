@@ -1,0 +1,14 @@
+provider: restaurant365
+apis_io: https://apis.io/providers/restaurant365/
+context: food-ordering
+generated: '2026-11-10'
+concepts:
+  restaurant:
+    path_segment:
+    - location
+    properties:
+      name: name
+      restaurant_id: locationId
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/restaurant365-odata-connector-openapi.yml#GET /Location
