@@ -17,7 +17,7 @@ generated. Every number below is a count of providers.
 | menu_item | 8 | 7 | name 86%, description 71% | items 5, menuitems 3, dishes 1 |
 | food_order | 18 | 18 | restaurant_id 67%, items 56% | orders 14, order 6 |
 
-Cohort: 77 providers with harvested OpenAPI, 35 crosswalks. Of the providers exposing a restaurant: 29% create, 88% list, 56% fetch, 21% update, 12% delete. Generated 2026-11-10 by build.py.
+Cohort: 77 providers with harvested OpenAPI, 35 crosswalks. Of the providers exposing a restaurant: 29% create, 88% list, 56% fetch, 21% update, 12% delete. Generated 2026-11-11 by build.py.
 <!-- /commons:summary -->
 
 Shares are of the providers with a readable resource schema for that concept. The
@@ -25,7 +25,7 @@ extended tier and the long tail of every concept are in [profile.yml](profile.ym
 
 ## What the measurement shows
 
-- A food order agrees only on the restaurant it belongs to. Aggregators (DoorDash, Just Eat), ordering platforms and kitchen systems each model the order, its items and its fulfilment type differently -- the same divergence as orders in commerce.
+- A food order agrees only on the restaurant and its items -- aggregators (DoorDash, Just Eat), ordering platforms and kitchen systems each model the totals and the fulfilment type differently, the same divergence as orders in commerce.
 - A restaurant agrees only on name and id; hours and address are carried by too few to share, because many APIs take the restaurant as given from their own onboarding.
 - Modifier groups -- the min/max choice rules that make a menu orderable -- are almost never a resource of their own (2 providers); they live inside the menu item.
 

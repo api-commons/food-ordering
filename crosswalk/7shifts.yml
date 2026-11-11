@@ -1,7 +1,7 @@
 provider: 7shifts
 apis_io: https://apis.io/providers/7shifts/
 context: food-ordering
-generated: '2026-11-10'
+generated: '2026-11-11'
 concepts:
   restaurant:
     path_segment:

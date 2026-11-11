@@ -1,7 +1,7 @@
 provider: flipdish
 apis_io: https://apis.io/providers/flipdish/
 context: food-ordering
-generated: '2026-11-10'
+generated: '2026-11-11'
 concepts:
   restaurant:
     path_segment:
