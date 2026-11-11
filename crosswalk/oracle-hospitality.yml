@@ -17,6 +17,7 @@ concepts:
     - menu
     properties:
       name: name
+      description: description
       status: active
     core_coverage: 0.5
     evidence:

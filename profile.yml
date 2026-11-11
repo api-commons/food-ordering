@@ -69,40 +69,66 @@ concepts:
     properties:
     - name: name
       tier: core
-      providers: 25
-      share: 0.735
+      providers: 27
+      share: 0.794
       type: string
       spellings:
       - name
+      - title
       - Name
     - name: id
       tier: core
-      providers: 19
-      share: 0.559
+      providers: 20
+      share: 0.588
       type: string
       spellings:
       - id
+      - externalId
       - guid
       - uuid
-    - name: address
+    - name: status
       tier: extended
       providers: 16
       share: 0.471
       type: string
       spellings:
+      - status
+      - state
+      - active
+      - enabled
+      - Active
+      - availability
+    - name: address
+      tier: extended
+      providers: 15
+      share: 0.441
+      type: object
+      spellings:
       - address
       - Address
-    - name: status
+    - name: restaurant_id
       tier: extended
       providers: 13
       share: 0.382
       type: string
       spellings:
-      - status
-      - state
-      - active
-      - Active
-      - availability
+      - storeId
+      - locationId
+      - store_id
+      - merchant_id
+      - StoreId
+      - merchantId
+      - location_id
+    - name: phone
+      tier: extended
+      providers: 12
+      share: 0.353
+      type: string
+      spellings:
+      - phone_number
+      - phone
+      - PhoneNumber
+      - phoneNumber
     - name: time_zone
       tier: extended
       providers: 12
@@ -112,36 +138,24 @@ concepts:
       - timezone
       - time_zone
       - timeZone
-    - name: restaurant_id
-      tier: extended
-      providers: 11
-      share: 0.324
-      type: string
-      spellings:
-      - storeId
-      - locationId
-      - store_id
-      - merchant_id
-      - StoreId
-      - merchantId
-      - restaurantId
-      - location_id
-    - name: phone
+    - name: city
       tier: extended
       providers: 9
       share: 0.265
       type: string
       spellings:
-      - phone_number
-      - phone
-      - PhoneNumber
-    - name: city
+      - city
+    - name: created_at
       tier: extended
-      providers: 8
-      share: 0.235
+      providers: 7
+      share: 0.206
       type: string
       spellings:
-      - city
+      - created_at
+      - created
+      - createdAt
+      - createdOn
+      - createdDate
     - name: currency
       tier: extended
       providers: 7
@@ -168,17 +182,20 @@ concepts:
       spellings:
       - longitude
       - Longitude
-    long_tail_count: 373
+    long_tail_count: 402
     long_tail_sample:
-    - created_at
     - country
-    - hours
+    - location_name
     - metadata
     - updated_at
     - description
+    - hours
+    - price
     - type
-    - building_id
+    - zip
+    - building_classification
     - charges
+    - competitive_internet_enablement
     - contact_emails
     - coordinates
     - country_code
@@ -186,30 +203,27 @@ concepts:
     - distance
     - email
     - external_store_id
+    - floor
     - limit
-    - location_name
     - logo_url
-    - messages
+    - network_status
     - order_by
-    - pagination
+    - preferred
+    - product_id
     - restaurant_name
+    - room
     - slug
     - state_code
+    - street
+    - suite
     - taxes
     - website_url
-    - zayo_network_status
-    - zip
     - zip_code
     - add_user
     - additional_url
     - address1
     - admin_user_id
     - allow_chef_notes
-    - allow_pre_orders_and_table_service
-    - alternate_store_number
-    - always_appear_open
-    - amenities
-    - apm_phone_number
   menu:
     segments_seen:
       menus: 8
@@ -257,8 +271,8 @@ concepts:
       - title
     - name: id
       tier: core
-      providers: 6
-      share: 0.545
+      providers: 7
+      share: 0.636
       type: string
       spellings:
       - id
@@ -266,10 +280,17 @@ concepts:
       - MenuId
       - guid
       - externalId
-    - name: categories
+    - name: description
       tier: extended
       providers: 4
       share: 0.364
+      type: string
+      spellings:
+      - description
+    - name: categories
+      tier: extended
+      providers: 3
+      share: 0.273
       type: array
       spellings:
       - categories
@@ -299,15 +320,13 @@ concepts:
       spellings:
       - status
       - active
-    long_tail_count: 90
+    long_tail_count: 92
     long_tail_sample:
-    - description
     - image_url
     - items
     - app_id
     - average_price
     - business_date
-    - category_id
     - chain_product_category
     - code
     - config_offer_entries
@@ -318,15 +337,15 @@ concepts:
     - discount_amount
     - display_section_links
     - end_business_date
-    - entities
     - entity_type
     - entries
     - excluded_restaurant_ids
+    - external_data
+    - extras
     - flexfields
     - fulfillment_type
     - gross_sales_amount
     - group_by
-    - hours
     - image_name
     - images
     - integration_id
@@ -341,6 +360,8 @@ concepts:
     - menu_group_name
     - menu_guid
     - menu_item_guid
+    - menu_item_name
+    - menu_name
   menu_item:
     segments_seen:
       items: 5
@@ -396,7 +417,7 @@ concepts:
       - id
       - guid
       - externalId
-    long_tail_count: 45
+    long_tail_count: 43
     long_tail_sample:
     - price
     - price_info
@@ -426,7 +447,6 @@ concepts:
     - item_type
     - labels
     - last_sold_datetime
-    - limit
     - menu_id
     - menu_item_ids
     - merchant_supplied_item_id
@@ -438,6 +458,7 @@ concepts:
     - program_eligibility
     - require_other_products
     - restaurant_id
+    - short_description
   food_order:
     segments_seen:
       orders: 14
@@ -484,14 +505,14 @@ concepts:
       - store
       - location
       - Store
+      - StoreId
       - locationId
       - Restaurant
       - restaurant_id
-      - location_id
     - name: items
       tier: core
-      providers: 9
-      share: 0.5
+      providers: 10
+      share: 0.556
       type: array
       spellings:
       - items
@@ -500,6 +521,7 @@ concepts:
       - LineItems
       - OrderItems
       - Items
+      - orderItems
       - line_items
     - name: created_at
       tier: extended
@@ -512,6 +534,17 @@ concepts:
       - placed_at
       - orderedAt
       - createdDate
+    - name: customer_id
+      tier: extended
+      providers: 8
+      share: 0.444
+      type: object
+      spellings:
+      - customer
+      - Customer
+      - CustomerId
+      - customer_id
+      - eater
     - name: status
       tier: extended
       providers: 8
@@ -521,16 +554,6 @@ concepts:
       - status
       - order_status
       - state
-    - name: customer_id
-      tier: extended
-      providers: 7
-      share: 0.389
-      type: object
-      spellings:
-      - customer
-      - Customer
-      - customer_id
-      - eater
     - name: order_id
       tier: extended
       providers: 7
@@ -557,6 +580,7 @@ concepts:
       spellings:
       - orderType
       - DeliveryType
+      - OrderType
       - service_type
       - diningOption
     - name: currency
@@ -576,6 +600,14 @@ concepts:
       spellings:
       - notes
       - description
+    - name: po_number
+      tier: extended
+      providers: 4
+      share: 0.222
+      type: string
+      spellings:
+      - poNumber
+      - PONumber
     - name: tax
       tier: extended
       providers: 4
@@ -595,10 +627,9 @@ concepts:
       - TotalPrice
       - totalPrice
       - total_money
-    long_tail_count: 337
+    long_tail_count: 352
     long_tail_sample:
     - payment
-    - po_number
     - price
     - updated_at
     - billing_account_id
@@ -637,3 +668,4 @@ concepts:
     - btc_receive_address
     - bundle_delivery_count
     - business_date
+    - business_id

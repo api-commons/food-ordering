@@ -11,8 +11,8 @@ concepts:
     - restaurants
     properties:
       name: Name
-      address: Address
       status: Active
+      address: Address
       restaurant_id: StoreId
       phone: PhoneNumber
       currency: Currency
@@ -58,11 +58,15 @@ concepts:
     - orders
     - order
     properties:
-      restaurant_id: Store
+      restaurant_id:
+      - Store
+      - StoreId
       items: OrderItems
       customer_id: Customer
       order_id: OrderId
-      fulfillment_type: DeliveryType
+      fulfillment_type:
+      - DeliveryType
+      - OrderType
       tax: TotalTax
     core_coverage: 1.0
     evidence:

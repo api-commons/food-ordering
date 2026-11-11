@@ -10,6 +10,14 @@ generated. Every number below is a count of providers.
 ## What the market already agrees on
 
 <!-- commons:summary -->
+| Concept | Expose it | Readable schema | Core properties (share) | Collection named |
+| --- | ---: | ---: | --- | --- |
+| restaurant | 34 | 34 | name 79%, id 59% | locations 14, stores 12, restaurants 8, location 4 |
+| menu | 11 | 11 | name 73%, id 64% | menus 8, menu 7 |
+| menu_item | 8 | 7 | name 86%, description 71% | items 5, menuitems 3, dishes 1 |
+| food_order | 18 | 18 | restaurant_id 67%, items 56% | orders 14, order 6 |
+
+Cohort: 77 providers with harvested OpenAPI, 35 crosswalks. Of the providers exposing a restaurant: 29% create, 88% list, 56% fetch, 21% update, 12% delete. Generated 2026-11-10 by build.py.
 <!-- /commons:summary -->
 
 Shares are of the providers with a readable resource schema for that concept. The

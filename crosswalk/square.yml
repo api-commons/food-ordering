@@ -9,11 +9,12 @@ concepts:
     properties:
       name: name
       id: id
-      address: address
       status: status
-      time_zone: timezone
+      address: address
       restaurant_id: merchant_id
       phone: phone_number
+      time_zone: timezone
+      created_at: created_at
       currency: currency
     core_coverage: 1.0
     evidence:
@@ -28,8 +29,8 @@ concepts:
       restaurant_id: location_id
       items: line_items
       created_at: created_at
-      status: state
       customer_id: customer_id
+      status: state
       id: id
       tax: taxes
       total: total_money

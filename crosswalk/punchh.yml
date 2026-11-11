@@ -8,13 +8,13 @@ concepts:
     - locations
     properties:
       name: name
-      address: address
       status:
       - state
       - status
-      time_zone: time_zone
+      address: address
       restaurant_id: location_id
       phone: phone_number
+      time_zone: time_zone
       city: city
       latitude: latitude
       longitude: longitude

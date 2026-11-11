@@ -7,7 +7,8 @@ concepts:
     path_segment:
     - locations
     properties:
-      address: address
+      status: enabled
+      restaurant_id: locationId
     core_coverage: 0.0
     evidence:
     - openapi/_original/zayo-group-openapi.yml#GET /services/location-management/v2/building/{buildingId}/locations
@@ -16,6 +17,7 @@ concepts:
     - order
     properties:
       description: notes
+      po_number: poNumber
     core_coverage: 0.0
     evidence:
     - openapi/_original/zayo-group-openapi.yml#POST /services/order-management/v2/orders/order

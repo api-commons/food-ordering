@@ -6,8 +6,12 @@ concepts:
   restaurant:
     path_segment:
     - stores
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      name: name
+      restaurant_id: storeId
+      phone: phone
+      created_at: createdAt
+    core_coverage: 0.5
     evidence:
     - openapi/_original/barogo-gorela-openapi.yml#GET /api/stores
   food_order:

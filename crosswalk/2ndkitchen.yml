@@ -9,12 +9,12 @@ concepts:
     properties:
       name: name
       id: id
-      address: address
       status:
       - state
       - status
-      time_zone: timezone
+      address: address
       phone: phone_number
+      time_zone: timezone
       city: city
       currency: currency_code
       latitude: latitude

@@ -9,8 +9,8 @@ concepts:
     properties:
       name: name
       status: status
-      time_zone: timezone
       restaurant_id: store_id
+      time_zone: timezone
       city: city
       latitude: latitude
       longitude: longitude
@@ -49,8 +49,8 @@ concepts:
       restaurant_id:
       - restaurant_id
       - location
-      status: status
       customer_id: customer
+      status: status
       order_id: order_id
       fulfillment_type: service_type
     core_coverage: 0.5

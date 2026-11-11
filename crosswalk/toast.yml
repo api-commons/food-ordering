@@ -8,6 +8,7 @@ concepts:
     - restaurants
     properties:
       id: guid
+      created_at: createdDate
     core_coverage: 0.5
     evidence:
     - openapi/_original/toast-partners-openapi.yaml#GET /restaurants

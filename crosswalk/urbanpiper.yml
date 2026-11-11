@@ -10,10 +10,10 @@ concepts:
     - locations
     properties:
       name: name
-      address: address
       status:
       - status
       - active
+      address: address
       city: city
     core_coverage: 0.5
     evidence:

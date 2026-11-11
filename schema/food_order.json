@@ -15,17 +15,17 @@
         "store",
         "location",
         "Store",
+        "StoreId",
         "locationId",
         "Restaurant",
-        "restaurant_id",
-        "location_id"
+        "restaurant_id"
       ]
     },
     "items": {
       "type": "array",
       "x-commons-tier": "core",
-      "x-commons-share": 0.5,
-      "x-commons-providers": 9,
+      "x-commons-share": 0.556,
+      "x-commons-providers": 10,
       "x-commons-spellings": [
         "items",
         "cart",
@@ -33,6 +33,7 @@
         "LineItems",
         "OrderItems",
         "Items",
+        "orderItems",
         "line_items"
       ]
     },
@@ -50,6 +51,19 @@
       ],
       "format": "date-time"
     },
+    "customer_id": {
+      "type": "object",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.444,
+      "x-commons-providers": 8,
+      "x-commons-spellings": [
+        "customer",
+        "Customer",
+        "CustomerId",
+        "customer_id",
+        "eater"
+      ]
+    },
     "status": {
       "type": "string",
       "x-commons-tier": "extended",
@@ -59,18 +73,6 @@
         "status",
         "order_status",
         "state"
-      ]
-    },
-    "customer_id": {
-      "type": "object",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.389,
-      "x-commons-providers": 7,
-      "x-commons-spellings": [
-        "customer",
-        "Customer",
-        "customer_id",
-        "eater"
       ]
     },
     "order_id": {
@@ -103,6 +105,7 @@
       "x-commons-spellings": [
         "orderType",
         "DeliveryType",
+        "OrderType",
         "service_type",
         "diningOption"
       ]
@@ -126,6 +129,16 @@
       "x-commons-spellings": [
         "notes",
         "description"
+      ]
+    },
+    "po_number": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.222,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "poNumber",
+        "PONumber"
       ]
     },
     "tax": {

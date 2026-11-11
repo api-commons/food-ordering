@@ -21,13 +21,17 @@ concepts:
     - orders
     - order
     properties:
-      restaurant_id: store
+      restaurant_id:
+      - store
+      - storeId
+      items: orderItems
       status: status
       id: id
       description: notes
+      po_number: poNumber
       tax: tax
       total: totalPrice
-    core_coverage: 0.5
+    core_coverage: 1.0
     evidence:
     - openapi/_original/partstech-api-openapi.yml#GET /orders
     - openapi/_original/partstech-api-openapi.yml#GET /orders/{orderId}

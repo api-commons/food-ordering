@@ -9,8 +9,8 @@ concepts:
     properties:
       name: name
       status: availability
-      time_zone: timezone
       restaurant_id: storeId
+      time_zone: timezone
     core_coverage: 0.5
     evidence:
     - openapi/_original/channel-openapi.yml#GET /stores

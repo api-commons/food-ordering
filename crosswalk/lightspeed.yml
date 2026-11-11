@@ -9,8 +9,8 @@ concepts:
     properties:
       name: name
       id: id
-      time_zone: time_zone
       phone: phone
+      time_zone: time_zone
       currency: currency
       latitude: latitude
       longitude: longitude

@@ -11,8 +11,9 @@ concepts:
       name: name
       id: id
       address: address
-      time_zone: time_zone
       phone: phone_number
+      time_zone: time_zone
+      created_at: created_at
     core_coverage: 1.0
     evidence:
     - openapi/_original/blackbird-flynet-openapi-original.yml#GET /locations

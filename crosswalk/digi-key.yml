@@ -19,7 +19,9 @@ concepts:
     - orders
     properties:
       items: LineItems
+      customer_id: CustomerId
       currency: Currency
+      po_number: PONumber
     core_coverage: 0.5
     evidence:
     - openapi/_original/digi-key-ordering-api-v3-ordering-v3-openapi.yml#POST /Orders

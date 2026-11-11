@@ -9,6 +9,7 @@ concepts:
     properties:
       name: name
       restaurant_id: locationId
+      created_at: createdOn
     core_coverage: 0.5
     evidence:
     - openapi/_original/restaurant365-odata-connector-openapi.yml#GET /Location

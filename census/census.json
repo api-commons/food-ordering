@@ -136,8 +136,14 @@
      "GET collection"
     ],
     "properties": {
-     "isSuccess": "boolean",
-     "stores": "array"
+     "storeId": "integer",
+     "name": "string",
+     "phone": "string",
+     "jibunAddress": "string",
+     "roadAddress": "string",
+     "detailAddress": "string",
+     "businessNumber": "string",
+     "createdAt": "integer"
     },
     "evidence": [
      "openapi/_original/barogo-gorela-openapi.yml#GET /api/stores"
@@ -153,8 +159,6 @@
      "GET item"
     ],
     "properties": {
-     "restaurants": "array",
-     "pagination": "object",
      "id": "string",
      "object": "string",
      "name": "string",
@@ -167,7 +171,6 @@
      "instagram_url": "string",
      "created_at": "string",
      "updated_at": "string",
-     "locations": "array",
      "restaurant": "object",
      "neighborhood": "object",
      "slug": "string",
@@ -310,10 +313,8 @@
      "auto_release_distance": "integer",
      "special_instructions_max_length": "integer",
      "current_deactivations": "array",
-     "stores": "array",
-     "prev_token": "string",
-     "next_token": "string",
      "id": "string",
+     "store_properties": "object",
      "time_zone": "string",
      "store_hours": "object",
      "store_special_hours": "object",
@@ -321,8 +322,7 @@
      "delivery_fee": "number",
      "average_delivery_time": "number",
      "average_pickup_time": "number",
-     "should_show_delivery_fee": "boolean",
-     "store_properties": "object"
+     "should_show_delivery_fee": "boolean"
     },
     "evidence": [
      "openapi/_original/doordash-drive-classic-openapi.yml#GET /developer/v1/businesses/{external_business_id}/stores",
@@ -405,12 +405,21 @@
      "PinCode": "integer",
      "Images": "array",
      "UserType": "string",
+     "WhiteLabelConfigs": "array",
+     "VirtualRestaurantId": "integer",
+     "VirtualRestaurantName": "string",
+     "VirtualRestaurantUrl": "string",
+     "PhysicalRestaurantId": "integer",
+     "PhysicalRestaurantName": "string",
+     "PhysicalRestaurantAddress": "string",
+     "MenuId": "integer",
+     "IsArchived": "boolean",
+     "FlipdishStripeCustomConnectedAccounts": "array",
      "Address": "object",
      "DeliveryZones": "array",
      "ApmPhoneNumber": "string",
      "PickupHours": "array",
      "DeliveryHours": "array",
-     "MenuId": "integer",
      "OrderConfirmationMessageOverrideDelivery": "string",
      "OrderConfirmationMessageOverridePickup": "string",
      "PrintoutLayoutType": "string",
@@ -447,7 +456,6 @@
      "AllowChefNotes": "boolean",
      "EtaInPickupConfirmationSmsEnabled": "boolean",
      "EtaInDeliveryConfirmationSmsEnabled": "boolean",
-     "IsArchived": "boolean",
      "EmailAddress": "string",
      "StaffLanguage": "string",
      "SalesChannelTypes": "array",
@@ -539,11 +547,14 @@
      "PUT item"
     ],
     "properties": {
-     "clientId": "string",
-     "locations": "array",
+     "locationId": "string",
+     "locationName": "string",
+     "metaData": "object",
+     "locationEnabled": "boolean",
      "catalogOverrides": "array",
      "catering": "boolean",
      "charges": "array",
+     "clientId": "string",
      "countryCode": "string",
      "currencyCode": "string",
      "deliveryArea": "object",
@@ -572,7 +583,6 @@
      "groupOverrides": "array",
      "kitchenThrottleConfig": "object",
      "latitude": "number",
-     "locationName": "string",
      "longitude": "number",
      "menuImportConfig": "object",
      "merchantId": "string",
@@ -601,13 +611,37 @@
      "taxes": "array",
      "test": "boolean",
      "timeZone": "string",
-     "patchData": "array",
-     "locationId": "string",
+     "op": "string",
+     "path": "string",
+     "value": "string",
      "active": "boolean",
-     "extTargetingId": "string",
-     "productType": "string",
-     "paging": "object",
-     "stores": "array"
+     "productTitle": "string",
+     "incentivioId": "string",
+     "externalId": "string",
+     "price": "string",
+     "status": "string",
+     "itemType": "string",
+     "productId": "string",
+     "storeId": "string",
+     "title": "string",
+     "address": "object",
+     "phoneNumber": "string",
+     "shortDescription": "string",
+     "longDescription": "string",
+     "regionId": "string",
+     "storeCode": "string",
+     "storeType": "string",
+     "beaconId": "string",
+     "beaconName": "string",
+     "smallImage": "string",
+     "mediumImage": "string",
+     "displayInfo": "array",
+     "deliveryProcessingTime": "integer",
+     "pickupProcessingTime": "integer",
+     "pickupMaxOrderingDate": "string",
+     "deliveryMaxOrderingDate": "string",
+     "withInDeliveryRadius": "boolean",
+     "viewOnlyLocationEnabled": "boolean"
     },
     "evidence": [
      "openapi/_original/incentivio-admin-api-openapi.json#DELETE /incentivio-ordering-service/locations/{locationid}",
@@ -635,9 +669,9 @@
     ],
     "properties": {
      "restaurants": "array",
-     "isSponsored": "boolean",
-     "products": "array",
-     "restaurantId": "string"
+     "fullName": "string",
+     "price": "number",
+     "productId": "string"
     },
     "evidence": [
      "openapi/_original/just-eat-uk-openapi-original.json#DELETE /delivery/pools/{deliveryPoolId}/restaurants",
@@ -959,19 +993,15 @@
      "GET item"
     ],
     "properties": {
-     "stores": "array",
-     "total": "integer",
      "id": "string",
      "name": "string",
      "address": "object",
      "coordinates": "object",
      "phone": "string",
      "timezone": "string",
-     "hours": "array",
-     "amenities": "array",
-     "services": "array",
-     "mobileOrderingEnabled": "boolean",
-     "driveThru": "boolean"
+     "day": "string",
+     "open": "string",
+     "close": "string"
     },
     "evidence": [
      "openapi/_original/starbucks-starbucks-api-openapi.yml#GET /v1/stores",
@@ -986,11 +1016,15 @@
      "GET collection"
     ],
     "properties": {
-     "locations": "array",
-     "pagination": "object",
      "id": "string",
      "merchant_id": "string",
-     "name": "string"
+     "street": "string",
+     "city": "string",
+     "state": "string",
+     "zip": "string",
+     "name": "string",
+     "phone": "string",
+     "loyalty_redemption_type": "string"
     },
     "evidence": [
      "openapi/_original/thanx-consumer-api-openapi.yml#GET /locations",
@@ -1063,8 +1097,6 @@
      "PATCH item"
     ],
     "properties": {
-     "stores": "array",
-     "total": "integer",
      "store_id": "string",
      "name": "string",
      "status": "string",
@@ -1149,8 +1181,8 @@
     ],
     "properties": {
      "uuid": "string",
-     "name": "string",
-     "custom_fields": "array"
+     "title": "string",
+     "value": "string"
     },
     "evidence": [
      "openapi/_original/workstream-public-api-openapi-original.json#GET /locations",
@@ -1165,11 +1197,22 @@
      "GET collection"
     ],
     "properties": {
-     "buildingId": "string",
-     "address": "string",
-     "zayoNetworkStatus": "string",
-     "locations": "array",
-     "messages": "array"
+     "locationName": "string",
+     "locationId": "string",
+     "networkStatus": "string",
+     "buildingClassification": [
+      "null",
+      "string"
+     ],
+     "competitiveInternetEnablement": "string",
+     "suite": [
+      "null",
+      "string"
+     ],
+     "floor": "string",
+     "room": "string",
+     "enabled": "object",
+     "preferred": "object"
     },
     "evidence": [
      "openapi/_original/zayo-openapi-original.yml#GET /services/location-management/v2/building/{buildingId}/locations"
@@ -1183,11 +1226,22 @@
      "GET collection"
     ],
     "properties": {
-     "buildingId": "string",
-     "address": "string",
-     "zayoNetworkStatus": "string",
-     "locations": "array",
-     "messages": "array"
+     "locationName": "string",
+     "locationId": "string",
+     "networkStatus": "string",
+     "buildingClassification": [
+      "null",
+      "string"
+     ],
+     "competitiveInternetEnablement": "string",
+     "suite": [
+      "null",
+      "string"
+     ],
+     "floor": "string",
+     "room": "string",
+     "enabled": "object",
+     "preferred": "object"
     },
     "evidence": [
      "openapi/_original/zayo-group-openapi.yml#GET /services/location-management/v2/building/{buildingId}/locations"
@@ -1271,9 +1325,11 @@
      "fulfillment_type": "string",
      "country_code": "string",
      "name": "string",
+     "description": "string",
      "id": "string",
-     "categories": "array",
-     "menu_hours": "object"
+     "price": "object",
+     "extras": "array",
+     "original_image_url": "string"
     },
     "evidence": [
      "openapi/_original/doordash-marketplace-legacy-openapi.yml#PATCH /api/v1/menus/{id}",
@@ -1527,9 +1583,12 @@
      "PUT collection"
     ],
     "properties": {
-     "category_id": "string",
+     "id": "string",
+     "external_data": "string",
      "title": "object",
-     "entities": "array"
+     "description": "object",
+     "msrp": "integer",
+     "quantity_info": "object"
     },
     "evidence": [
      "openapi/_original/uber-eats-openapi.yml#GET /eats/stores/{store_id}/menus",
@@ -1576,8 +1635,7 @@
      "price": "number",
      "metas": "array",
      "labels": "array",
-     "stock_status": "integer",
-     "menus_products": "object"
+     "stock_status": "integer"
     },
     "evidence": [
      "openapi/_original/2ndkitchen-restaurantservice.yaml#GET /menus/products",
@@ -1632,10 +1690,7 @@
      "Price": "number",
      "ImageFileName": "string",
      "Alcohol": "boolean",
-     "Page": "integer",
-     "Limit": "integer",
-     "TotalRecordCount": "integer",
-     "Data": "array"
+     "Data": "object"
     },
     "evidence": [
      "openapi/_original/flipdish-catalog-openapi.json#GET /api/v1.0/{appId}/catalog/items",
@@ -2092,9 +2147,7 @@
      "customerPayments": "array",
      "fulfillmentInfo": "object",
      "promotionsDetails": "array",
-     "preparationTime": "object",
-     "orders": "array",
-     "offsetToken": "string"
+     "preparationTime": "object"
     },
     "evidence": [
      "openapi/_original/cloudkitchens-public-api-openapi.yml#GET /manager/order/v1/orders",
@@ -2199,8 +2252,12 @@
      "PackagingPreference": "string",
      "Taxable": "boolean",
      "ExportQuestions": "object",
-     "TotalOrders": "integer",
-     "Orders": "array"
+     "OrderNumber": "integer",
+     "CustomerId": "integer",
+     "DateEntered": "string",
+     "PONumber": "string",
+     "EntireOrderStatus": "object",
+     "SalesOrders": "array"
     },
     "evidence": [
      "openapi/_original/digi-key-ordering-api-v3-ordering-v3-openapi.yml#POST /Orders",
@@ -2222,7 +2279,8 @@
      "failure_reason": "string",
      "prep_time": "string",
      "pickup_instructions": "string",
-     "errors": "array"
+     "code": "string",
+     "message": "string"
     },
     "evidence": [
      "openapi/_original/doordash-marketplace-legacy-openapi.yml#PATCH /api/v1/orders/{id}",
@@ -2299,13 +2357,31 @@
      "FoodAmount": "number",
      "TotalRestaurantAmount": "number",
      "IsoCurrency": "string",
-     "Page": "integer",
-     "Limit": "integer",
-     "TotalRecordCount": "integer",
-     "Data": "array",
+     "Data": "object",
+     "PayoutId": "integer",
+     "OrderDate": "string",
+     "OrderType": "string",
+     "OrderCurrency": "string",
+     "Sales": "number",
+     "SalesTax": "number",
+     "DeliveryCharges": "number",
+     "Tips": "number",
+     "FlatFeeExcludingVat": "number",
+     "FlatFeeExcludingVAT": "number",
+     "FlatFeeIncludingVat": "number",
+     "PercentageFeeExcludingVat": "number",
+     "PercentageFeeExcludingVAT": "number",
+     "Vat": "number",
+     "TotalFees": "number",
+     "CashFeeChargedToCustomer": "number",
+     "NetSales": "number",
+     "StoreId": "integer",
      "PeriodStart": "string",
      "PeriodLengthInDays": "integer",
-     "CurrencyData": "array"
+     "CurrencyData": "array",
+     "Page": "integer",
+     "Limit": "integer",
+     "TotalRecordCount": "integer"
     },
     "evidence": [
      "openapi/_original/flipdish-customers-openapi.json#GET /api/v1.0/users/{userId}/orders",
@@ -2467,10 +2543,10 @@
      "PUT item"
     ],
     "properties": {
-     "locale": "string",
-     "currency": "string",
-     "totalAmount": "number",
-     "lines": "array"
+     "label": "string",
+     "category": "string",
+     "totalPrice": "number",
+     "quantity": "number"
     },
     "evidence": [
      "openapi/_original/lafourchette-pos-api-openapi.yml#PUT /v1/orders/{orderUuid}"
@@ -2534,27 +2610,25 @@
      "GET item"
     ],
     "properties": {
-     "nextPage": "string",
-     "orders": "array",
-     "deliveryCharges": "number",
-     "attachments": "array",
+     "createdDate": "string",
      "orderId": "string",
-     "otherCharges": "number",
+     "invoiceNumber": "string",
      "vendorId": "string",
-     "tax": "number",
      "vendorName": "string",
      "customerNumber": "string",
      "invoiceDate": "string",
+     "paymentAccount": "string",
      "orderTotal": "number",
+     "status": "string",
+     "deliveryCharges": "number",
+     "attachments": "array",
+     "otherCharges": "number",
+     "tax": "number",
      "lineItems": "array",
      "isCredit": "boolean",
-     "createdDate": "string",
      "inputTaxCredits": "number",
-     "invoiceNumber": "string",
      "creditAmount": "number",
-     "paymentAccount": "string",
-     "otherDescription": "string",
-     "status": "string"
+     "otherDescription": "string"
     },
     "evidence": [
      "openapi/_original/marginedge-openapi.yml#GET /orders",
@@ -2659,8 +2733,8 @@
      "user": "object",
      "shop": "object",
      "buyerShop": "object",
-     "orders": "array",
-     "urls": "object"
+     "storeId": "integer",
+     "orderItems": "array"
     },
     "evidence": [
      "openapi/_original/partstech-api-openapi.yml#GET /orders",
@@ -2851,8 +2925,26 @@
      "GET collection"
     ],
     "properties": {
-     "page_summary": "object",
-     "sales": "array"
+     "shipment_id": "integer",
+     "shipment_state_id": "integer",
+     "po_number": "integer",
+     "shipment_name": "string",
+     "offer_id": "integer",
+     "product_title": "string",
+     "takealot_url_mobi": "string",
+     "sku": "string",
+     "tsin": "integer",
+     "order_id": "integer",
+     "order_item_id": "integer",
+     "quantity": "integer",
+     "selling_price": "number",
+     "dc": "string",
+     "customer_dc": "string",
+     "order_date": "string",
+     "sale_status": "boolean",
+     "promotion": "boolean",
+     "customer": "string",
+     "stock_source_region": "string"
     },
     "evidence": [
      "openapi/_original/takealot-seller-openapi.yml#GET /{version}/sales/orders"
@@ -2930,10 +3022,10 @@
      "PUT item"
     ],
     "properties": {
-     "locale": "string",
-     "currency": "string",
-     "totalAmount": "number",
-     "lines": "array"
+     "label": "string",
+     "category": "string",
+     "totalPrice": "number",
+     "quantity": "number"
     },
     "evidence": [
      "openapi/_original/lafourchette-v1-api-openapi.yml#PUT /v1/orders/{orderUuid}"
@@ -3628,8 +3720,7 @@
     "tripleseat",
     "uber",
     "uber-eats",
-    "urbanpiper",
-    "workstream"
+    "urbanpiper"
    ],
    "camelCase": [
     "barogo",

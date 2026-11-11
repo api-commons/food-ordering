@@ -10,8 +10,8 @@ concepts:
       name: name
       id: id
       address: address
-      time_zone: timezone
       phone: phone
+      time_zone: timezone
     core_coverage: 1.0
     evidence:
     - openapi/_original/starbucks-starbucks-api-openapi.yml#GET /v1/stores

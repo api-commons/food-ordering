@@ -8,45 +8,75 @@
     "name": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.735,
-      "x-commons-providers": 25,
+      "x-commons-share": 0.794,
+      "x-commons-providers": 27,
       "x-commons-spellings": [
         "name",
+        "title",
         "Name"
       ]
     },
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.559,
-      "x-commons-providers": 19,
+      "x-commons-share": 0.588,
+      "x-commons-providers": 20,
       "x-commons-spellings": [
         "id",
+        "externalId",
         "guid",
         "uuid"
-      ]
-    },
-    "address": {
-      "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.471,
-      "x-commons-providers": 16,
-      "x-commons-spellings": [
-        "address",
-        "Address"
       ]
     },
     "status": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.382,
-      "x-commons-providers": 13,
+      "x-commons-share": 0.471,
+      "x-commons-providers": 16,
       "x-commons-spellings": [
         "status",
         "state",
         "active",
+        "enabled",
         "Active",
         "availability"
+      ]
+    },
+    "address": {
+      "type": "object",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.441,
+      "x-commons-providers": 15,
+      "x-commons-spellings": [
+        "address",
+        "Address"
+      ]
+    },
+    "restaurant_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.382,
+      "x-commons-providers": 13,
+      "x-commons-spellings": [
+        "storeId",
+        "locationId",
+        "store_id",
+        "merchant_id",
+        "StoreId",
+        "merchantId",
+        "location_id"
+      ]
+    },
+    "phone": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.353,
+      "x-commons-providers": 12,
+      "x-commons-spellings": [
+        "phone_number",
+        "phone",
+        "PhoneNumber",
+        "phoneNumber"
       ]
     },
     "time_zone": {
@@ -60,41 +90,28 @@
         "timeZone"
       ]
     },
-    "restaurant_id": {
-      "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.324,
-      "x-commons-providers": 11,
-      "x-commons-spellings": [
-        "storeId",
-        "locationId",
-        "store_id",
-        "merchant_id",
-        "StoreId",
-        "merchantId",
-        "restaurantId",
-        "location_id"
-      ]
-    },
-    "phone": {
+    "city": {
       "type": "string",
       "x-commons-tier": "extended",
       "x-commons-share": 0.265,
       "x-commons-providers": 9,
       "x-commons-spellings": [
-        "phone_number",
-        "phone",
-        "PhoneNumber"
-      ]
-    },
-    "city": {
-      "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.235,
-      "x-commons-providers": 8,
-      "x-commons-spellings": [
         "city"
       ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.206,
+      "x-commons-providers": 7,
+      "x-commons-spellings": [
+        "created_at",
+        "created",
+        "createdAt",
+        "createdOn",
+        "createdDate"
+      ],
+      "format": "date-time"
     },
     "currency": {
       "type": "string",

@@ -33,8 +33,8 @@ concepts:
       restaurant_id: storeId
       items: items
       created_at: orderedAt
-      status: status
       customer_id: customer
+      status: status
       currency: currencyCode
       total: orderTotal
     core_coverage: 1.0
